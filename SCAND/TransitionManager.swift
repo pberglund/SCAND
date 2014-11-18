@@ -17,8 +17,6 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     // animate a change from one viewcontroller to another
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        
-        
         // get reference to our fromView, toView and the container view that we should perform the transition in
         let container = transitionContext.containerView()
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!

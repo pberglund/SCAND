@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class SliderViewController : BaseViewController {
+@IBDesignable class SliderViewController : BaseScanDController {
     
     @IBInspectable var videName:String!
     @IBInspectable var videoExtension: String!

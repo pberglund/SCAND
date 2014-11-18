@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
-@IBDesignable class VideoController : BaseViewController {
+@IBDesignable class VideoController : BaseScanDController {
     
     var moviePlayer:MPMoviePlayerController!
     @IBInspectable var segueAfterVideo: String!

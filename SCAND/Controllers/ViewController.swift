@@ -9,7 +9,7 @@
 import UIKit
 import MediaPlayer
 
-@IBDesignable class ViewController: BaseViewController {
+@IBDesignable class ViewController: BaseScanDController {
     
         override func viewDidLoad() {
         super.viewDidLoad()

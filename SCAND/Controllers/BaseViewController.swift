@@ -27,9 +27,7 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setBackGroundImage()
-        addMenuButton()
+        println("Page identifier: \(pageIdentifier)")
     }
     
     func setBackGroundImage(){
@@ -53,19 +51,52 @@ import UIKit
         let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(960, 25, 40, 35)
         //button.setImage(image, forState: .Normal)
-        button.addTarget(self, action: "btnTouched:", forControlEvents:.TouchUpInside)
+        button.addTarget(self, action: "openMenu:", forControlEvents:.TouchUpInside)
 
         self.view.addSubview(button)
 
     }
     
-    func btnTouched(sender:UIButton!)
+    func openMenu(sender:UIButton!)
     {
-        transitionToViewControllerByStoryboardId("MenuPage")
-        
         println("Menu Button tapped")
+        println("Going to menu from \(pageIdentifier)")
+        if(pageIdentifier == nil || pageIdentifier == "")
+        {
+            println("Pageidentifier was null, not going to menu")
+            return
+        }
+        
+        let vc = getViewControllerFromstoryboardID("MenuPage")
+        //vc.returnStoryBoardId = pageIdentifier;
+        //vc.transManager = transitionManager;
+        self.showController(vc);
+        
+    }    
+    
+    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+        // this func left empty intentionally, the transition manager 
+        // handles swiping back to the origin view controller
     }
-
+    
+    /*
+    
+    func closedBtnTouched(sender:UIButton!)
+    {
+        
+        println("Close Button tapped")
+        
+        if(pageIdentifier == nil || pageIdentifier == ""){
+            println("Error returning to previous controller, returnStoryBoardId was null")
+            return;
+        }
+        
+        self.transitionToViewControllerByStoryboardId(pageIdentifier)
+        
+        
+    }
+    
+*/
     
     func transitionToViewControllerBySegueIdentifier(segueIdentifier:String, originPage:String = ""){
         
@@ -85,12 +116,20 @@ import UIKit
 
     }
     
-    func transitionToViewControllerByStoryboardId(storyBoardId:String){
-    
+    func getViewControllerFromstoryboardID(storyBoardId:String) -> UIViewController{
         let vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as UIViewController
         vc.transitioningDelegate = self.transitionManager
-        self.showViewController(vc, sender: vc)
+        return vc;
+    }
     
+    func showController(vc:UIViewController) -> Void{
+        self.showViewController(vc, sender: vc)
+    }
+    
+    func transitionToViewControllerByStoryboardId(storyBoardId:String){
+        
+        let vc = getViewControllerFromstoryboardID(storyBoardId);
+        showController(vc);
     }
     
     func RBResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
