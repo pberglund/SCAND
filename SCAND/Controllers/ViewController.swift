@@ -9,19 +9,10 @@
 import UIKit
 import MediaPlayer
 
-class ViewController: BaseViewController {
-
-    var moviePlayer:MPMoviePlayerController!
-
+@IBDesignable class ViewController: BaseViewController {
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let image = UIImage(named: "start.jpg")
-        let resized = RBResizeImage(image!, targetSize: self.view.bounds.size)
-        
-        self.view.backgroundColor = UIColor(patternImage: resized)
-
     }
 
     override func didReceiveMemoryWarning() {

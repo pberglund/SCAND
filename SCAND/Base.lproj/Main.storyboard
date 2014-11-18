@@ -1,25 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro Video-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVideo" title="Intro Video" id="BYZ-38-t0r" userLabel="Intro Video" customClass="VideoController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1nz-Ok-IFT" appends="YES" id="CK4-A7-w0f"/>
+                        </connections>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="segueAfterVideo" value="Custom from 1 to main"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Big_Buck_Bunny_Trailer"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Start">
+                    <connections>
+                        <segue destination="T1Q-xP-5dL" kind="custom" identifier="Custom from 1 to main" customClass="RightLeftSegue" id="TIr-zc-mkr"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-381" y="559"/>
+        </scene>
+        <!--Start Page-->
+        <scene sceneID="Nc4-tG-aqk">
+            <objects>
+                <viewController storyboardIdentifier="1StartPage" title="Start Page" id="T1Q-xP-5dL" userLabel="Start Page" customClass="ViewController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0lN-yR-fHe"/>
+                        <viewControllerLayoutGuide type="bottom" id="qyi-LO-yUd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pde-oa-D9a">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="48M-XP-kuN" appends="YES" id="cp6-R3-g9e"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_Loading-Start_page_11-18-14.jpg"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Start Page"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Dashboard">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="RightLeftSegue" id="NwK-lG-akd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="727" y="559"/>
+        </scene>
+        <!--Dashboard Page-->
+        <scene sceneID="3qf-Ue-iw4">
+            <objects>
+                <viewController storyboardIdentifier="2DashboardPage" title="Dashboard Page" id="ZDf-mT-dJL" customClass="DashboardController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nrd-M3-qkM"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Zr-aj-b7H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ker-DL-EKd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_home_table_of_contents" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-Mt-vqY" userLabel="Dashboard Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-wX-aHy" userLabel="Category Performance Button">
+                                <rect key="frame" x="0.0" y="258" width="256" height="253"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryPerformanceButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="jFC-xh-Kk4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_home_table_of_contents.jpg"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryPerformanceSegueIdentifier" value="Dashboard - Category Performance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Dashboard page"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="14a-ZL-8Of" kind="custom" identifier="Dashboard - Category Performance" customClass="RightLeftSegue" id="DtN-b0-etW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-HS-bNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="571"/>
+        </scene>
+        <!--Category Performance Section-->
+        <scene sceneID="bi1-ZV-bM9">
+            <objects>
+                <viewController storyboardIdentifier="3CategoryPerformance" title="Category Performance Start" id="14a-ZL-8Of" userLabel="Category Performance Section" customClass="ViewController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ckk-6p-hCs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xax-eP-Cfm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LXV-w7-eZp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Start"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwP-Ju-cwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3088" y="-268"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SCAND_home_table_of_contents" width="2048" height="1536"/>
+    </resources>
 </document>

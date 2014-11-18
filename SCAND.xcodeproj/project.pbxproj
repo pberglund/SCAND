@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE62A1A1B956C007A6E72 /* AppDelegate.swift */; };
-		043BE62D1A1B956C007A6E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE62C1A1B956C007A6E72 /* ViewController.swift */; };
 		043BE6301A1B956C007A6E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE62E1A1B956C007A6E72 /* Main.storyboard */; };
 		043BE6321A1B956C007A6E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043BE6311A1B956C007A6E72 /* Images.xcassets */; };
 		043BE6351A1B956C007A6E72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043BE6331A1B956C007A6E72 /* LaunchScreen.xib */; };
 		043BE6411A1B956C007A6E72 /* SCANDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6401A1B956C007A6E72 /* SCANDTests.swift */; };
+		043BE64B1A1B95A8007A6E72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BE64A1A1B95A8007A6E72 /* MediaPlayer.framework */; };
+		043BE64D1A1B95B1007A6E72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BE64C1A1B95B1007A6E72 /* QuartzCore.framework */; };
+		043BE64F1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 043BE64E1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v */; };
+		043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6521A1B96AE007A6E72 /* BaseViewController.swift */; };
+		043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6531A1B96AE007A6E72 /* VideoController.swift */; };
+		043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6541A1B96AE007A6E72 /* SliderViewController.swift */; };
+		043BE6591A1B96AE007A6E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6551A1B96AE007A6E72 /* ViewController.swift */; };
+		043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */; };
+		043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */; };
+		043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +38,24 @@
 		043BE6251A1B956C007A6E72 /* SCAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BE6291A1B956C007A6E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043BE62A1A1B956C007A6E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		043BE62C1A1B956C007A6E72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		043BE62F1A1B956C007A6E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		043BE6311A1B956C007A6E72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		043BE6341A1B956C007A6E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		043BE63A1A1B956C007A6E72 /* SCANDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCANDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BE63F1A1B956C007A6E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043BE6401A1B956C007A6E72 /* SCANDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCANDTests.swift; sourceTree = "<group>"; };
+		043BE64A1A1B95A8007A6E72 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		043BE64C1A1B95B1007A6E72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		043BE64E1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = Big_Buck_Bunny_Trailer.m4v; path = ../../../SingleView/SingleView/SingleView/Big_Buck_Bunny_Trailer.m4v; sourceTree = "<group>"; };
+		043BE6521A1B96AE007A6E72 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		043BE6531A1B96AE007A6E72 /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
+		043BE6541A1B96AE007A6E72 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		043BE6551A1B96AE007A6E72 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		043BE65B1A1B9879007A6E72 /* LeftRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftRightSegue.h; sourceTree = "<group>"; };
+		043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftRightSegue.m; sourceTree = "<group>"; };
+		043BE65D1A1B9879007A6E72 /* RightLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightLeftSegue.h; sourceTree = "<group>"; };
+		043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightLeftSegue.m; sourceTree = "<group>"; };
+		043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043BE64D1A1B95B1007A6E72 /* QuartzCore.framework in Frameworks */,
+				043BE64B1A1B95A8007A6E72 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +81,8 @@
 		043BE61C1A1B956C007A6E72 = {
 			isa = PBXGroup;
 			children = (
+				043BE64C1A1B95B1007A6E72 /* QuartzCore.framework */,
+				043BE64A1A1B95A8007A6E72 /* MediaPlayer.framework */,
 				043BE6271A1B956C007A6E72 /* SCAND */,
 				043BE63D1A1B956C007A6E72 /* SCANDTests */,
 				043BE6261A1B956C007A6E72 /* Products */,
@@ -77,10 +101,12 @@
 		043BE6271A1B956C007A6E72 /* SCAND */ = {
 			isa = PBXGroup;
 			children = (
+				043BE65A1A1B9879007A6E72 /* Segues */,
+				043BE6511A1B96AE007A6E72 /* Controllers */,
 				043BE62A1A1B956C007A6E72 /* AppDelegate.swift */,
-				043BE62C1A1B956C007A6E72 /* ViewController.swift */,
 				043BE62E1A1B956C007A6E72 /* Main.storyboard */,
 				043BE6311A1B956C007A6E72 /* Images.xcassets */,
+				043BE64E1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v */,
 				043BE6331A1B956C007A6E72 /* LaunchScreen.xib */,
 				043BE6281A1B956C007A6E72 /* Supporting Files */,
 			);
@@ -110,6 +136,29 @@
 				043BE63F1A1B956C007A6E72 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		043BE6511A1B96AE007A6E72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				043BE6521A1B96AE007A6E72 /* BaseViewController.swift */,
+				043BE6531A1B96AE007A6E72 /* VideoController.swift */,
+				043BE6541A1B96AE007A6E72 /* SliderViewController.swift */,
+				043BE6551A1B96AE007A6E72 /* ViewController.swift */,
+				043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		043BE65A1A1B9879007A6E72 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				043BE65B1A1B9879007A6E72 /* LeftRightSegue.h */,
+				043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */,
+				043BE65D1A1B9879007A6E72 /* RightLeftSegue.h */,
+				043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */,
+			);
+			path = Segues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +243,7 @@
 			files = (
 				043BE6301A1B956C007A6E72 /* Main.storyboard in Resources */,
 				043BE6351A1B956C007A6E72 /* LaunchScreen.xib in Resources */,
+				043BE64F1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v in Resources */,
 				043BE6321A1B956C007A6E72 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043BE62D1A1B956C007A6E72 /* ViewController.swift in Sources */,
+				043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */,
+				043BE6591A1B96AE007A6E72 /* ViewController.swift in Sources */,
+				043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */,
 				043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */,
+				043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */,
+				043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */,
+				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
+				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
