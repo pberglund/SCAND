@@ -38,6 +38,26 @@
             </objects>
             <point key="canvasLocation" x="-381" y="559"/>
         </scene>
+        <!--Menu Page-->
+        <scene sceneID="glY-rM-AdO">
+            <objects>
+                <viewController storyboardIdentifier="MenuPage" title="Menu" id="Ony-UR-cuj" userLabel="Menu Page" customClass="ViewController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HIc-ng-WjC"/>
+                        <viewControllerLayoutGuide type="bottom" id="1yB-A1-OKI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sxt-5V-u8u">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F66-Fo-NCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="-483"/>
+        </scene>
         <!--Start Page-->
         <scene sceneID="Nc4-tG-aqk">
             <objects>

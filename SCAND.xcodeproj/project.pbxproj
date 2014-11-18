@@ -22,6 +22,7 @@
 		043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */; };
 		043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */; };
 		043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */; };
+		043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6631A1BACB2007A6E72 /* TransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		043BE65D1A1B9879007A6E72 /* RightLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightLeftSegue.h; sourceTree = "<group>"; };
 		043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightLeftSegue.m; sourceTree = "<group>"; };
 		043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
+		043BE6631A1BACB2007A6E72 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				043BE64E1A1B95EA007A6E72 /* Big_Buck_Bunny_Trailer.m4v */,
 				043BE6331A1B956C007A6E72 /* LaunchScreen.xib */,
 				043BE6281A1B956C007A6E72 /* Supporting Files */,
+				043BE6631A1BACB2007A6E72 /* TransitionManager.swift */,
 			);
 			path = SCAND;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */,
 				043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */,
 				043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */,
+				043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */,
 				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
 				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,
 			);

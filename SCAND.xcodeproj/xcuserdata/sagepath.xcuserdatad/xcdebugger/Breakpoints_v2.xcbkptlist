@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCAND/Controllers/BaseViewController.swift"
-            timestampString = "438020890.41619"
+            timestampString = "438021555.735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "addMenuButton()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "transitionToViewControllerByStoryboardId(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

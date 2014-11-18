@@ -11,8 +11,10 @@ import UIKit
 
 @IBDesignable class BaseViewController : UIViewController{
     
+    let transitionManager = TransitionManager()
+    
     @IBInspectable var backgroundImageFileName:String!
-    @IBInspectable var menuButtonImageFileName:String!
+    //@IBInspectable var menuButtonImageFileName:String!
     @IBInspectable var pageIdentifier: String!
         
     enum Direction {
@@ -59,6 +61,8 @@ import UIKit
     
     func btnTouched(sender:UIButton!)
     {
+        transitionToViewControllerByStoryboardId("MenuPage")
+        
         println("Menu Button tapped")
     }
 
@@ -83,8 +87,9 @@ import UIKit
     
     func transitionToViewControllerByStoryboardId(storyBoardId:String){
     
-        let vc : AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId)
-        self.showViewController(vc as UIViewController, sender: vc)
+        let vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as UIViewController
+        vc.transitioningDelegate = self.transitionManager
+        self.showViewController(vc, sender: vc)
     
     }
     
