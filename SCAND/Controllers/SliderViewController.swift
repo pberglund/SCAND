@@ -46,21 +46,6 @@ import UIKit
         println("swiped left...")
         slide(Direction.Right);
     }
-    //override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-    //    return false;
-    //}
-    
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == leftSegueIdentifier){
-            println("swiped left...")
-            slide(Direction.Right);
-        }
-        
-        if(segue.identifier == rightSequeIdentifier){
-            println("swiped right...")
-            slide(Direction.Left);
-        }
-    }*/
     
     func slide(direction: Direction){
         
