@@ -270,6 +270,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJm-Vf-PmY" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-Gb-aIy" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -291,7 +299,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="downArrowView" destination="KJm-Vf-PmY" id="oOJ-z4-ool"/>
                         <outlet property="sliderView" destination="cug-iJ-Y16" id="p94-1d-ez4"/>
+                        <outlet property="upArrowView" destination="ghf-Gb-aIy" id="kvu-PQ-luv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0H-gB-ylT" userLabel="First Responder" sceneMemberID="firstResponder"/>
