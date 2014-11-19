@@ -16,16 +16,25 @@ import MediaPlayer
     @IBInspectable var rightView: String!
     @IBInspectable var videoPath: String!
     let transitionDistance:CGFloat = 768
+    let animationDuration = 2.0
     var lastDirection:Direction = Direction.None
     
     @IBOutlet weak var sliderView: UIView!
     @IBOutlet weak var expandCollapseButton: UIButton!
     
     
+    @IBOutlet weak var downArrowView: UIView!
+    @IBOutlet weak var upArrowView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //self.sliderView.frame = self.view.frame;
+        if(downArrowView == nil){
+        return
+        }
+        
+        self.downArrowView.alpha = 0.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,6 +42,20 @@ import MediaPlayer
         // Dispose of any resources that can be recreated.
     }
     
+    func showHideArrows(showArrow:UIView, hideArrow:UIView){
+    UIView.animateWithDuration(0.75, animations: {
+    hideArrow.alpha = 1.0
+    showArrow.alpha = 0.0
+    })
+}
+    
+    func arrowAnimationUp(){
+        showHideArrows(upArrowView, hideArrow: downArrowView)
+    }
+
+    func arrowAnimationDown(){
+        showHideArrows(downArrowView, hideArrow: upArrowView)
+    }
     
     func goRight(){
         self.transitionToViewControllerByStoryboardId(rightView)
@@ -144,8 +167,10 @@ import MediaPlayer
         switch direction {
         case Direction.Up:
             newY -= transitionDistance
+            arrowAnimationUp()
         case Direction.Down:
             newY += transitionDistance
+            arrowAnimationDown()
         default:
             println("Error finding a direction, slideIt: returning")
             return;
@@ -154,7 +179,7 @@ import MediaPlayer
         
         let newFrame:CGRect = CGRectMake(newX, newY, currFrame.width, currFrame.height);
         
-        UIView.animateWithDuration(2.0, animations: {
+        UIView.animateWithDuration(animationDuration, animations: {
             
             self.sliderView.frame = newFrame
             //println("sliding...")

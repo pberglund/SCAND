@@ -328,7 +328,6 @@
                         <viewControllerLayoutGuide type="bottom" id="Fsc-od-4sT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1E9-Hy-7ae">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDD-4p-dDN">
@@ -370,6 +369,14 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMp-wu-xnn" userLabel="Down Arrow View">
+                                        <rect key="frame" x="489" y="705" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-7U-SmO" userLabel="Up Arrow View">
+                                        <rect key="frame" x="489" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
@@ -384,12 +391,14 @@
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="768"/>
+                    <size key="freeformSize" width="1024" height="0.0"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="downArrowView" destination="IMp-wu-xnn" id="Ly6-vu-CQ6"/>
                         <outlet property="sliderView" destination="KDD-4p-dDN" id="pdS-vO-tud"/>
+                        <outlet property="upArrowView" destination="KaS-7U-SmO" id="Pun-HG-zDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwE-k8-joj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,6 +425,23 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5266" y="-268"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0qf-iD-BlR">
+            <objects>
+                <viewController id="uiC-Qs-QqO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iIl-rP-H5O"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZmF-Mm-POU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XLD-Mz-aOt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRe-jy-jrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
