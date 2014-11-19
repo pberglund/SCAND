@@ -24,6 +24,8 @@
 		043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */; };
 		043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6631A1BACB2007A6E72 /* TransitionManager.swift */; };
 		043BE66A1A1BE646007A6E72 /* BaseScanDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6691A1BE646007A6E72 /* BaseScanDController.swift */; };
+		043BE69A1A1CE82A007A6E72 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6991A1CE82A007A6E72 /* StartController.swift */; };
+		043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69B1A1CE8D6007A6E72 /* SectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
 		043BE6631A1BACB2007A6E72 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		043BE6691A1BE646007A6E72 /* BaseScanDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScanDController.swift; sourceTree = "<group>"; };
+		043BE6991A1CE82A007A6E72 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		043BE69B1A1CE8D6007A6E72 /* SectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				043BE6551A1B96AE007A6E72 /* ViewController.swift */,
 				043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */,
 				043BE6691A1BE646007A6E72 /* BaseScanDController.swift */,
+				043BE6991A1CE82A007A6E72 /* StartController.swift */,
+				043BE69B1A1CE8D6007A6E72 /* SectionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,10 +280,12 @@
 				043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */,
 				043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */,
 				043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */,
+				043BE69A1A1CE82A007A6E72 /* StartController.swift in Sources */,
 				043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */,
 				043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */,
 				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
 				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,
+				043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
