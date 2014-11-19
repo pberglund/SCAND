@@ -11,7 +11,7 @@ import MediaPlayer
 
 @IBDesignable class SectionController: BaseScanDController {
     
-    @IBInspectable var leftView: String!
+    //@IBInspectable var leftView: String!
     
     @IBInspectable var rightView: String!
     
