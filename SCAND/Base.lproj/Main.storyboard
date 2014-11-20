@@ -377,12 +377,13 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_Loading-Start_page_11-18-14.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Start Page"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="startToDashBoardSegueIdentifier" value="Start - Dashboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Dashboard">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="RightLeftSegue" id="NwK-lG-akd"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="RightLeftSegue" id="0kL-dk-s7A"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -412,6 +413,42 @@
                                     <action selector="categoryPerformanceButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="jFC-xh-Kk4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj7-LW-lc9" userLabel="Assortment Portfolio Button">
+                                <rect key="frame" x="508" y="257" width="265" height="253"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="assortmentPortfolioButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="u1n-lA-zrl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gna-aM-3sn" userLabel="Pricing Analysis Button">
+                                <rect key="frame" x="0.0" y="510" width="256" height="258"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pricingAnalysisButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="g57-L9-HpU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPv-8e-18u" userLabel="Store Performance Button">
+                                <rect key="frame" x="256" y="510" width="254" height="258"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="storePerformanceButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="uNI-WE-K0N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AW-tB-K9M" userLabel="Shopper Marketing Button">
+                                <rect key="frame" x="773" y="510" width="251" height="258"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shopperMarketingButtonTouchUpInside:" destination="ZDf-mT-dJL" eventType="touchUpInside" id="XlG-tO-OsY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -423,8 +460,12 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_home_table_of_contents.jpg"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="categoryPerformanceSegueIdentifier" value="Dashboard - Category Performance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryPerformanceSegueIdentifier" value="Category Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="2DashboardPage"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="assortmentPortfolioSegueIdentifier" value="Assortment Portfolio Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pricingAnalysisSegueIdentifier" value="Pricing Analysis Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storePerformanceSegueIdentifier" value="Store Performance Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="shopperMarketingSegueIdentifier" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="14a-ZL-8Of" kind="custom" identifier="Dashboard - Category Performance" customClass="RightLeftSegue" id="DtN-b0-etW"/>
@@ -439,10 +480,10 @@
             </objects>
             <point key="canvasLocation" x="1835" y="571"/>
         </scene>
-        <!--Category Performance Section-->
+        <!--Category Performance Start-->
         <scene sceneID="bi1-ZV-bM9">
             <objects>
-                <viewController storyboardIdentifier="3CategoryPerformance" title="Category Performance Start" id="14a-ZL-8Of" userLabel="Category Performance Section" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Start" title="Category Performance Start" id="14a-ZL-8Of" userLabel="Category Performance Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ckk-6p-hCs"/>
                         <viewControllerLayoutGuide type="bottom" id="Xax-eP-Cfm"/>
@@ -467,7 +508,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ovo-ce-gBB" appends="YES" id="MkR-6B-fqQ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -475,21 +520,255 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="fJL-TP-p4D" id="Y3s-yF-P3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwP-Ju-cwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ovo-ce-gBB" userLabel="Swipe Right">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="dhf-Lg-jGM"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3088" y="-268"/>
         </scene>
-        <!--CP - Page 1-->
+        <!--Assortment Portfolio Start-->
+        <scene sceneID="TKN-qD-vju">
+            <objects>
+                <viewController storyboardIdentifier="Assortment Portfolio Start" title="Assortment Portfolio Start" id="IB0-YQ-rHE" userLabel="Assortment Portfolio Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7X-nm-L93"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxl-we-Us1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Wo-eF-lM4">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-RZ-uBl">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio" translatesAutoresizingMaskIntoConstraints="NO" id="O5C-oM-XLn">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeN-Rk-Ema" userLabel="Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="IB0-YQ-rHE" eventType="touchUpInside" id="epR-Is-pOB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VIn-nC-Tml" appends="YES" id="LXC-dk-MaS"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="sliderView" destination="r1I-RZ-uBl" id="6Oj-aU-ALN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29g-iL-VMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="VIn-nC-Tml" userLabel="Swipe Right">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="0cL-tx-N9G"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3100" y="624"/>
+        </scene>
+        <!--Pricing Analysis Start-->
+        <scene sceneID="jNX-Rv-ifB">
+            <objects>
+                <viewController storyboardIdentifier="Pricing Analysis Start" title="Pricing Analysis Start" id="53k-em-v8c" userLabel="Pricing Analysis Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CBM-NK-LMu"/>
+                        <viewControllerLayoutGuide type="bottom" id="gcX-Zq-e4B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKl-9u-qyq">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouy-Ng-Eg2">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Pricing_Analysis" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-ky-FF1">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-LC-rIV" userLabel="Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="53k-em-v8c" eventType="touchUpInside" id="TUZ-aQ-KIl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6hp-jo-AWe" appends="YES" id="eVI-Lc-nSj"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="sliderView" destination="ouy-Ng-Eg2" id="EoU-ey-uid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHV-zO-atb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="6hp-jo-AWe" userLabel="Swipe Right">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="xvg-He-u6y"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3100" y="1552"/>
+        </scene>
+        <!--Store Performance Start-->
+        <scene sceneID="tlj-hE-Ih4">
+            <objects>
+                <viewController storyboardIdentifier="Store Performance Start" title="Store Performance Start" id="JIs-6d-fUj" userLabel="Store Performance Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHh-9T-Gll"/>
+                        <viewControllerLayoutGuide type="bottom" id="MhG-uz-aa3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vic-4g-ePA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T92-o5-NgT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Store_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-E1-9HW">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAE-BR-6KK" userLabel="Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="JIs-6d-fUj" eventType="touchUpInside" id="Cr7-l4-Yvf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="v8h-cQ-Y8K" appends="YES" id="Vna-OS-ycX"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="sliderView" destination="T92-o5-NgT" id="XRi-EJ-31w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxx-SE-HE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="v8h-cQ-Y8K" userLabel="Swipe Right">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="s36-W1-GVc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3100" y="2512"/>
+        </scene>
+        <!--Shopper Marketing Start-->
+        <scene sceneID="yNC-Zt-Dgd">
+            <objects>
+                <viewController storyboardIdentifier="Shopper Marketing Start" title="Shopper Marketing Start" id="USv-Ee-74X" userLabel="Shopper Marketing Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cN-x1-I4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRJ-ah-V2d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCS-Fy-SYT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1LE-ZU-WxA">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Shopper_marketing" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-iu-TSv">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-JY-Zlo" userLabel="Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="USv-Ee-74X" eventType="touchUpInside" id="sgw-fx-zhE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3N8-Rn-XXa" appends="YES" id="KXx-5M-oEL"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Shopper Marketing Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What Is Scan D"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="sliderView" destination="1LE-ZU-WxA" id="dme-HY-WZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVM-0r-nhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="3N8-Rn-XXa" userLabel="Swipe Right">
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="ccO-0I-OE5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3088" y="3452"/>
+        </scene>
+        <!--Category Performance Page - 1-->
         <scene sceneID="RFv-pw-n11">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Page - 1" title="Category Performance Page - 1" id="Oti-Cv-wYI" userLabel="CP - Page 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Page - 1" title="Category Performance Page - 1" id="Oti-Cv-wYI" userLabel="Category Performance Page - 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d5X-nl-2qC"/>
                         <viewControllerLayoutGuide type="bottom" id="GTI-vW-qPC"/>
@@ -531,12 +810,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnr-VJ-5w0">
-                                        <rect key="frame" x="100" y="100" width="54" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJm-Vf-PmY" userLabel="Down Arrow View">
                                         <rect key="frame" x="488" y="707" width="47" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -546,7 +819,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -564,6 +837,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="KJm-Vf-PmY" id="oOJ-z4-ool"/>
@@ -596,10 +870,640 @@
             </objects>
             <point key="canvasLocation" x="4186" y="-268"/>
         </scene>
-        <!--CP - Page 2-->
+        <!--Assortment Portfolio - Page 1-->
+        <scene sceneID="k5K-AC-8b9">
+            <objects>
+                <viewController storyboardIdentifier="Assortment Portfolio Page - 1" title="Assortment Portfolio Page - 1" id="lQx-aY-bJg" userLabel="Assortment Portfolio - Page 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9eF-f8-Ea7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qxs-aa-p26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sHz-bc-CLn">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnt-03-uXo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-82-zS8" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="lQx-aY-bJg" eventType="touchUpInside" id="8bV-cB-N4p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POM-SP-wy8" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pP7-l9-arL" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="2xH-Xi-ED2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-h7-kia" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="lQx-aY-bJg" eventType="touchUpInside" id="53l-Po-2Iz"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Assortment_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-wO-QSy">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHG-SU-M7L" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="57B-qC-ge6" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1nm-ib-DNd" appends="YES" id="ZGs-be-j8s"/>
+                            <outletCollection property="gestureRecognizers" destination="fx3-de-c7j" appends="YES" id="2d1-jP-iRx"/>
+                            <outletCollection property="gestureRecognizers" destination="WQO-U2-Wtv" appends="YES" id="73o-Je-6hc"/>
+                            <outletCollection property="gestureRecognizers" destination="W73-yz-n1t" appends="YES" id="zLD-Av-buh"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="UHG-SU-M7L" id="atl-xB-oNP"/>
+                        <outlet property="sliderView" destination="Vnt-03-uXo" id="yH0-KW-Te3"/>
+                        <outlet property="upArrowView" destination="57B-qC-ge6" id="DFS-40-zr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNM-Sm-rG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pP7-l9-arL" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="1nm-ib-DNd" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="lQx-aY-bJg" id="scX-Lc-VdZ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="fx3-de-c7j" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="lQx-aY-bJg" id="R8P-CI-L8A"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="WQO-U2-Wtv" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="lQx-aY-bJg" id="BrN-aE-Qki"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="W73-yz-n1t" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="lQx-aY-bJg" id="QES-Wx-cyB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4186" y="624"/>
+        </scene>
+        <!--Pricing Analysis - Page 1-->
+        <scene sceneID="ery-mn-9zw">
+            <objects>
+                <viewController storyboardIdentifier="Pricing Analysis Page - 1" title="Pricing Analysis Page - 1" id="5o3-U2-smh" userLabel="Pricing Analysis - Page 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ui6-mm-1NY"/>
+                        <viewControllerLayoutGuide type="bottom" id="P34-q0-cbj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xTy-H9-ItA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0MD-sS-pkh">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26f-Nv-3Sh" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="5o3-U2-smh" eventType="touchUpInside" id="7xQ-PA-suD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-wg-8Ga" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="D6S-fT-YMb" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="asR-HN-bFS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ici-XP-kuM" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="5o3-U2-smh" eventType="touchUpInside" id="0gJ-oD-40v"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Range_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="med-Sq-fCv">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-as-LmQ" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-oS-80D" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="THb-k3-Hoi" appends="YES" id="V6U-n0-fsQ"/>
+                            <outletCollection property="gestureRecognizers" destination="zTy-ib-fC5" appends="YES" id="P2t-Vy-nBc"/>
+                            <outletCollection property="gestureRecognizers" destination="FyC-H8-0El" appends="YES" id="kVW-W9-NyM"/>
+                            <outletCollection property="gestureRecognizers" destination="XPr-RL-Ety" appends="YES" id="g8W-3w-Nhz"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="tPh-as-LmQ" id="N62-b7-cpA"/>
+                        <outlet property="sliderView" destination="0MD-sS-pkh" id="pGL-pV-55L"/>
+                        <outlet property="upArrowView" destination="YIc-oS-80D" id="zjo-fK-ybI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjP-Vx-5rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="D6S-fT-YMb" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="THb-k3-Hoi" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="5o3-U2-smh" id="wse-ye-J37"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="zTy-ib-fC5" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="5o3-U2-smh" id="g88-hk-ToX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="FyC-H8-0El" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="5o3-U2-smh" id="WKU-bu-Md2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="XPr-RL-Ety" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="5o3-U2-smh" id="kBP-0i-5SY"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4186" y="1552"/>
+        </scene>
+        <!--Store Performance - Page 1-->
+        <scene sceneID="NHA-Sm-J9i">
+            <objects>
+                <viewController storyboardIdentifier="Store Performance Page - 1" title="Store Performance Page - 1" id="937-Ra-2QI" userLabel="Store Performance - Page 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mLh-3n-cLg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ipn-jc-1KI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aW3-mf-x6n">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yS3-wA-eT8">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-vo-Zg0" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="937-Ra-2QI" eventType="touchUpInside" id="U97-3K-Qao"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMh-lP-hJw" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7a7-OQ-iDt" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="gn7-hN-Wms"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-mX-SBO" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="937-Ra-2QI" eventType="touchUpInside" id="RRA-0Z-WHR"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Store_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-Lg-C8K">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGE-ky-2i7" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itS-cp-wrq" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eWO-il-cf1" appends="YES" id="UZ6-mg-Wgv"/>
+                            <outletCollection property="gestureRecognizers" destination="bNP-fk-vHq" appends="YES" id="ZxG-0e-y8H"/>
+                            <outletCollection property="gestureRecognizers" destination="sd6-jx-M2D" appends="YES" id="4Vj-Ed-IZK"/>
+                            <outletCollection property="gestureRecognizers" destination="mCf-3F-cTU" appends="YES" id="dmv-uT-eiN"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Page - 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="AGE-ky-2i7" id="Dgl-C7-JgP"/>
+                        <outlet property="sliderView" destination="yS3-wA-eT8" id="Tks-yj-WDq"/>
+                        <outlet property="upArrowView" destination="itS-cp-wrq" id="x3p-8B-XCV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-4C-dk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7a7-OQ-iDt" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="eWO-il-cf1" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="937-Ra-2QI" id="Dej-xj-Um5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="bNP-fk-vHq" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="937-Ra-2QI" id="Us9-uL-9OM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="sd6-jx-M2D" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="937-Ra-2QI" id="Ix3-h1-Lnu"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="mCf-3F-cTU" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="937-Ra-2QI" id="9LF-5X-mlz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4186" y="2512"/>
+        </scene>
+        <!--Pricing Analysis - Page 2-->
+        <scene sceneID="HbX-5P-OCw">
+            <objects>
+                <viewController storyboardIdentifier="Pricing Analysis Page - 2" title="Pricing Analysis Page - 2" id="osf-cO-OhN" userLabel="Pricing Analysis - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rrl-So-uRv"/>
+                        <viewControllerLayoutGuide type="bottom" id="SGk-He-s03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uzf-Om-M8n">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-dv-Suf">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAJ-TG-mzy" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="osf-cO-OhN" eventType="touchUpInside" id="m5D-tD-hGs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az9-tN-Qv5" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Jwe-Vj-UHR" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="3bY-cx-H5N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-fW-0dF" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="osf-cO-OhN" eventType="touchUpInside" id="ChP-Ff-aJB"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Trend_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-kD-C9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-QM-LKF" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-dc-ggW" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lwp-Qj-Et3" appends="YES" id="0HI-2t-cjf"/>
+                            <outletCollection property="gestureRecognizers" destination="PKz-Kk-EAI" appends="YES" id="aov-dB-p8v"/>
+                            <outletCollection property="gestureRecognizers" destination="k1H-zF-zSF" appends="YES" id="7g9-uQ-6yg"/>
+                            <outletCollection property="gestureRecognizers" destination="N6Z-e0-Vtj" appends="YES" id="bNU-Lg-UCr"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="cqZ-QM-LKF" id="6ha-W0-ZfR"/>
+                        <outlet property="sliderView" destination="5pG-dv-Suf" id="TIb-2e-4am"/>
+                        <outlet property="upArrowView" destination="hJC-dc-ggW" id="xf1-aY-VE2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ar-XE-9vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jwe-Vj-UHR" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="lwp-Qj-Et3" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="osf-cO-OhN" id="YPy-gQ-Lzo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="PKz-Kk-EAI" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="osf-cO-OhN" id="bTd-3T-Bqj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="k1H-zF-zSF" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="osf-cO-OhN" id="4fR-LI-CsL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="N6Z-e0-Vtj" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="osf-cO-OhN" id="VPO-mh-5CK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5354" y="1552"/>
+        </scene>
+        <!--Assortment Portfolio - Page 2-->
+        <scene sceneID="WCY-rQ-ZWe">
+            <objects>
+                <viewController storyboardIdentifier="Assortment Portfolio Page - 2" title="Assortment Portfolio Page - 2" id="lM1-o4-UYV" userLabel="Assortment Portfolio - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wyc-rB-YQJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdr-hO-X8k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gZC-xp-GDK">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fsw-nh-dd6">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-ga-hdR" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="lM1-o4-UYV" eventType="touchUpInside" id="Yiw-dI-EM0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-ip-igL" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="B5F-Mc-h4O" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="vau-Jf-0cE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-5K-xa7" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="lM1-o4-UYV" eventType="touchUpInside" id="ElY-PP-YLG"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Power_Index" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-cO-pqN">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-9W-zYD" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7z-ch-UYO" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WI0-ja-tU1" appends="YES" id="sd3-Gq-UFx"/>
+                            <outletCollection property="gestureRecognizers" destination="PE4-RD-WRT" appends="YES" id="H4U-Fr-i7K"/>
+                            <outletCollection property="gestureRecognizers" destination="JJh-iC-fqm" appends="YES" id="hOd-8Q-hVu"/>
+                            <outletCollection property="gestureRecognizers" destination="eYT-Ql-CtQ" appends="YES" id="ZZQ-cN-9P0"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="UJi-9W-zYD" id="hT0-mD-N9B"/>
+                        <outlet property="sliderView" destination="Fsw-nh-dd6" id="uUt-g1-zCf"/>
+                        <outlet property="upArrowView" destination="N7z-ch-UYO" id="SaR-Ex-HMv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wq7-Bs-HKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B5F-Mc-h4O" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="WI0-ja-tU1" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="lM1-o4-UYV" id="cpT-sh-8Zi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="PE4-RD-WRT" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="lM1-o4-UYV" id="O41-p9-6Z1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="JJh-iC-fqm" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="lM1-o4-UYV" id="lNE-tT-Mex"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="eYT-Ql-CtQ" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="lM1-o4-UYV" id="2sQ-dA-BIG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5354" y="624"/>
+        </scene>
+        <!--Assortment Portfolio - Page 3-->
+        <scene sceneID="E5E-9Z-2Jj">
+            <objects>
+                <viewController storyboardIdentifier="Assortment Portfolio Page - 3" title="Assortment Portfolio Page - 3" id="ksl-pq-ITf" userLabel="Assortment Portfolio - Page 3" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iOW-8e-fjm"/>
+                        <viewControllerLayoutGuide type="bottom" id="lQq-WF-emN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yAs-jf-JLF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X6x-zA-gGl">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31G-mv-SaH" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="5xk-cM-Pf4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8g-c6-gHh" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="33" y="329" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pB4-cx-hgB" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="1gk-al-ouI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-4g-9gY" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="NRN-1N-zeQ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Product_Ranking" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-hK-PsY">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-I2-4Xh" userLabel="Down Arrow View">
+                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csg-aZ-5Qu" userLabel="Up Arrow View">
+                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wvg-cn-MxD" appends="YES" id="2Dy-cw-rRM"/>
+                            <outletCollection property="gestureRecognizers" destination="bUQ-8w-B1d" appends="YES" id="7tZ-FF-xz5"/>
+                            <outletCollection property="gestureRecognizers" destination="yyd-qd-oxE" appends="YES" id="4Qp-IO-r7m"/>
+                            <outletCollection property="gestureRecognizers" destination="je8-RM-yXR" appends="YES" id="Eb7-dN-ifl"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="gEq-I2-4Xh" id="O61-yA-yP2"/>
+                        <outlet property="sliderView" destination="X6x-zA-gGl" id="F5M-Zf-eJ7"/>
+                        <outlet property="upArrowView" destination="csg-aZ-5Qu" id="2dD-iP-JRV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-la-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pB4-cx-hgB" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="wvg-cn-MxD" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="ksl-pq-ITf" id="qEq-nl-7Cr"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="bUQ-8w-B1d" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="ksl-pq-ITf" id="zWQ-jM-dC4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="yyd-qd-oxE" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="ksl-pq-ITf" id="GxR-yS-iCa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="je8-RM-yXR" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="ksl-pq-ITf" id="13a-T2-r9k"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="6506" y="624"/>
+        </scene>
+        <!--Category Performance - Page 2-->
         <scene sceneID="LgU-o6-WsD">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Page - 2" title="Category Performance Page - 2" id="4NV-n7-ZOK" userLabel="CP - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Page - 2" title="Category Performance Page - 2" id="4NV-n7-ZOK" userLabel="Category Performance - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRk-Dh-eiz"/>
                         <viewControllerLayoutGuide type="bottom" id="Fsc-od-4sT"/>
@@ -617,7 +1521,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="L9M-9a-p1R" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="MD4-x6-OYY"/>
+                                            <segue destination="L9M-9a-p1R" kind="unwind" unwindAction="unwindToViewController:" id="zCL-ml-Sdt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flX-L0-3g0" userLabel="Play Arrow Button">
@@ -630,23 +1534,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-NL-UhK" userLabel="Right Arrow Button">
-                                        <rect key="frame" x="880" y="332" width="101" height="105"/>
+                                        <rect key="frame" x="880" y="330" width="101" height="107"/>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="rightArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="FMW-my-Dwv"/>
                                             <action selector="rightArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="O8K-Jc-hbh"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Manufacturer_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua8-Ns-Afb">
-                                        <rect key="frame" x="75" y="75" width="54" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMp-wu-xnn" userLabel="Down Arrow View">
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -654,7 +1553,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -670,6 +1569,8 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="IMp-wu-xnn" id="Ly6-vu-CQ6"/>
@@ -700,20 +1601,136 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5266" y="-268"/>
+            <point key="canvasLocation" x="5354" y="-268"/>
+        </scene>
+        <!--Category Performance - Page 3-->
+        <scene sceneID="xQV-aa-qPP">
+            <objects>
+                <viewController storyboardIdentifier="Category Performance Page - 3" title="Category Performance Page - 3" id="deR-nr-Rv0" userLabel="Category Performance - Page 3" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IMx-o9-zWO"/>
+                        <viewControllerLayoutGuide type="bottom" id="iqS-no-siM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9V3-Tn-e2O">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILF-3E-EAj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYr-ya-gql" userLabel="Left Arrow Button">
+                                        <rect key="frame" x="38" y="330" width="110" height="110"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Afp-Nu-2Z3" kind="unwind" unwindAction="unwindToViewController:" id="jIe-Lc-I5P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rn-V4-dy6" userLabel="Play Arrow Button">
+                                        <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="E5f-6D-nVr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-yf-9Wz" userLabel="Right Arrow Button">
+                                        <rect key="frame" x="880" y="330" width="101" height="107"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightArrowButton:" destination="deR-nr-Rv0" eventType="touchUpInside" id="cxy-8j-Oud"/>
+                                            <action selector="rightArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="jHA-lK-yDz"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Key_Manufacturer" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-pE-nkz">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-m2-PTW" userLabel="Down Arrow View">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2P-aa-tIm" userLabel="Up Arrow View">
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="O23-Co-eT8" appends="YES" id="ihA-dQ-H5t"/>
+                            <outletCollection property="gestureRecognizers" destination="o6Q-Uw-t2x" appends="YES" id="aSu-d8-vmA"/>
+                            <outletCollection property="gestureRecognizers" destination="f1B-O3-fuW" appends="YES" id="D00-87-l4J"/>
+                            <outletCollection property="gestureRecognizers" destination="tTn-Rt-FPm" appends="YES" id="iUC-47-3ov"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Start"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="downArrowView" destination="nOw-m2-PTW" id="12d-Hq-dYY"/>
+                        <outlet property="sliderView" destination="ILF-3E-EAj" id="x1e-Qz-eCk"/>
+                        <outlet property="upArrowView" destination="C2P-aa-tIm" id="fzu-rA-B4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2x-zZ-DVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Afp-Nu-2Z3" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="O23-Co-eT8" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="swipedRight:" destination="deR-nr-Rv0" id="i00-yI-haA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="o6Q-Uw-t2x" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="swipedLeft:" destination="deR-nr-Rv0" id="djP-xc-372"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="f1B-O3-fuW" userLabel="Up Swipe">
+                    <connections>
+                        <action selector="swipedUp:" destination="deR-nr-Rv0" id="lLw-qI-0Ol"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="tTn-Rt-FPm" userLabel="Down Swipe">
+                    <connections>
+                        <action selector="swipedDown:" destination="deR-nr-Rv0" id="27z-qb-XHR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="6506" y="-268"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio" width="2048" height="1536"/>
         <image name="1_SCAND_dashboard_templates_Landing_Category_Performance" width="2048" height="1536"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Pricing_Analysis" width="2048" height="1536"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Shopper_marketing" width="2048" height="1536"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Store_Performance" width="2048" height="1536"/>
         <image name="SCAND_Loading-Start_page_11-18-14" width="2048" height="1536"/>
         <image name="SCAND_dashboard_templates_MENU" width="2048" height="1536"/>
         <image name="SCAND_home_table_of_contents" width="2048" height="1536"/>
         <image name="SCAND_type_of_data" width="2048" height="1536"/>
         <image name="SCAND_what_is_scanD" width="2048" height="1536"/>
         <image name="SCAND_what_you_need_to_start" width="2048" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Assortment_analysis" width="2048" height="3072"/>
         <image name="_SCAND_dashboard_templates_Category_snapshot" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Key_Manufacturer" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Manufacturer_snapshot" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Power_Index" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Price_Range_analysis" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Price_Trend_analysis" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Product_Ranking" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TIr-zc-mkr"/>
+        <segue reference="xvg-He-u6y"/>
+        <segue reference="WrE-dD-vBb"/>
     </inferredMetricsTieBreakers>
 </document>

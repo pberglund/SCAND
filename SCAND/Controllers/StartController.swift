@@ -11,6 +11,8 @@ import MediaPlayer
 
 @IBDesignable class StartController: BaseScanDController {
     
+    @IBInspectable var startToDashBoardSegueIdentifier: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +23,7 @@ import MediaPlayer
     }
     
     @IBAction func StartButtonTouched(sender: AnyObject) {
-        self.transitionToViewControllerBySegueIdentifier("Start - Dashboard")
+        self.transitionToViewControllerBySegueIdentifier(startToDashBoardSegueIdentifier)
     }
     
     

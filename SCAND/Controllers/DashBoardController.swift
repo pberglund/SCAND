@@ -12,7 +12,11 @@ import MediaPlayer
 @IBDesignable class DashboardController: BaseScanDController {
     
     @IBInspectable var categoryPerformanceSegueIdentifier: String!
-        
+    @IBInspectable var assortmentPortfolioSegueIdentifier: String!
+    @IBInspectable var pricingAnalysisSegueIdentifier: String!
+    @IBInspectable var storePerformanceSegueIdentifier: String!
+    @IBInspectable var shopperMarketingSegueIdentifier: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +28,23 @@ import MediaPlayer
     }
     
     @IBAction func categoryPerformanceButtonTouchUpInside(sender: AnyObject) {
-        self.transitionToViewControllerBySegueIdentifier(categoryPerformanceSegueIdentifier)
+        self.transitionToViewControllerByStoryboardId(categoryPerformanceSegueIdentifier)
     }
     
+    @IBAction func assortmentPortfolioButtonTouchUpInside(sender: AnyObject) {
+        self.transitionToViewControllerByStoryboardId(assortmentPortfolioSegueIdentifier)
+    }
     
+    @IBAction func pricingAnalysisButtonTouchUpInside(sender: AnyObject) {
+        self.transitionToViewControllerByStoryboardId(pricingAnalysisSegueIdentifier)
+    }
+    @IBAction func shopperMarketingButtonTouchUpInside(sender: AnyObject) {
+        self.transitionToViewControllerByStoryboardId(shopperMarketingSegueIdentifier)
+    }
+    
+    @IBAction func storePerformanceButtonTouchUpInside(sender: AnyObject) {
+                self.transitionToViewControllerByStoryboardId(storePerformanceSegueIdentifier)
+    }
     
 }
 
