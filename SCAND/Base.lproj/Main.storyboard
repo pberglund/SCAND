@@ -7,7 +7,7 @@
         <!--Intro Video-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="IntroVideo" title="Intro Video" id="BYZ-38-t0r" userLabel="Intro Video" customClass="VideoController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Intro Video" title="Intro Video" id="BYZ-38-t0r" userLabel="Intro Video" customClass="VideoController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,6 +27,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="segueAfterVideo" value="Custom from 1 to main"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Big_Buck_Bunny_Trailer"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,6 +38,175 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-381" y="559"/>
+        </scene>
+        <!--What Is SCAN D?-->
+        <scene sceneID="Jcb-17-2tq">
+            <objects>
+                <viewController storyboardIdentifier="What Is Scan D" title="What Is Scan D" id="XrY-zs-24a" userLabel="What Is SCAN D?" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eBM-fO-aAN"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkw-ZN-Fcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yov-cf-tXb">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_is_scanD" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-Tq-4lB">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYG-dl-aAJ" userLabel="Right Arrow Button">
+                                <rect key="frame" x="878" y="337" width="108" height="94"/>
+                                <gestureRecognizers/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightArrowButton:" destination="XrY-zs-24a" eventType="touchUpInside" id="zi4-a4-KLM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5bX-YN-J3h" appends="YES" id="Wje-u5-Jxn"/>
+                            <outletCollection property="gestureRecognizers" destination="srr-8g-PWK" appends="YES" id="RhV-bP-FBU"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="What Is Scan D"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What You Need To Start"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3i-hX-xrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="J6N-cK-7NF" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="left" id="5bX-YN-J3h" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="XrY-zs-24a" id="xx3-vw-mR0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="srr-8g-PWK" userLabel="Swipe Right">
+                    <connections>
+                        <action selector="swipedRight:" destination="XrY-zs-24a" id="o70-aA-ZOS"/>
+                        <segue destination="J6N-cK-7NF" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="EgW-WF-LoA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="74" y="-1419"/>
+        </scene>
+        <!--What You Need To Start-->
+        <scene sceneID="ftm-tI-Uc3">
+            <objects>
+                <viewController storyboardIdentifier="What You Need To Start" title="What You Need To Start" id="heR-QC-HNc" userLabel="What You Need To Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EhZ-JA-9oa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uzj-u4-P7b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vLi-Re-utP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_you_need_to_start" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-ex-NFm">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPm-5c-0AW" userLabel="Right Arrow Button">
+                                <rect key="frame" x="882" y="328" width="99" height="107"/>
+                                <gestureRecognizers/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightArrowButton:" destination="heR-QC-HNc" eventType="touchUpInside" id="Fkb-G4-SAi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iw-Pr-l3R" userLabel="Left Arrow Button">
+                                <rect key="frame" x="44" y="335" width="95" height="94"/>
+                                <gestureRecognizers/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e5I-1U-jjO" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="VRb-SD-Ngp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xai-zE-ert" appends="YES" id="csJ-Vr-oYX"/>
+                            <outletCollection property="gestureRecognizers" destination="jKO-1c-UfV" appends="YES" id="j55-VG-e8I"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="What You Need To Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Type of Data"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etE-km-ar7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e5I-1U-jjO" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="Xai-zE-ert" userLabel="Swipe Right">
+                    <connections>
+                        <action selector="swipedRight:" destination="heR-QC-HNc" id="tIB-G1-5YA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="jKO-1c-UfV" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="heR-QC-HNc" id="jQl-Jf-pHz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-1419"/>
+        </scene>
+        <!--Type of Data-->
+        <scene sceneID="ydG-1t-PjA">
+            <objects>
+                <viewController storyboardIdentifier="Type of Data" title="Type of Data" id="if0-UL-Epn" userLabel="Type of Data" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OGm-Hw-8Lz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ez6-la-IIj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D9T-Sb-DW3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_type_of_data" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-2r-Xom">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-SP-Qgh" userLabel="Left Arrow Button">
+                                <rect key="frame" x="37" y="329" width="112" height="110"/>
+                                <gestureRecognizers/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iFS-jV-rla" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="BqC-gT-593"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0KQ-T1-HmJ" appends="YES" id="Ms4-Ws-G2G"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Type of Data"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQx-Y1-bRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iFS-jV-rla" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="0KQ-T1-HmJ" userLabel="Swipe Right">
+                    <connections>
+                        <action selector="swipedRight:" destination="if0-UL-Epn" id="Yw3-sC-vvB"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2236" y="-1419"/>
         </scene>
         <!--Menu Page-->
         <scene sceneID="glY-rM-AdO">
@@ -160,6 +330,10 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="MenuPage"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="categoryAndPerformanceSectionStart" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeOfData" value="Type of Data"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="whatYouNeedToStart" value="What You Need To Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="whatIsScanD" value="What Is Scan D"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="replayIntro" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F66-Fo-NCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -534,9 +708,12 @@
         <image name="SCAND_Loading-Start_page_11-18-14" width="2048" height="1536"/>
         <image name="SCAND_dashboard_templates_MENU" width="2048" height="1536"/>
         <image name="SCAND_home_table_of_contents" width="2048" height="1536"/>
+        <image name="SCAND_type_of_data" width="2048" height="1536"/>
+        <image name="SCAND_what_is_scanD" width="2048" height="1536"/>
+        <image name="SCAND_what_you_need_to_start" width="2048" height="1536"/>
         <image name="_SCAND_dashboard_templates_Category_snapshot" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WrE-dD-vBb"/>
+        <segue reference="TIr-zc-mkr"/>
     </inferredMetricsTieBreakers>
 </document>

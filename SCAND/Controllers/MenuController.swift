@@ -76,7 +76,7 @@ import MediaPlayer
         }
         
         println("Transition from menu to \(storyBoardId)")
-                self.transitionToViewControllerByStoryboardId(categoryAndPerformanceSectionStart)
+                self.transitionToViewControllerByStoryboardId(storyBoardId)
     }
     
     
