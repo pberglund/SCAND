@@ -41,7 +41,7 @@
         <!--Menu Page-->
         <scene sceneID="glY-rM-AdO">
             <objects>
-                <viewController storyboardIdentifier="MenuPage" title="Menu" id="Ony-UR-cuj" userLabel="Menu Page" customClass="ViewController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuPage" title="Menu" id="Ony-UR-cuj" userLabel="Menu Page" customClass="MenuController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HIc-ng-WjC"/>
                         <viewControllerLayoutGuide type="bottom" id="1yB-A1-OKI"/>
@@ -50,13 +50,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4x-kJ-3jV">
-                                <rect key="frame" x="960" y="25" width="40" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4x-kJ-3jV" userLabel="Close Menu">
+                                <rect key="frame" x="957" y="25" width="42" height="40"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="flh-Kn-dWf" kind="unwind" unwindAction="unwindToViewController:" id="m8G-lH-j3g"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_dashboard_templates_MENU" translatesAutoresizingMaskIntoConstraints="NO" id="xJo-mw-ocO">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqs-vh-s11" userLabel="Category Performance Button">
+                                <rect key="frame" x="49" y="307" width="139" height="131"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="P5D-2K-0bf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbh-94-W22" userLabel="Assortment / Portfolio Button">
+                                <rect key="frame" x="245" y="307" width="139" height="131"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="vAB-d1-ohr"/>
+                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="VJi-HG-Ip0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wY-4M-V8D" userLabel="Pricing Analysis Button">
+                                <rect key="frame" x="442" y="319" width="139" height="131"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="P31-o1-RGH"/>
+                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="Dp0-UL-WP8"/>
+                                    <action selector="pricingAnalysisButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="9OF-ZD-2T8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDL-KX-dnQ" userLabel="Store Performance Button">
+                                <rect key="frame" x="649" y="307" width="139" height="131"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="yE1-tV-pzQ"/>
+                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="x7v-Vg-4lS"/>
+                                    <action selector="storePerformanceButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="J8h-Wh-RKW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF9-4I-OI4" userLabel="Shopper Marketing Button">
+                                <rect key="frame" x="845" y="307" width="139" height="131"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="Q0y-Vq-P1v"/>
+                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="TfI-9l-a2Z"/>
+                                    <action selector="shopperMarketingButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="8nv-hC-g2f"/>
+                                    <action selector="storePerformanceButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="67j-Ir-mcN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Mg-tmP" userLabel="What Is SCAND Button">
+                                <rect key="frame" x="117" y="690" width="137" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="whatIsScanDButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="D4C-Gy-oC7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-ks-Dzj" userLabel="What You Need To Start Button">
+                                <rect key="frame" x="317" y="690" width="222" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="whatYouNeedToStartButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="YOB-Pj-iT1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRq-yO-i9U" userLabel="Type of Data Button">
+                                <rect key="frame" x="593" y="690" width="137" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="typeOfDataButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="aMq-1a-map"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy7-fg-N82" userLabel="Replay Intro Button">
+                                <rect key="frame" x="780" y="695" width="132" height="31"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="replayIntroButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="uJM-3n-LEK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +158,8 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU.jpg"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="menuPage"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="MenuPage"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryAndPerformanceSectionStart" value="3CategoryPerformance"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F66-Fo-NCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,7 +285,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-Dw-Wdi" userLabel="Arrow Button">
                                         <rect key="frame" x="880" y="332" width="101" height="105"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -327,7 +420,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4138" y="-268"/>
+            <point key="canvasLocation" x="4186" y="-268"/>
         </scene>
         <!--CP - Page 2-->
         <scene sceneID="LgU-o6-WsD">
@@ -338,6 +431,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fsc-od-4sT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1E9-Hy-7ae">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDD-4p-dDN">
@@ -380,11 +474,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMp-wu-xnn" userLabel="Down Arrow View">
-                                        <rect key="frame" x="489" y="705" width="47" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-7U-SmO" userLabel="Up Arrow View">
-                                        <rect key="frame" x="489" y="788" width="47" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -401,7 +493,7 @@
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="0.0"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
                     </userDefinedRuntimeAttributes>
@@ -436,27 +528,11 @@
             </objects>
             <point key="canvasLocation" x="5266" y="-268"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="0qf-iD-BlR">
-            <objects>
-                <viewController id="uiC-Qs-QqO" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iIl-rP-H5O"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZmF-Mm-POU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XLD-Mz-aOt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NRe-jy-jrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="1_SCAND_dashboard_templates_Landing_Category_Performance" width="2048" height="1536"/>
         <image name="SCAND_Loading-Start_page_11-18-14" width="2048" height="1536"/>
+        <image name="SCAND_dashboard_templates_MENU" width="2048" height="1536"/>
         <image name="SCAND_home_table_of_contents" width="2048" height="1536"/>
         <image name="_SCAND_dashboard_templates_Category_snapshot" width="2048" height="3072"/>
     </resources>

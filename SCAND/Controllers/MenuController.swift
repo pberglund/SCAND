@@ -10,57 +10,74 @@ import UIKit
 import MediaPlayer
 
 @IBDesignable class MenuController: BaseViewController {
+
+    //Main sections
+    @IBInspectable var categoryAndPerformanceSectionStart: String!
+    @IBInspectable var assortmentPortfolioSectionStart: String!
+    @IBInspectable var pricingAnalysisSectionStart: String!
+    @IBInspectable var storePerformanceSectionStart: String!
+    @IBInspectable var shopperMarketingSectionStart: String!
     
-    var returnStoryBoardId:String!
-    var transManager:TransitionManager!
+    //Bottom Links
+    @IBInspectable var whatIsScanD: String!
+    @IBInspectable var whatYouNeedToStart: String!
+    @IBInspectable var typeOfData: String!
+    @IBInspectable var replayIntro: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addCloseMenuButton();
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    func addCloseMenuButton(){
-        
-        //if(menuButtonImageFileName == nil){
-        //    return
-        //}
-        
-        //let image = UIImage(named: menuButtonImageFileName) as UIImage?
-        //let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        //button.frame = CGRectMake(960, 25, 40, 35)
-        //button.setImage(image, forState: .Normal)
-        //button.addTarget(self, action: "closedBtnTouched:", forControlEvents:.TouchUpInside)
-        
-        //self.view.addSubview(button)
-        
+    // Main Sections
+    @IBAction func categoryPerformanceClicked(sender: AnyObject) {
+        transitionFromMenu(categoryAndPerformanceSectionStart)
     }
     
-    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
-        // empty for now
+    @IBAction func assesmentPortfolioButtonClicked(sender: AnyObject) {
+        transitionFromMenu(assortmentPortfolioSectionStart)
     }
     
-    func closedBtnTouched(sender:UIButton!)
-    {
-
-        println("Close Button tapped")
+    @IBAction func pricingAnalysisButtonClicked(sender: AnyObject) {
+        transitionFromMenu(pricingAnalysisSectionStart)
+    }
+    
+    @IBAction func storePerformanceButtonClicked(sender: AnyObject) {
+        transitionFromMenu(storePerformanceSectionStart)
+    }
+    
+    @IBAction func shopperMarketingButtonClicked(sender: AnyObject) {
+        transitionFromMenu(shopperMarketingSectionStart)
+    }
+    
+    //Bottom Links
+    @IBAction func whatIsScanDButtonClicked(sender: AnyObject) {
+        transitionFromMenu(whatIsScanD)
+    }
+    
+    @IBAction func whatYouNeedToStartButtonClicked(sender: AnyObject) {
+        transitionFromMenu(whatYouNeedToStart)
+    }
+    
+    @IBAction func typeOfDataButtonClicked(sender: AnyObject) {
+        transitionFromMenu(typeOfData)
+    }
+    
+    @IBAction func replayIntroButtonClicked(sender: AnyObject) {
+        transitionFromMenu(replayIntro)
+    }
+    
+    
+    func transitionFromMenu(storyBoardId:String){
         
-        if(returnStoryBoardId == nil || returnStoryBoardId == ""){
-            println("Error returning to previous controller, returnStoryBoardId was null")
-            return;
+        if(storyBoardId == ""){
+            println("In menu transition, provided storyboardid was empty, returning")
+            return
         }
         
-        self.transitionToViewControllerByStoryboardId(returnStoryBoardId)
-        
-
+        println("Transition from menu to \(storyBoardId)")
+                self.transitionToViewControllerByStoryboardId(categoryAndPerformanceSectionStart)
     }
-
-    
     
     
     

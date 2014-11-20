@@ -26,6 +26,7 @@
 		043BE66A1A1BE646007A6E72 /* BaseScanDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6691A1BE646007A6E72 /* BaseScanDController.swift */; };
 		043BE69A1A1CE82A007A6E72 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6991A1CE82A007A6E72 /* StartController.swift */; };
 		043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69B1A1CE8D6007A6E72 /* SectionController.swift */; };
+		043BE69E1A1D46CD007A6E72 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69D1A1D46CD007A6E72 /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		043BE6691A1BE646007A6E72 /* BaseScanDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScanDController.swift; sourceTree = "<group>"; };
 		043BE6991A1CE82A007A6E72 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		043BE69B1A1CE8D6007A6E72 /* SectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
+		043BE69D1A1D46CD007A6E72 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		043BE6511A1B96AE007A6E72 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				043BE69D1A1D46CD007A6E72 /* MenuController.swift */,
 				043BE6521A1B96AE007A6E72 /* BaseViewController.swift */,
 				043BE6531A1B96AE007A6E72 /* VideoController.swift */,
 				043BE6541A1B96AE007A6E72 /* SliderViewController.swift */,
@@ -285,6 +288,7 @@
 				043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */,
 				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
 				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,
+				043BE69E1A1D46CD007A6E72 /* MenuController.swift in Sources */,
 				043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
