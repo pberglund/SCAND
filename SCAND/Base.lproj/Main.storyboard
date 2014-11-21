@@ -1691,7 +1691,7 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhf-Lg-jGM"/>
         <segue reference="Bkw-JS-1Id"/>
+        <segue reference="CJa-qp-vrs"/>
     </inferredMetricsTieBreakers>
 </document>
