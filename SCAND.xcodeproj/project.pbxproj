@@ -27,6 +27,7 @@
 		043BE69A1A1CE82A007A6E72 /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6991A1CE82A007A6E72 /* StartController.swift */; };
 		043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69B1A1CE8D6007A6E72 /* SectionController.swift */; };
 		043BE69E1A1D46CD007A6E72 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69D1A1D46CD007A6E72 /* MenuController.swift */; };
+		043BE6A01A1EA90F007A6E72 /* SectionBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69F1A1EA90F007A6E72 /* SectionBaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		043BE6991A1CE82A007A6E72 /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		043BE69B1A1CE8D6007A6E72 /* SectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionController.swift; sourceTree = "<group>"; };
 		043BE69D1A1D46CD007A6E72 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		043BE69F1A1EA90F007A6E72 /* SectionBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionBaseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				043BE6691A1BE646007A6E72 /* BaseScanDController.swift */,
 				043BE6991A1CE82A007A6E72 /* StartController.swift */,
 				043BE69B1A1CE8D6007A6E72 /* SectionController.swift */,
+				043BE69F1A1EA90F007A6E72 /* SectionBaseController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */,
 				043BE66A1A1BE646007A6E72 /* BaseScanDController.swift in Sources */,
 				043BE6591A1B96AE007A6E72 /* ViewController.swift in Sources */,
+				043BE6A01A1EA90F007A6E72 /* SectionBaseController.swift in Sources */,
 				043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */,
 				043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */,
 				043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */,

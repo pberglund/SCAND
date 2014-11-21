@@ -9,32 +9,42 @@
 import UIKit
 import MediaPlayer
 
-@IBDesignable class SectionController: BaseScanDController {
-    
-    //@IBInspectable var leftView: String!
-    
-    @IBInspectable var rightView: String!
-    @IBInspectable var videoPath: String!
-    let transitionDistance:CGFloat = 768
-    let animationDuration = 2.0
-    var lastDirection:Direction = Direction.None
-    
-    @IBOutlet weak var sliderView: UIView!
-    @IBOutlet weak var expandCollapseButton: UIButton!
-    
-    
-    @IBOutlet weak var downArrowView: UIView!
-    @IBOutlet weak var upArrowView: UIView!
+class SectionController: SectionBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.sliderView.frame = self.view.frame;
-        if(downArrowView == nil){
-        return
-        }
+        let downArrowBase = UIImage(named: "_SCAND_dashboard_templates_Manufacturer_snapshot_03")
+        let downArrowDimensions = CGSize(width: 47, height: 30)
+        let downArrrowResized = RBResizeImage(downArrowBase!, targetSize: downArrowDimensions)
+        let downArrowImageView = UIImageView(image: downArrrowResized)
         
-        self.downArrowView.alpha = 0.0
+        var downFrame = CGRect(x: 489, y: 707, width: 47, height: 30)
+        downArrowView = UIView(frame: downFrame)
+        
+        //downArrowView.backgroundColor = UIColor.clearColor()
+        
+        downArrowView.addSubview(downArrowImageView)
+        
+        downArrowView.alpha = 1.0;
+        self.sliderView.addSubview(downArrowView)
+        
+        let upArrowBase = UIImage(named: "_SCAND_dashboard_templates_Manufacturer_snapshot_06")
+        let upArrowDimensions = CGSize(width: 47, height: 30)
+        let upArrrowResized = RBResizeImage(upArrowBase!, targetSize: upArrowDimensions)
+        let upArrowImageView = UIImageView(image: upArrrowResized)
+        
+        var upFrame = CGRect(x: 489, y: 788, width: 47, height: 30)
+        upArrowView = UIView(frame: upFrame)
+        
+        //downArrowView.backgroundColor = UIColor.clearColor()
+        
+        upArrowView.addSubview(upArrowImageView)
+        
+        upArrowView.alpha = 0.0;
+        self.sliderView.addSubview(upArrowView)
+        //self.downArrowView.alpha = 0.0
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,158 +52,7 @@ import MediaPlayer
         // Dispose of any resources that can be recreated.
     }
     
-    func showHideArrows(showArrow:UIView, hideArrow:UIView){
-    UIView.animateWithDuration(0.75, animations: {
-    hideArrow.alpha = 1.0
-    showArrow.alpha = 0.0
-    })
-}
-    
-    func arrowAnimationUp(){
-        showHideArrows(upArrowView, hideArrow: downArrowView)
-    }
-
-    func arrowAnimationDown(){
-        showHideArrows(downArrowView, hideArrow: upArrowView)
-    }
-    
-    func goRight(){
-        self.transitionToViewControllerByStoryboardId(rightView)
-    }
-    
-    func goLeft(){
-        self.transitionToViewControllerBySegueIdentifier("unwindSegue", originPage: self.pageIdentifier)
-    }
-    
-    @IBAction func rightArrowButton(sender: AnyObject) {
-        println("Clicked right arrow, going to: \(rightView)")
-        goRight()
-    }
-    
-    @IBAction func playArrowButton(sender: AnyObject) {
-    }
-    
-    @IBAction func swipedUp(sender: AnyObject) {
-        
-        println("swiped up...")
-        slide(Direction.Down);
-    }
-    @IBAction func swipedDown(sender: AnyObject) {
-        println("swiped down...")
-        slide(Direction.Up);
-    }
-    
-    @IBAction func swipedRight(sender: AnyObject) {
-        println("swiped right...")
-        slide(Direction.Left);
-    }
-    
-    @IBAction func swipedLeft(sender: AnyObject) {
-        println("swiped left...")
-        slide(Direction.Right);
-    }
-    
-    func slide(direction: Direction){
-        
-        // If we havent slide, and they want to slide up, return
-        if(lastDirection == Direction.None && direction == Direction.Down){
-            return;
-        }
-        
-        //If they are trying to swipe the same way as the last time, return
-        if(lastDirection == direction){
-            return;
-        }
-        
-        let leftOrRight = (direction == Direction.Left || direction == Direction.Right)
-        
-        if(lastDirection == Direction.Up && leftOrRight){
-            
-            println("Sliding up before transistion \(direction.hashValue)")
-            
-            
-            slideIt(Direction.Down, { self.segueWithDirection(direction)})
-            
-            return;
-        }
-        
-        if(leftOrRight){
-            self.segueWithDirection(direction)
-            return
-        }
-        
-        
-        slideIt(direction, nil)
-        lastDirection = direction;
-        
-    }
     
     
-    func segueWithDirection(direction: Direction) -> Void{
-        
-        var pageName = self.pageIdentifier;
-        if(pageName == nil){
-            pageName = "";
-        }
-        
-        switch direction {
-        case Direction.Left:
-            //self.performSegueWithIdentifier("Slide To Main", sender: self)
-            //let vc:ViewController = ViewController()
-            //let vc : AnyObject! = self.storyboard.instantiateViewControllerWithIdentifier("1StartPage")
-            //self.showViewController(vc as UIViewController, sender: vc)
-            //self.transitionToViewControllerBySegueIdentifier(leftSegueIdentifier, originPage: pageName)
-            goLeft();
-        case Direction.Right:
-           // self.transitionToViewControllerBySegueIdentifier(rightSequeIdentifier, originPage: pageName)
-            goRight();
-            
-        default:
-            println("Error finding a direction, segueWithDirection: returning")
-        }
-        
-        return
-    }
     
-    func slideIt(direction: Direction, completion: (() -> Void)!){
-        //println("In slideIt")
-        
-        let currFrame = sliderView.frame
-        
-        let newX:CGFloat = currFrame.origin.x
-        var newY:CGFloat = currFrame.origin.y
-        
-        
-        switch direction {
-        case Direction.Up:
-            newY -= transitionDistance
-            arrowAnimationUp()
-        case Direction.Down:
-            newY += transitionDistance
-            arrowAnimationDown()
-        default:
-            println("Error finding a direction, slideIt: returning")
-            return;
-            
-        }
-        
-        let newFrame:CGRect = CGRectMake(newX, newY, currFrame.width, currFrame.height);
-        
-        UIView.animateWithDuration(animationDuration, animations: {
-            
-            self.sliderView.frame = newFrame
-            //println("sliding...")
-            
-            }, completion: {
-                (value: Bool) in
-                
-                //println("Done sliding")
-                if((completion) != nil){
-                    completion()
-                }
-                
-        })
-        println("Leaving slideIt");
-    }
-
 }

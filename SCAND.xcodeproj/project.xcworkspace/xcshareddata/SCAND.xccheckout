@@ -22,7 +22,7 @@
 		<key>8B855B7293F4BEA7928E943C26AB3BDC9047532A</key>
 		<string>../..</string>
 		<key>B1C9B88AAE249185B03FC4241BEDA4BDAAD58E83</key>
-		<string>../../../../SingleView/SingleView</string>
+		<string>../../../SingleView/SingleView</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/pberglund/SCAND.git</string>

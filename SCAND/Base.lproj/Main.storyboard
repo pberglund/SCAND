@@ -480,10 +480,10 @@
             </objects>
             <point key="canvasLocation" x="1835" y="571"/>
         </scene>
-        <!--Category Performance Start-->
+        <!--CP -  Category Performance Start-->
         <scene sceneID="bi1-ZV-bM9">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Start" title="Category Performance Start" id="14a-ZL-8Of" userLabel="Category Performance Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Start" title="Category Performance Start" id="14a-ZL-8Of" userLabel="CP -  Category Performance Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ckk-6p-hCs"/>
                         <viewControllerLayoutGuide type="bottom" id="Xax-eP-Cfm"/>
@@ -522,7 +522,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="fJL-TP-p4D" id="Y3s-yF-P3S"/>
@@ -565,14 +565,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VIn-nC-Tml" appends="YES" id="LXC-dk-MaS"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
@@ -622,14 +622,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="6hp-jo-AWe" appends="YES" id="eVI-Lc-nSj"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
@@ -679,14 +679,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="v8h-cQ-Y8K" appends="YES" id="Vna-OS-ycX"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
@@ -736,14 +736,14 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3N8-Rn-XXa" appends="YES" id="KXx-5M-oEL"/>
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
@@ -812,11 +812,11 @@
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJm-Vf-PmY" userLabel="Down Arrow View">
                                         <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-Gb-aIy" userLabel="Up Arrow View">
                                         <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -837,7 +837,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="KJm-Vf-PmY" id="oOJ-z4-ool"/>
@@ -1500,10 +1500,10 @@
             </objects>
             <point key="canvasLocation" x="6506" y="624"/>
         </scene>
-        <!--Category Performance - Page 2-->
+        <!--CP - Category Performance - Page 2-->
         <scene sceneID="LgU-o6-WsD">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Page - 2" title="Category Performance Page - 2" id="4NV-n7-ZOK" userLabel="Category Performance - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Page - 2" title="Category Performance Page - 2" id="4NV-n7-ZOK" userLabel="CP - Category Performance - Page 2" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XRk-Dh-eiz"/>
                         <viewControllerLayoutGuide type="bottom" id="Fsc-od-4sT"/>
@@ -1569,7 +1569,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -1603,10 +1603,10 @@
             </objects>
             <point key="canvasLocation" x="5354" y="-268"/>
         </scene>
-        <!--Category Performance - Page 3-->
+        <!--CP - Category Performance - Page 3-->
         <scene sceneID="xQV-aa-qPP">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Page - 3" title="Category Performance Page - 3" id="deR-nr-Rv0" userLabel="Category Performance - Page 3" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Page - 3" title="Category Performance Page - 3" id="deR-nr-Rv0" userLabel="CP - Category Performance - Page 3" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IMx-o9-zWO"/>
                         <viewControllerLayoutGuide type="bottom" id="iqS-no-siM"/>
@@ -1672,8 +1672,8 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 3"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="nOw-m2-PTW" id="12d-Hq-dYY"/>
@@ -1730,7 +1730,7 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xvg-He-u6y"/>
+        <segue reference="dhf-Lg-jGM"/>
         <segue reference="WrE-dD-vBb"/>
     </inferredMetricsTieBreakers>
 </document>
