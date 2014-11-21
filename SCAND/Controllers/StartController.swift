@@ -11,6 +11,8 @@ import MediaPlayer
 
 @IBDesignable class StartController: BaseScanDController {
     
+    @IBInspectable var startToVideoSegueIdentifier: String!
+    
     @IBInspectable var startToDashBoardSegueIdentifier: String!
     
     override func viewDidLoad() {
@@ -23,9 +25,12 @@ import MediaPlayer
     }
     
     @IBAction func StartButtonTouched(sender: AnyObject) {
-        self.transitionToViewControllerBySegueIdentifier(startToDashBoardSegueIdentifier)
+        self.transitionToViewControllerBySegueIdentifier(startToVideoSegueIdentifier)
     }
     
+    @IBAction func skipIntroButtonTouched(sender: AnyObject) {
+        self.transitionToViewControllerBySegueIdentifier(startToDashBoardSegueIdentifier)
+    }
     
     
 }

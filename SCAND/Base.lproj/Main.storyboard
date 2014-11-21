@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1Q-xP-5dL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -24,20 +24,20 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="segueAfterVideo" value="Custom from 1 to main"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="segueAfterVideo" value="Video - Dashboard"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Big_Buck_Bunny_Trailer"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Start">
+                <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Dasboard">
                     <connections>
-                        <segue destination="T1Q-xP-5dL" kind="custom" identifier="Custom from 1 to main" customClass="RightLeftSegue" id="TIr-zc-mkr"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="RightLeftSegue" id="CJa-qp-vrs"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-381" y="559"/>
+            <point key="canvasLocation" x="759" y="571"/>
         </scene>
         <!--What Is SCAN D?-->
         <scene sceneID="Jcb-17-2tq">
@@ -365,6 +365,15 @@
                                     <action selector="StartButtonTouched:" destination="T1Q-xP-5dL" eventType="touchUpInside" id="Q2P-e2-GbU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phk-Fz-tVt" userLabel="Skip Intro Button">
+                                <rect key="frame" x="475" y="686" width="75" height="36"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipIntroButtonTouched:" destination="T1Q-xP-5dL" eventType="touchUpInside" id="paP-Te-qRl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -377,17 +386,21 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_Loading-Start_page_11-18-14.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Start Page"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="startToVideoSegueIdentifier" value="Start - Video"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="startToDashBoardSegueIdentifier" value="Start - Dashboard"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="RightLeftSegue" id="aA0-hY-Rsz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Dashboard">
+                <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Video">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="RightLeftSegue" id="0kL-dk-s7A"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="Start - Video" customClass="RightLeftSegue" id="Bkw-JS-1Id"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="729" y="551"/>
+            <point key="canvasLocation" x="-350" y="571"/>
         </scene>
         <!--Dashboard Page-->
         <scene sceneID="3qf-Ue-iw4">
@@ -467,14 +480,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="storePerformanceSegueIdentifier" value="Store Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="shopperMarketingSegueIdentifier" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="14a-ZL-8Of" kind="custom" identifier="Dashboard - Category Performance" customClass="RightLeftSegue" id="DtN-b0-etW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-HS-bNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="hSX-Ec-1Dd" userLabel="Swipe to Start">
+                <swipeGestureRecognizer direction="right" id="hSX-Ec-1Dd" userLabel="Swipe to Video">
                     <connections>
-                        <segue destination="T1Q-xP-5dL" kind="custom" identifier="Dashboard - Start" customClass="LeftRightSegue" id="WrE-dD-vBb"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" customClass="LeftRightSegue" id="4em-bj-NZO"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1730,7 +1740,7 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhf-Lg-jGM"/>
-        <segue reference="WrE-dD-vBb"/>
+        <segue reference="CJa-qp-vrs"/>
+        <segue reference="4em-bj-NZO"/>
     </inferredMetricsTieBreakers>
 </document>
