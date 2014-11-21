@@ -37,12 +37,12 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="759" y="571"/>
+            <point key="canvasLocation" x="681" y="571"/>
         </scene>
         <!--What Is SCAN D?-->
         <scene sceneID="Jcb-17-2tq">
             <objects>
-                <viewController storyboardIdentifier="What Is Scan D" title="What Is Scan D" id="XrY-zs-24a" userLabel="What Is SCAN D?" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="What Is Scan D" title="What Is Scan D" id="XrY-zs-24a" userLabel="What Is SCAN D?" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eBM-fO-aAN"/>
                         <viewControllerLayoutGuide type="bottom" id="fkw-ZN-Fcc"/>
@@ -98,7 +98,7 @@
         <!--What You Need To Start-->
         <scene sceneID="ftm-tI-Uc3">
             <objects>
-                <viewController storyboardIdentifier="What You Need To Start" title="What You Need To Start" id="heR-QC-HNc" userLabel="What You Need To Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="What You Need To Start" title="What You Need To Start" id="heR-QC-HNc" userLabel="What You Need To Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EhZ-JA-9oa"/>
                         <viewControllerLayoutGuide type="bottom" id="Uzj-u4-P7b"/>
@@ -163,7 +163,7 @@
         <!--Type of Data-->
         <scene sceneID="ydG-1t-PjA">
             <objects>
-                <viewController storyboardIdentifier="Type of Data" title="Type of Data" id="if0-UL-Epn" userLabel="Type of Data" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Type of Data" title="Type of Data" id="if0-UL-Epn" userLabel="Type of Data" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OGm-Hw-8Lz"/>
                         <viewControllerLayoutGuide type="bottom" id="ez6-la-IIj"/>
@@ -400,7 +400,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-350" y="571"/>
+            <point key="canvasLocation" x="-413" y="571"/>
         </scene>
         <!--Dashboard Page-->
         <scene sceneID="3qf-Ue-iw4">
@@ -522,6 +522,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ovo-ce-gBB" appends="YES" id="MkR-6B-fqQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="Tnh-eb-ScD" appends="YES" id="dr6-nl-gQA"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -544,13 +545,18 @@
                         <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="dhf-Lg-jGM"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Tnh-eb-ScD" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="14a-ZL-8Of" id="roR-Zb-JCI"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3088" y="-268"/>
         </scene>
         <!--Assortment Portfolio Start-->
         <scene sceneID="TKN-qD-vju">
             <objects>
-                <viewController storyboardIdentifier="Assortment Portfolio Start" title="Assortment Portfolio Start" id="IB0-YQ-rHE" userLabel="Assortment Portfolio Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Assortment Portfolio Start" title="Assortment Portfolio Start" id="IB0-YQ-rHE" userLabel="Assortment Portfolio Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J7X-nm-L93"/>
                         <viewControllerLayoutGuide type="bottom" id="cxl-we-Us1"/>
@@ -579,17 +585,19 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="VIn-nC-Tml" appends="YES" id="LXC-dk-MaS"/>
+                                    <outletCollection property="gestureRecognizers" destination="juu-Tp-qsd" appends="YES" id="psK-g4-ylB"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="r1I-RZ-uBl" id="6Oj-aU-ALN"/>
@@ -601,13 +609,18 @@
                         <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="0cL-tx-N9G"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="juu-Tp-qsd" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="IB0-YQ-rHE" id="6vi-cg-12S"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3100" y="624"/>
         </scene>
         <!--Pricing Analysis Start-->
         <scene sceneID="jNX-Rv-ifB">
             <objects>
-                <viewController storyboardIdentifier="Pricing Analysis Start" title="Pricing Analysis Start" id="53k-em-v8c" userLabel="Pricing Analysis Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pricing Analysis Start" title="Pricing Analysis Start" id="53k-em-v8c" userLabel="Pricing Analysis Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CBM-NK-LMu"/>
                         <viewControllerLayoutGuide type="bottom" id="gcX-Zq-e4B"/>
@@ -636,17 +649,19 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="6hp-jo-AWe" appends="YES" id="eVI-Lc-nSj"/>
+                                    <outletCollection property="gestureRecognizers" destination="M5U-Vj-ExH" appends="YES" id="Fp8-zY-ZPR"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ouy-Ng-Eg2" id="EoU-ey-uid"/>
@@ -658,13 +673,18 @@
                         <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="xvg-He-u6y"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="M5U-Vj-ExH" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="53k-em-v8c" id="QnB-V0-v5o"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3100" y="1552"/>
         </scene>
         <!--Store Performance Start-->
         <scene sceneID="tlj-hE-Ih4">
             <objects>
-                <viewController storyboardIdentifier="Store Performance Start" title="Store Performance Start" id="JIs-6d-fUj" userLabel="Store Performance Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Store Performance Start" title="Store Performance Start" id="JIs-6d-fUj" userLabel="Store Performance Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eHh-9T-Gll"/>
                         <viewControllerLayoutGuide type="bottom" id="MhG-uz-aa3"/>
@@ -693,17 +713,19 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="v8h-cQ-Y8K" appends="YES" id="Vna-OS-ycX"/>
+                                    <outletCollection property="gestureRecognizers" destination="k8c-9g-K4i" appends="YES" id="c2B-Ci-iU0"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="T92-o5-NgT" id="XRi-EJ-31w"/>
@@ -715,13 +737,18 @@
                         <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="s36-W1-GVc"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="k8c-9g-K4i" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="JIs-6d-fUj" id="YyH-PS-Mvy"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3100" y="2512"/>
         </scene>
         <!--Shopper Marketing Start-->
         <scene sceneID="yNC-Zt-Dgd">
             <objects>
-                <viewController storyboardIdentifier="Shopper Marketing Start" title="Shopper Marketing Start" id="USv-Ee-74X" userLabel="Shopper Marketing Start" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Shopper Marketing Start" title="Shopper Marketing Start" id="USv-Ee-74X" userLabel="Shopper Marketing Start" customClass="SectionBaseController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cN-x1-I4e"/>
                         <viewControllerLayoutGuide type="bottom" id="gRJ-ah-V2d"/>
@@ -750,6 +777,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3N8-Rn-XXa" appends="YES" id="KXx-5M-oEL"/>
+                                    <outletCollection property="gestureRecognizers" destination="LrB-hP-83x" appends="YES" id="G9N-Rb-YjX"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -760,7 +788,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Shopper Marketing Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What Is Scan D"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-5"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="1LE-ZU-WxA" id="dme-HY-WZR"/>
@@ -770,6 +798,11 @@
                 <swipeGestureRecognizer direction="right" id="3N8-Rn-XXa" userLabel="Swipe Right">
                     <connections>
                         <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="ccO-0I-OE5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="LrB-hP-83x" userLabel="Swipe Left">
+                    <connections>
+                        <action selector="swipedLeft:" destination="USv-Ee-74X" id="rZK-ek-hE1"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -952,7 +985,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="UHG-SU-M7L" id="atl-xB-oNP"/>
@@ -1056,8 +1089,8 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="tPh-as-LmQ" id="N62-b7-cpA"/>
@@ -1161,8 +1194,8 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="AGE-ky-2i7" id="Dgl-C7-JgP"/>
@@ -1267,7 +1300,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="cqZ-QM-LKF" id="6ha-W0-ZfR"/>
@@ -1372,7 +1405,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 3"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="UJi-9W-zYD" id="hT0-mD-N9B"/>
@@ -1477,7 +1510,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_background-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="downArrowView" destination="gEq-I2-4Xh" id="O61-yA-yP2"/>
@@ -1740,7 +1773,7 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CJa-qp-vrs"/>
-        <segue reference="4em-bj-NZO"/>
+        <segue reference="ccO-0I-OE5"/>
+        <segue reference="Bkw-JS-1Id"/>
     </inferredMetricsTieBreakers>
 </document>
