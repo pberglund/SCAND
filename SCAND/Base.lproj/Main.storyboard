@@ -329,11 +329,15 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="MenuPage"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="categoryAndPerformanceSectionStart" value="3CategoryPerformance"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryAndPerformanceSectionStart" value="Category Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="typeOfData" value="Type of Data"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="whatYouNeedToStart" value="What You Need To Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="whatIsScanD" value="What Is Scan D"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="replayIntro" value="Intro Video"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="assortmentPortfolioSectionStart" value="Assortment Portfolio Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pricingAnalysisSectionStart" value="Pricing Analysis Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storePerformanceSectionStart" value="Store Performance Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="shopperMarketingSectionStart" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F66-Fo-NCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -853,14 +857,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJm-Vf-PmY" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-Gb-aIy" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -883,9 +879,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="KJm-Vf-PmY" id="oOJ-z4-ool"/>
                         <outlet property="sliderView" destination="cug-iJ-Y16" id="p94-1d-ez4"/>
-                        <outlet property="upArrowView" destination="ghf-Gb-aIy" id="kvu-PQ-luv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0H-gB-ylT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -958,14 +952,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Assortment_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-wO-QSy">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHG-SU-M7L" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="57B-qC-ge6" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -988,9 +974,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="UHG-SU-M7L" id="atl-xB-oNP"/>
                         <outlet property="sliderView" destination="Vnt-03-uXo" id="yH0-KW-Te3"/>
-                        <outlet property="upArrowView" destination="57B-qC-ge6" id="DFS-40-zr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNM-Sm-rG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1063,14 +1047,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Range_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="med-Sq-fCv">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-as-LmQ" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-oS-80D" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1093,9 +1069,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="tPh-as-LmQ" id="N62-b7-cpA"/>
                         <outlet property="sliderView" destination="0MD-sS-pkh" id="pGL-pV-55L"/>
-                        <outlet property="upArrowView" destination="YIc-oS-80D" id="zjo-fK-ybI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjP-Vx-5rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1168,14 +1142,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Store_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-Lg-C8K">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGE-ky-2i7" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itS-cp-wrq" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1198,9 +1164,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="AGE-ky-2i7" id="Dgl-C7-JgP"/>
                         <outlet property="sliderView" destination="yS3-wA-eT8" id="Tks-yj-WDq"/>
-                        <outlet property="upArrowView" destination="itS-cp-wrq" id="x3p-8B-XCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-4C-dk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1273,14 +1237,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Trend_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-kD-C9W">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-QM-LKF" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-dc-ggW" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1303,9 +1259,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="cqZ-QM-LKF" id="6ha-W0-ZfR"/>
                         <outlet property="sliderView" destination="5pG-dv-Suf" id="TIb-2e-4am"/>
-                        <outlet property="upArrowView" destination="hJC-dc-ggW" id="xf1-aY-VE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ar-XE-9vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1378,14 +1332,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Power_Index" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-cO-pqN">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJi-9W-zYD" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7z-ch-UYO" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1408,9 +1354,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="UJi-9W-zYD" id="hT0-mD-N9B"/>
                         <outlet property="sliderView" destination="Fsw-nh-dd6" id="uUt-g1-zCf"/>
-                        <outlet property="upArrowView" destination="N7z-ch-UYO" id="SaR-Ex-HMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq7-Bs-HKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1483,14 +1427,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Product_Ranking" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-hK-PsY">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-I2-4Xh" userLabel="Down Arrow View">
-                                        <rect key="frame" x="488" y="707" width="47" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csg-aZ-5Qu" userLabel="Up Arrow View">
-                                        <rect key="frame" x="488" y="788" width="47" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1513,9 +1449,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="gEq-I2-4Xh" id="O61-yA-yP2"/>
                         <outlet property="sliderView" destination="X6x-zA-gGl" id="F5M-Zf-eJ7"/>
-                        <outlet property="upArrowView" destination="csg-aZ-5Qu" id="2dD-iP-JRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-la-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1589,12 +1523,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Manufacturer_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMp-wu-xnn" userLabel="Down Arrow View">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-7U-SmO" userLabel="Up Arrow View">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1616,9 +1544,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="IMp-wu-xnn" id="Ly6-vu-CQ6"/>
                         <outlet property="sliderView" destination="KDD-4p-dDN" id="pdS-vO-tud"/>
-                        <outlet property="upArrowView" destination="KaS-7U-SmO" id="Pun-HG-zDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwE-k8-joj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1692,12 +1618,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Key_Manufacturer" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-pE-nkz">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOw-m2-PTW" userLabel="Down Arrow View">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2P-aa-tIm" userLabel="Up Arrow View">
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1719,9 +1639,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="downArrowView" destination="nOw-m2-PTW" id="12d-Hq-dYY"/>
                         <outlet property="sliderView" destination="ILF-3E-EAj" id="x1e-Qz-eCk"/>
-                        <outlet property="upArrowView" destination="C2P-aa-tIm" id="fzu-rA-B4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2x-zZ-DVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1773,7 +1691,7 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ccO-0I-OE5"/>
+        <segue reference="dhf-Lg-jGM"/>
         <segue reference="Bkw-JS-1Id"/>
     </inferredMetricsTieBreakers>
 </document>
