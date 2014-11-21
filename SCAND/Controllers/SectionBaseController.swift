@@ -74,7 +74,7 @@ import MediaPlayer
     
     func playVideo() -> Void{
         
-        if(videoName == "" || videoExtension == ""){
+        if(videoName == nil || videoName == "" || videoExtension == nil || videoExtension == ""){
             return
         }
         

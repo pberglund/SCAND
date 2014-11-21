@@ -10,6 +10,11 @@
 		040F7FAA1A1FDF4700B17B4C /* Category Snapshot.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FA91A1FDF4700B17B4C /* Category Snapshot.m4v */; };
 		040F7FAE1A1FDF6000B17B4C /* Key Manu.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FAC1A1FDF6000B17B4C /* Key Manu.m4v */; };
 		040F7FAF1A1FDF6000B17B4C /* Manu Snapshot.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FAD1A1FDF6000B17B4C /* Manu Snapshot.m4v */; };
+		040F7FB21A1FEFDC00B17B4C /* Price Range.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB01A1FEFDC00B17B4C /* Price Range.m4v */; };
+		040F7FB31A1FEFDC00B17B4C /* Price Trend.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB11A1FEFDC00B17B4C /* Price Trend.m4v */; };
+		040F7FB71A1FF01900B17B4C /* Assortment.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB51A1FF01900B17B4C /* Assortment.m4v */; };
+		040F7FB81A1FF01900B17B4C /* Power Index.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB61A1FF01900B17B4C /* Power Index.m4v */; };
+		040F7FBB1A1FF04600B17B4C /* Store Perform.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FBA1A1FF04600B17B4C /* Store Perform.m4v */; };
 		043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE62A1A1B956C007A6E72 /* AppDelegate.swift */; };
 		043BE6301A1B956C007A6E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043BE62E1A1B956C007A6E72 /* Main.storyboard */; };
 		043BE6321A1B956C007A6E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043BE6311A1B956C007A6E72 /* Images.xcassets */; };
@@ -47,6 +52,11 @@
 		040F7FA91A1FDF4700B17B4C /* Category Snapshot.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Category Snapshot.m4v"; path = "Video Resources/Category Performance/Category Snapshot.m4v"; sourceTree = "<group>"; };
 		040F7FAC1A1FDF6000B17B4C /* Key Manu.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Key Manu.m4v"; path = "Video Resources/Category Performance/Key Manu.m4v"; sourceTree = "<group>"; };
 		040F7FAD1A1FDF6000B17B4C /* Manu Snapshot.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Manu Snapshot.m4v"; path = "Video Resources/Category Performance/Manu Snapshot.m4v"; sourceTree = "<group>"; };
+		040F7FB01A1FEFDC00B17B4C /* Price Range.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Price Range.m4v"; path = "Video Resources/Pricing Analysis/Price Range.m4v"; sourceTree = "<group>"; };
+		040F7FB11A1FEFDC00B17B4C /* Price Trend.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Price Trend.m4v"; path = "Video Resources/Pricing Analysis/Price Trend.m4v"; sourceTree = "<group>"; };
+		040F7FB51A1FF01900B17B4C /* Assortment.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = Assortment.m4v; path = "Video Resources/Assortment Portfolio/Assortment.m4v"; sourceTree = "<group>"; };
+		040F7FB61A1FF01900B17B4C /* Power Index.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Power Index.m4v"; path = "Video Resources/Assortment Portfolio/Power Index.m4v"; sourceTree = "<group>"; };
+		040F7FBA1A1FF04600B17B4C /* Store Perform.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Store Perform.m4v"; path = "Video Resources/Store Performance/Store Perform.m4v"; sourceTree = "<group>"; };
 		043BE6251A1B956C007A6E72 /* SCAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BE6291A1B956C007A6E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043BE62A1A1B956C007A6E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +114,32 @@
 				040F7FA91A1FDF4700B17B4C /* Category Snapshot.m4v */,
 			);
 			name = "Category Snapshot";
+			sourceTree = "<group>";
+		};
+		040F7FB41A1FEFEA00B17B4C /* Pricing Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				040F7FB01A1FEFDC00B17B4C /* Price Range.m4v */,
+				040F7FB11A1FEFDC00B17B4C /* Price Trend.m4v */,
+			);
+			name = "Pricing Analysis";
+			sourceTree = "<group>";
+		};
+		040F7FB91A1FF02300B17B4C /* Assortment Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				040F7FB51A1FF01900B17B4C /* Assortment.m4v */,
+				040F7FB61A1FF01900B17B4C /* Power Index.m4v */,
+			);
+			name = "Assortment Portfolio";
+			sourceTree = "<group>";
+		};
+		040F7FBC1A1FF04B00B17B4C /* Store Performance */ = {
+			isa = PBXGroup;
+			children = (
+				040F7FBA1A1FF04600B17B4C /* Store Perform.m4v */,
+			);
+			name = "Store Performance";
 			sourceTree = "<group>";
 		};
 		043BE61C1A1B956C007A6E72 = {
@@ -198,6 +234,9 @@
 		0487F08D1A1FD37900AD66D4 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				040F7FBC1A1FF04B00B17B4C /* Store Performance */,
+				040F7FB91A1FF02300B17B4C /* Assortment Portfolio */,
+				040F7FB41A1FEFEA00B17B4C /* Pricing Analysis */,
 				040F7FAB1A1FDF4F00B17B4C /* Category Snapshot */,
 				0487F0941A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v */,
 			);
@@ -284,13 +323,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040F7FB31A1FEFDC00B17B4C /* Price Trend.m4v in Resources */,
 				040F7FAA1A1FDF4700B17B4C /* Category Snapshot.m4v in Resources */,
 				040F7FAF1A1FDF6000B17B4C /* Manu Snapshot.m4v in Resources */,
+				040F7FB71A1FF01900B17B4C /* Assortment.m4v in Resources */,
 				040F7FAE1A1FDF6000B17B4C /* Key Manu.m4v in Resources */,
 				043BE6301A1B956C007A6E72 /* Main.storyboard in Resources */,
+				040F7FBB1A1FF04600B17B4C /* Store Perform.m4v in Resources */,
+				040F7FB21A1FEFDC00B17B4C /* Price Range.m4v in Resources */,
 				043BE6351A1B956C007A6E72 /* LaunchScreen.xib in Resources */,
 				0487F0951A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v in Resources */,
 				043BE6321A1B956C007A6E72 /* Images.xcassets in Resources */,
+				040F7FB81A1FF01900B17B4C /* Power Index.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -975,6 +975,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Assortment"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Vnt-03-uXo" id="yH0-KW-Te3"/>
@@ -1070,6 +1072,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Range"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="0MD-sS-pkh" id="pGL-pV-55L"/>
@@ -1165,6 +1169,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Shopper Marketing Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Store Perform"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="yS3-wA-eT8" id="Tks-yj-WDq"/>
@@ -1260,6 +1266,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Trend"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="5pG-dv-Suf" id="TIb-2e-4am"/>
@@ -1355,6 +1363,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Power Index"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Fsw-nh-dd6" id="uUt-g1-zCf"/>
@@ -1501,7 +1511,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="L9M-9a-p1R" kind="unwind" unwindAction="unwindToViewController:" id="zCL-ml-Sdt"/>
+                                            <segue destination="L9M-9a-p1R" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="zCL-ml-Sdt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flX-L0-3g0" userLabel="Play Arrow Button">
@@ -1510,6 +1520,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="playArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="0Ty-Yz-zkQ"/>
                                             <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="6eT-2V-ZpS"/>
                                         </connections>
                                     </button>
@@ -1545,6 +1556,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Manu Snapshot"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="KDD-4p-dDN" id="pdS-vO-tud"/>
@@ -1596,7 +1609,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Afp-Nu-2Z3" kind="unwind" unwindAction="unwindToViewController:" id="jIe-Lc-I5P"/>
+                                            <segue destination="Afp-Nu-2Z3" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="jIe-Lc-I5P"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rn-V4-dy6" userLabel="Play Arrow Button">
@@ -1606,6 +1619,7 @@
                                         </state>
                                         <connections>
                                             <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="E5f-6D-nVr"/>
+                                            <action selector="playArrowButton:" destination="deR-nr-Rv0" eventType="touchUpInside" id="gFo-xo-wCf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-yf-9Wz" userLabel="Right Arrow Button">
@@ -1640,6 +1654,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Key Manu"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ILF-3E-EAj" id="x1e-Qz-eCk"/>
@@ -1695,6 +1711,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Bkw-JS-1Id"/>
-        <segue reference="CJa-qp-vrs"/>
+        <segue reference="xvg-He-u6y"/>
     </inferredMetricsTieBreakers>
 </document>
