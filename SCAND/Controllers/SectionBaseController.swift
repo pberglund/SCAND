@@ -15,7 +15,8 @@ import MediaPlayer
     //@IBInspectable var leftView: String!
     
     @IBInspectable var rightView: String!
-    @IBInspectable var videoPath: String!
+    @IBInspectable var videoName: String!
+    @IBInspectable var videoExtension: String!
     let transitionDistance:CGFloat = 768
     let animationDuration = 2.0
     var lastDirection:Direction = Direction.None
@@ -64,8 +65,89 @@ import MediaPlayer
         goRight()
     }
     
+    var moviePlayer:MPMoviePlayerController!
+    
     @IBAction func playArrowButton(sender: AnyObject) {
+        println("Clicked Play")
+        playVideo()
     }
+    
+    func playVideo() -> Void{
+        
+        if(videoName == "" || videoExtension == ""){
+            return
+        }
+        
+        let bundle = NSBundle.mainBundle()
+        let pathhtml = bundle.pathForResource(videoName, ofType: videoExtension)
+        var url:NSURL = NSURL(fileURLWithPath: pathhtml!)!
+        
+        
+        moviePlayer = MPMoviePlayerController(contentURL: url)
+        
+        moviePlayer.view.frame = self.view.bounds
+        
+        moviePlayer.fullscreen = true
+        
+        moviePlayer.shouldAutoplay = true
+        
+        //moviePlayer.movieSourceType = MPMovieSourceType.Streaming
+        
+        //moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
+        
+        moviePlayer.controlStyle = MPMovieControlStyle.Fullscreen;
+
+       
+        self.view.addSubview(moviePlayer.view)
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerExitingFullScreen:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer)
+        
+        
+        
+        self.view.bringSubviewToFront(moviePlayer.view)
+        
+        moviePlayer.play()
+        
+        println("Playing Movie");
+    }
+    
+    @objc
+    func moviePlayerExitingFullScreen(notification: NSNotification){
+        println("In moviePlayerExitingFullScreen");
+        
+        doExitMoviePlayer()
+    }
+
+    func doExitMoviePlayer() -> Void{
+        
+        moviePlayer.setFullscreen(false, animated: true)
+        moviePlayer.view.removeFromSuperview()
+    }
+    
+    @objc
+    func moviePlayerOver(notification: NSNotification){
+        println("In moviePlayerDidFinishPlaying");
+
+        //let userInfo : [NSObject : AnyObject]? = notification.userInfo
+        
+        
+        //var playbackDidFinish : Int = userInfo![MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] as Int
+        
+        
+        doExitMoviePlayer()
+        
+        /*if(playbackDidFinish == MPMovieFinishReason.UserExited.rawValue || playbackDidFinish == MPMovieFinishReason.PlaybackEnded.rawValue)
+        {
+            moviePlayer.view.removeFromSuperview()
+        }*/
+        
+        
+        
+        
+    }
+
     
     @IBAction func swipedUp(sender: AnyObject) {
         

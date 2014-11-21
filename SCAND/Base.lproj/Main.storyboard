@@ -877,6 +877,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoPath" value="Key Manu"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Category Snapshot"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="cug-iJ-Y16" id="p94-1d-ez4"/>

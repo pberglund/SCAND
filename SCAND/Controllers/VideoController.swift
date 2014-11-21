@@ -41,15 +41,13 @@ import AVFoundation
         
         //moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
         
-        moviePlayer.controlStyle = MPMovieControlStyle.Embedded
-        
-        moviePlayer.initialPlaybackTime = 28;
+        moviePlayer.controlStyle = MPMovieControlStyle.Fullscreen;
         
         self.view.addSubview(moviePlayer.view)
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer)
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerDidExitFullscreenNotification, object: moviePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer)
         
         
         
@@ -65,6 +63,12 @@ import AVFoundation
         self.transitionToViewControllerBySegueIdentifier(segueAfterVideo )
         
         println("Show initial controller")
+    }
+    
+    @objc
+    func moviePlayerExitingFullScreen(notification: NSNotification){
+        println("In moviePlayerExitingFullScreen");
+        transitionToMain()
     }
     
     @objc
