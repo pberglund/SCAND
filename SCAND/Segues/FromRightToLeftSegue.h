@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RightLeftSegue : UIStoryboardSegue
+@interface FromRightToLeftSegue : UIStoryboardSegue
 
 // Originating point for animation
 @property CGPoint originatingPoint;

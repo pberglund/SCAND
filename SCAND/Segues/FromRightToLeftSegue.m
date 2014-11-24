@@ -1,7 +1,7 @@
-#import "RightLeftSegue.h"
+#import "FromRightToLeftSegue.h"
 #import "QuartzCore/QuartzCore.h"
 
-@implementation RightLeftSegue
+@implementation FromRightToLeftSegue
 
 
 - (void)perform {

@@ -33,7 +33,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Dasboard">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="RightLeftSegue" id="CJa-qp-vrs"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="FromRightToLeftSegue" id="CJa-qp-vrs"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -76,20 +76,21 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="What Is Scan D"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What You Need To Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="What Is Scan D - Shopper Marketing"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="What is Scan D - What You Need To Start"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3i-hX-xrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="J6N-cK-7NF" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="left" id="5bX-YN-J3h" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="XrY-zs-24a" id="xx3-vw-mR0"/>
+                        <segue destination="heR-QC-HNc" kind="custom" identifier="What is Scan D - What You Need To Start" customClass="FromRightToLeftSegue" id="lFK-6Z-ziH"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="srr-8g-PWK" userLabel="Swipe Right">
                     <connections>
                         <action selector="swipedRight:" destination="XrY-zs-24a" id="o70-aA-ZOS"/>
-                        <segue destination="J6N-cK-7NF" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="EgW-WF-LoA"/>
+                        <segue destination="USv-Ee-74X" kind="custom" identifier="What Is Scan D - Shopper Marketing" customClass="FromLeftToRightSegue" id="DzD-YQ-sh2"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -127,7 +128,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="e5I-1U-jjO" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="VRb-SD-Ngp"/>
+                                    <action selector="leftArrowButton:" destination="heR-QC-HNc" eventType="touchUpInside" id="H9I-4o-DLP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,18 +144,21 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="What You Need To Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Type of Data"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="What You Need To Start - What is Scan D"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="What is Scan D - Type Of Data"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etE-km-ar7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="e5I-1U-jjO" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="Xai-zE-ert" userLabel="Swipe Right">
                     <connections>
                         <action selector="swipedRight:" destination="heR-QC-HNc" id="tIB-G1-5YA"/>
+                        <segue destination="XrY-zs-24a" kind="custom" identifier="What You Need To Start - What is Scan D" customClass="FromLeftToRightSegue" id="kef-9h-sFz"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="jKO-1c-UfV" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="heR-QC-HNc" id="jQl-Jf-pHz"/>
+                        <segue destination="if0-UL-Epn" kind="custom" identifier="What is Scan D - Type Of Data" customClass="FromRightToLeftSegue" id="IxJ-xS-8tW"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -182,7 +186,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="iFS-jV-rla" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="BqC-gT-593"/>
+                                    <action selector="leftArrowButton:" destination="if0-UL-Epn" eventType="touchUpInside" id="Gar-Fa-Qla"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,13 +200,14 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Type of Data"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Type of Data - What You Need To Start"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQx-Y1-bRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="iFS-jV-rla" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="0KQ-T1-HmJ" userLabel="Swipe Right">
                     <connections>
                         <action selector="swipedRight:" destination="if0-UL-Epn" id="Yw3-sC-vvB"/>
+                        <segue destination="heR-QC-HNc" kind="custom" identifier="Type of Data - What You Need To Start" customClass="FromLeftToRightSegue" id="um3-Bq-5TI"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -238,7 +243,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="P5D-2K-0bf"/>
+                                    <segue destination="14a-ZL-8Of" kind="custom" customClass="FromRightToLeftSegue" id="GBU-Gv-xGf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbh-94-W22" userLabel="Assortment / Portfolio Button">
@@ -247,8 +252,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="vAB-d1-ohr"/>
-                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="VJi-HG-Ip0"/>
+                                    <segue destination="IB0-YQ-rHE" kind="custom" customClass="FromRightToLeftSegue" id="bZS-WT-0wy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wY-4M-V8D" userLabel="Pricing Analysis Button">
@@ -257,9 +261,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="P31-o1-RGH"/>
-                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="Dp0-UL-WP8"/>
-                                    <action selector="pricingAnalysisButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="9OF-ZD-2T8"/>
+                                    <segue destination="53k-em-v8c" kind="custom" customClass="FromRightToLeftSegue" id="Ywc-Ow-bDJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDL-KX-dnQ" userLabel="Store Performance Button">
@@ -268,9 +270,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="yE1-tV-pzQ"/>
-                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="x7v-Vg-4lS"/>
-                                    <action selector="storePerformanceButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="J8h-Wh-RKW"/>
+                                    <segue destination="JIs-6d-fUj" kind="custom" customClass="FromRightToLeftSegue" id="bIy-Df-e6r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF9-4I-OI4" userLabel="Shopper Marketing Button">
@@ -279,10 +279,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="assesmentPortfolioButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="Q0y-Vq-P1v"/>
-                                    <action selector="categoryPerformanceClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="TfI-9l-a2Z"/>
-                                    <action selector="shopperMarketingButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="8nv-hC-g2f"/>
-                                    <action selector="storePerformanceButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="67j-Ir-mcN"/>
+                                    <segue destination="USv-Ee-74X" kind="custom" customClass="FromRightToLeftSegue" id="WMg-eK-jlC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaM-Mg-tmP" userLabel="What Is SCAND Button">
@@ -291,7 +288,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="whatIsScanDButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="D4C-Gy-oC7"/>
+                                    <segue destination="XrY-zs-24a" kind="custom" customClass="FromRightToLeftSegue" id="BlT-ws-p0K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-ks-Dzj" userLabel="What You Need To Start Button">
@@ -300,7 +297,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="whatYouNeedToStartButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="YOB-Pj-iT1"/>
+                                    <segue destination="heR-QC-HNc" kind="custom" customClass="FromRightToLeftSegue" id="7We-bW-cXf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRq-yO-i9U" userLabel="Type of Data Button">
@@ -309,7 +306,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="typeOfDataButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="aMq-1a-map"/>
+                                    <segue destination="if0-UL-Epn" kind="custom" customClass="FromRightToLeftSegue" id="eZd-ti-QA3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy7-fg-N82" userLabel="Replay Intro Button">
@@ -318,7 +315,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="replayIntroButtonClicked:" destination="Ony-UR-cuj" eventType="touchUpInside" id="uJM-3n-LEK"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="FromRightToLeftSegue" id="TJv-lD-S3Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -329,15 +326,6 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="MenuPage"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="categoryAndPerformanceSectionStart" value="Category Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="typeOfData" value="Type of Data"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="whatYouNeedToStart" value="What You Need To Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="whatIsScanD" value="What Is Scan D"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="replayIntro" value="Intro Video"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="assortmentPortfolioSectionStart" value="Assortment Portfolio Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="pricingAnalysisSectionStart" value="Pricing Analysis Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storePerformanceSectionStart" value="Store Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="shopperMarketingSectionStart" value="Shopper Marketing Start"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F66-Fo-NCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,13 +382,13 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="startToDashBoardSegueIdentifier" value="Start - Dashboard"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="RightLeftSegue" id="aA0-hY-Rsz"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="FromRightToLeftSegue" id="aA0-hY-Rsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Video">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="Start - Video" customClass="RightLeftSegue" id="Bkw-JS-1Id"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="Start - Video" customClass="FromRightToLeftSegue" id="Bkw-JS-1Id"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -488,7 +476,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-HS-bNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="hSX-Ec-1Dd" userLabel="Swipe to Video">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" customClass="LeftRightSegue" id="4em-bj-NZO"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" customClass="FromLeftToRightSegue" id="4em-bj-NZO"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -538,6 +526,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Category Performance Start - Dashboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Category Performance Start - Category Performance 1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="fJL-TP-p4D" id="Y3s-yF-P3S"/>
@@ -546,12 +536,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwP-Ju-cwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ovo-ce-gBB" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="dhf-Lg-jGM"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Category Performance Start - Dashboard" customClass="FromLeftToRightSegue" id="dhf-Lg-jGM"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="Tnh-eb-ScD" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="14a-ZL-8Of" id="roR-Zb-JCI"/>
+                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Category Performance Start - Category Performance 1" customClass="FromRightToLeftSegue" id="lTm-d2-d3x"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -602,6 +593,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="AP Start - Cp page 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Start - Ap Page 1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="r1I-RZ-uBl" id="6Oj-aU-ALN"/>
@@ -610,12 +603,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29g-iL-VMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="VIn-nC-Tml" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="0cL-tx-N9G"/>
+                        <segue destination="deR-nr-Rv0" kind="custom" identifier="AP Start - Cp page 3" customClass="FromLeftToRightSegue" id="hkg-lO-o77"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="juu-Tp-qsd" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="IB0-YQ-rHE" id="6vi-cg-12S"/>
+                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Start - Ap Page 1" customClass="FromRightToLeftSegue" id="d19-ff-gez"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -666,6 +660,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Pa Start - Ap Page 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Pa Start - Pa Page 1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ouy-Ng-Eg2" id="EoU-ey-uid"/>
@@ -674,12 +670,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHV-zO-atb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="6hp-jo-AWe" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="xvg-He-u6y"/>
+                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Pa Start - Ap Page 3" customClass="FromLeftToRightSegue" id="lKc-wc-dIj"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="M5U-Vj-ExH" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="53k-em-v8c" id="QnB-V0-v5o"/>
+                        <segue destination="5o3-U2-smh" kind="custom" identifier="Pa Start - Pa Page 1" customClass="FromRightToLeftSegue" id="6ab-lT-Yfs"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -730,6 +727,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Sp Start - Pa Page 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="SP Start - Sp Page 1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="T92-o5-NgT" id="XRi-EJ-31w"/>
@@ -738,12 +737,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxx-SE-HE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="v8h-cQ-Y8K" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="s36-W1-GVc"/>
+                        <segue destination="osf-cO-OhN" kind="custom" identifier="Sp Start - Pa Page 2" customClass="FromLeftToRightSegue" id="7Cc-5b-e7J"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="k8c-9g-K4i" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="JIs-6d-fUj" id="YyH-PS-Mvy"/>
+                        <segue destination="937-Ra-2QI" kind="custom" identifier="SP Start - Sp Page 1" customClass="FromRightToLeftSegue" id="Qxl-mX-OmK"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -793,6 +793,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Shopper Marketing Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What Is Scan D"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-5"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="SM Start - SP Page 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="SM Start - What Is Scan D"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="1LE-ZU-WxA" id="dme-HY-WZR"/>
@@ -801,12 +803,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVM-0r-nhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="3N8-Rn-XXa" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" customClass="LeftRightSegue" id="ccO-0I-OE5"/>
+                        <segue destination="937-Ra-2QI" kind="custom" identifier="SM Start - SP Page 1" customClass="FromLeftToRightSegue" id="UEn-4T-ryZ"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="LrB-hP-83x" userLabel="Swipe Left">
                     <connections>
                         <action selector="swipedLeft:" destination="USv-Ee-74X" id="rZK-ek-hE1"/>
+                        <segue destination="XrY-zs-24a" kind="custom" identifier="SM Start - What Is Scan D" customClass="FromRightToLeftSegue" id="V6l-sx-ND2"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -842,7 +845,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="DrG-Rx-Yyt" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="5Ck-s3-e7c"/>
+                                            <action selector="leftArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="iJJ-Kp-Msc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o55-WA-Trp" userLabel="Play Arrow Button">
@@ -850,9 +853,6 @@
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="x8L-Px-n2J"/>
-                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
@@ -880,13 +880,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="videoPath" value="Key Manu"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Category Snapshot"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="CP Page 1 - CP Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Cp Page 1 - Cp Page 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="cug-iJ-Y16" id="p94-1d-ez4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0H-gB-ylT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="DrG-Rx-Yyt" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="nhb-yZ-TJI" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="Oti-Cv-wYI" id="8nx-aG-yeH"/>
@@ -900,11 +901,13 @@
                 <swipeGestureRecognizer direction="right" id="xtb-yQ-fpE" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="Oti-Cv-wYI" id="iuB-ge-ROq"/>
+                        <segue destination="14a-ZL-8Of" kind="custom" identifier="CP Page 1 - CP Start" customClass="FromLeftToRightSegue" id="gJR-g9-SE9"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="YFv-TQ-w5T" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="Oti-Cv-wYI" id="Xme-ko-pY1"/>
+                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 1 - Cp Page 2" customClass="FromRightToLeftSegue" id="uk1-Br-HRM"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -940,7 +943,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pP7-l9-arL" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="2xH-Xi-ED2"/>
+                                            <action selector="leftArrowButton:" destination="lQx-aY-bJg" eventType="touchUpInside" id="MSJ-hZ-8qw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-h7-kia" userLabel="Play Arrow Button">
@@ -977,13 +980,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Assortment"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 1 - Ap Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Page 1 - Ap Page 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Vnt-03-uXo" id="yH0-KW-Te3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNM-Sm-rG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pP7-l9-arL" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="1nm-ib-DNd" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="lQx-aY-bJg" id="scX-Lc-VdZ"/>
@@ -997,11 +1001,13 @@
                 <swipeGestureRecognizer direction="right" id="WQO-U2-Wtv" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="lQx-aY-bJg" id="BrN-aE-Qki"/>
+                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Ap Page 1 - Ap Start" customClass="FromLeftToRightSegue" id="acS-8Y-nZk"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="W73-yz-n1t" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="lQx-aY-bJg" id="QES-Wx-cyB"/>
+                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 1 - Ap Page 2" customClass="FromRightToLeftSegue" id="DV9-8i-fMJ"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1037,7 +1043,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="D6S-fT-YMb" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="asR-HN-bFS"/>
+                                            <action selector="leftArrowButton:" destination="5o3-U2-smh" eventType="touchUpInside" id="b4R-B2-cVP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ici-XP-kuM" userLabel="Play Arrow Button">
@@ -1074,13 +1080,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Range"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="PA Page 1 - PA Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="PA Page 1 - PA Page 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="0MD-sS-pkh" id="pGL-pV-55L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjP-Vx-5rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="D6S-fT-YMb" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="THb-k3-Hoi" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="5o3-U2-smh" id="wse-ye-J37"/>
@@ -1094,11 +1101,13 @@
                 <swipeGestureRecognizer direction="right" id="FyC-H8-0El" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="5o3-U2-smh" id="WKU-bu-Md2"/>
+                        <segue destination="53k-em-v8c" kind="custom" identifier="PA Page 1 - PA Start" customClass="FromLeftToRightSegue" id="hjl-H1-9JS"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="XPr-RL-Ety" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="5o3-U2-smh" id="kBP-0i-5SY"/>
+                        <segue destination="osf-cO-OhN" kind="custom" identifier="PA Page 1 - PA Page 2" customClass="FromRightToLeftSegue" id="hbo-Pr-taG"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1134,7 +1143,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="7a7-OQ-iDt" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="gn7-hN-Wms"/>
+                                            <action selector="leftArrowButton:" destination="937-Ra-2QI" eventType="touchUpInside" id="wEl-cI-9a5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-mX-SBO" userLabel="Play Arrow Button">
@@ -1171,13 +1180,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Shopper Marketing Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Store Perform"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="SP Page 1 - Sp Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="SP Page 1 - SM Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="yS3-wA-eT8" id="Tks-yj-WDq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-4C-dk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="7a7-OQ-iDt" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="eWO-il-cf1" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="937-Ra-2QI" id="Dej-xj-Um5"/>
@@ -1191,11 +1201,13 @@
                 <swipeGestureRecognizer direction="right" id="sd6-jx-M2D" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="937-Ra-2QI" id="Ix3-h1-Lnu"/>
+                        <segue destination="JIs-6d-fUj" kind="custom" identifier="SP Page 1 - Sp Start" customClass="FromLeftToRightSegue" id="0CR-Wo-Of3"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="mCf-3F-cTU" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="937-Ra-2QI" id="9LF-5X-mlz"/>
+                        <segue destination="USv-Ee-74X" kind="custom" identifier="SP Page 1 - SM Start" customClass="FromRightToLeftSegue" id="Bnv-EW-c05"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1231,7 +1243,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Jwe-Vj-UHR" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="3bY-cx-H5N"/>
+                                            <action selector="leftArrowButton:" destination="osf-cO-OhN" eventType="touchUpInside" id="drq-iy-THB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-fW-0dF" userLabel="Play Arrow Button">
@@ -1268,13 +1280,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Trend"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="PA Page 2 - Pa Page 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="PA Page 2 - SP Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="5pG-dv-Suf" id="TIb-2e-4am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ar-XE-9vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Jwe-Vj-UHR" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="lwp-Qj-Et3" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="osf-cO-OhN" id="YPy-gQ-Lzo"/>
@@ -1288,11 +1301,13 @@
                 <swipeGestureRecognizer direction="right" id="k1H-zF-zSF" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="osf-cO-OhN" id="4fR-LI-CsL"/>
+                        <segue destination="5o3-U2-smh" kind="custom" identifier="PA Page 2 - Pa Page 1" customClass="FromLeftToRightSegue" id="aht-SA-con"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="N6Z-e0-Vtj" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="osf-cO-OhN" id="VPO-mh-5CK"/>
+                        <segue destination="JIs-6d-fUj" kind="custom" identifier="PA Page 2 - SP Start" customClass="FromRightToLeftSegue" id="713-ci-e9p"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1328,7 +1343,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="B5F-Mc-h4O" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="vau-Jf-0cE"/>
+                                            <action selector="leftArrowButton:" destination="lM1-o4-UYV" eventType="touchUpInside" id="KZf-Bj-UcE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-5K-xa7" userLabel="Play Arrow Button">
@@ -1365,13 +1380,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Power Index"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 2 - Ap Page 1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Page 2 - Ap Page 3"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Fsw-nh-dd6" id="uUt-g1-zCf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq7-Bs-HKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="B5F-Mc-h4O" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="WI0-ja-tU1" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="lM1-o4-UYV" id="cpT-sh-8Zi"/>
@@ -1385,11 +1401,13 @@
                 <swipeGestureRecognizer direction="right" id="JJh-iC-fqm" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="lM1-o4-UYV" id="lNE-tT-Mex"/>
+                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Page 2 - Ap Page 1" customClass="FromLeftToRightSegue" id="fsX-V5-RFF"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="eYT-Ql-CtQ" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="lM1-o4-UYV" id="2sQ-dA-BIG"/>
+                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Ap Page 2 - Ap Page 3" customClass="FromRightToLeftSegue" id="lVc-R2-9GG"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1416,7 +1434,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="rightArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="5xk-cM-Pf4"/>
+                                            <action selector="rightArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="ZWK-GT-4Ks"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8g-c6-gHh" userLabel="Left Arrow Button">
@@ -1425,10 +1443,10 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pB4-cx-hgB" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="1gk-al-ouI"/>
+                                            <action selector="leftArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="Nba-XL-IZw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-4g-9gY" userLabel="Play Arrow Button">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-4g-9gY" userLabel="Play Arrow Button">
                                         <rect key="frame" x="452" y="375" width="120" height="120"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -1442,11 +1460,6 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="UvW-4g-9gY"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1465,13 +1478,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 3 - Ap Page 2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Page 3 - Pa Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="X6x-zA-gGl" id="F5M-Zf-eJ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-la-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pB4-cx-hgB" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="up" id="wvg-cn-MxD" userLabel="Up Swipe">
                     <connections>
                         <action selector="swipedUp:" destination="ksl-pq-ITf" id="qEq-nl-7Cr"/>
@@ -1485,11 +1499,13 @@
                 <swipeGestureRecognizer direction="right" id="yyd-qd-oxE" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="ksl-pq-ITf" id="GxR-yS-iCa"/>
+                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 3 - Ap Page 2" customClass="FromLeftToRightSegue" id="G7p-c2-mt8"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="je8-RM-yXR" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="ksl-pq-ITf" id="13a-T2-r9k"/>
+                        <segue destination="53k-em-v8c" kind="custom" identifier="Ap Page 3 - Pa Start" customClass="FromRightToLeftSegue" id="GeI-O1-4Z7"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1516,7 +1532,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="L9M-9a-p1R" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="zCL-ml-Sdt"/>
+                                            <action selector="leftArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="j4Y-qP-ZMU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flX-L0-3g0" userLabel="Play Arrow Button">
@@ -1526,7 +1542,6 @@
                                         </state>
                                         <connections>
                                             <action selector="playArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="0Ty-Yz-zkQ"/>
-                                            <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="6eT-2V-ZpS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-NL-UhK" userLabel="Right Arrow Button">
@@ -1536,7 +1551,6 @@
                                         </state>
                                         <connections>
                                             <action selector="rightArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="FMW-my-Dwv"/>
-                                            <action selector="rightArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="O8K-Jc-hbh"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Manufacturer_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
@@ -1563,21 +1577,24 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Manu Snapshot"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Cp page 2 - Cp Page 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Cp Page 2 - Cp Page 1"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="KDD-4p-dDN" id="pdS-vO-tud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwE-k8-joj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="L9M-9a-p1R" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="V1Z-q6-VnL" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="4NV-n7-ZOK" id="EVM-HL-gsC"/>
+                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Cp Page 2 - Cp Page 1" customClass="FromLeftToRightSegue" id="yo6-tI-uv6"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="3ve-lS-rg2" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="4NV-n7-ZOK" id="aeO-jt-JBG"/>
+                        <segue destination="deR-nr-Rv0" kind="custom" identifier="Cp page 2 - Cp Page 3" customClass="FromRightToLeftSegue" id="F6B-Y7-n1p"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="1C3-jf-WNh" userLabel="Up Swipe">
@@ -1614,7 +1631,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Afp-Nu-2Z3" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="jIe-Lc-I5P"/>
+                                            <action selector="leftArrowButton:" destination="deR-nr-Rv0" eventType="touchUpInside" id="UrS-LX-BNg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rn-V4-dy6" userLabel="Play Arrow Button">
@@ -1634,7 +1651,6 @@
                                         </state>
                                         <connections>
                                             <action selector="rightArrowButton:" destination="deR-nr-Rv0" eventType="touchUpInside" id="cxy-8j-Oud"/>
-                                            <action selector="rightArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="jHA-lK-yDz"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Key_Manufacturer" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-pE-nkz">
@@ -1661,21 +1677,24 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Key Manu"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Cp Page 3 - AP Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Cp Page 3 - Cp Page 2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ILF-3E-EAj" id="x1e-Qz-eCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2x-zZ-DVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Afp-Nu-2Z3" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="O23-Co-eT8" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="deR-nr-Rv0" id="i00-yI-haA"/>
+                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 3 - Cp Page 2" customClass="FromLeftToRightSegue" id="B7f-la-cdQ"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="o6Q-Uw-t2x" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="deR-nr-Rv0" id="djP-xc-372"/>
+                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Cp Page 3 - AP Start" customClass="FromRightToLeftSegue" id="mNE-tP-Xz8"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="f1B-O3-fuW" userLabel="Up Swipe">
@@ -1715,7 +1734,24 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bkw-JS-1Id"/>
-        <segue reference="xvg-He-u6y"/>
+        <segue reference="7Cc-5b-e7J"/>
+        <segue reference="0CR-Wo-Of3"/>
+        <segue reference="UEn-4T-ryZ"/>
+        <segue reference="DzD-YQ-sh2"/>
+        <segue reference="kef-9h-sFz"/>
+        <segue reference="lFK-6Z-ziH"/>
+        <segue reference="TJv-lD-S3Y"/>
+        <segue reference="IxJ-xS-8tW"/>
+        <segue reference="lKc-wc-dIj"/>
+        <segue reference="hjl-H1-9JS"/>
+        <segue reference="aht-SA-con"/>
+        <segue reference="G7p-c2-mt8"/>
+        <segue reference="yo6-tI-uv6"/>
+        <segue reference="uk1-Br-HRM"/>
+        <segue reference="dhf-Lg-jGM"/>
+        <segue reference="gJR-g9-SE9"/>
+        <segue reference="fsX-V5-RFF"/>
+        <segue reference="hkg-lO-o77"/>
+        <segue reference="acS-8Y-nZk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,8 @@ import MediaPlayer
     
     //@IBInspectable var leftView: String!
     
-    @IBInspectable var rightView: String!
+    @IBInspectable var rightSegueIdentifier: String!
+    @IBInspectable var leftSegueIdentifier: String!
     @IBInspectable var videoName: String!
     @IBInspectable var videoExtension: String!
     let transitionDistance:CGFloat = 768
@@ -53,15 +54,22 @@ import MediaPlayer
     }
     
     func goRight(){
-        self.transitionToViewControllerByStoryboardId(rightView)
+        //self.transitionToViewControllerByStoryboardId(rightView)
+        transistionBySegue(leftSegueIdentifier)
+    }
+    
+    func transistionBySegue(segueIdentifier:String) -> Void{
+        self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueIdentifier, originPage: self.pageIdentifier)
     }
     
     func goLeft(){
-        self.transitionToViewControllerBySegueIdentifier("unwindSegue", originPage: self.pageIdentifier)
+        transistionBySegue(rightSegueIdentifier)
     }
     
+    @IBAction func leftArrowButton(sender: AnyObject) {
+        goLeft()
+    }
     @IBAction func rightArrowButton(sender: AnyObject) {
-        println("Clicked right arrow, going to: \(rightView)")
         goRight()
     }
     

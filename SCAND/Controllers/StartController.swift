@@ -25,11 +25,11 @@ import MediaPlayer
     }
     
     @IBAction func StartButtonTouched(sender: AnyObject) {
-        self.transitionToViewControllerBySegueIdentifier(startToVideoSegueIdentifier)
+        self.transitionToViewControllerBySegueIdentifier(segueIdentifier: startToVideoSegueIdentifier)
     }
     
     @IBAction func skipIntroButtonTouched(sender: AnyObject) {
-        self.transitionToViewControllerBySegueIdentifier(startToDashBoardSegueIdentifier)
+        self.transitionToViewControllerBySegueIdentifier( segueIdentifier: startToDashBoardSegueIdentifier)
     }
     
     

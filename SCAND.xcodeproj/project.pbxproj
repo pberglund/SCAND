@@ -26,8 +26,8 @@
 		043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6531A1B96AE007A6E72 /* VideoController.swift */; };
 		043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6541A1B96AE007A6E72 /* SliderViewController.swift */; };
 		043BE6591A1B96AE007A6E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6551A1B96AE007A6E72 /* ViewController.swift */; };
-		043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */; };
-		043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */; };
+		043BE65F1A1B9879007A6E72 /* FromLeftToRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65C1A1B9879007A6E72 /* FromLeftToRightSegue.m */; };
+		043BE6601A1B9879007A6E72 /* FromRightToLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65E1A1B9879007A6E72 /* FromRightToLeftSegue.m */; };
 		043BE6621A1B9DC3007A6E72 /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */; };
 		043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6631A1BACB2007A6E72 /* TransitionManager.swift */; };
 		043BE66A1A1BE646007A6E72 /* BaseScanDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6691A1BE646007A6E72 /* BaseScanDController.swift */; };
@@ -72,10 +72,10 @@
 		043BE6531A1B96AE007A6E72 /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		043BE6541A1B96AE007A6E72 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		043BE6551A1B96AE007A6E72 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		043BE65B1A1B9879007A6E72 /* LeftRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftRightSegue.h; sourceTree = "<group>"; };
-		043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftRightSegue.m; sourceTree = "<group>"; };
-		043BE65D1A1B9879007A6E72 /* RightLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightLeftSegue.h; sourceTree = "<group>"; };
-		043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightLeftSegue.m; sourceTree = "<group>"; };
+		043BE65B1A1B9879007A6E72 /* FromLeftToRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromLeftToRightSegue.h; sourceTree = "<group>"; };
+		043BE65C1A1B9879007A6E72 /* FromLeftToRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromLeftToRightSegue.m; sourceTree = "<group>"; };
+		043BE65D1A1B9879007A6E72 /* FromRightToLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromRightToLeftSegue.h; sourceTree = "<group>"; };
+		043BE65E1A1B9879007A6E72 /* FromRightToLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromRightToLeftSegue.m; sourceTree = "<group>"; };
 		043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
 		043BE6631A1BACB2007A6E72 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		043BE6691A1BE646007A6E72 /* BaseScanDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScanDController.swift; sourceTree = "<group>"; };
@@ -223,10 +223,10 @@
 		043BE65A1A1B9879007A6E72 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
-				043BE65B1A1B9879007A6E72 /* LeftRightSegue.h */,
-				043BE65C1A1B9879007A6E72 /* LeftRightSegue.m */,
-				043BE65D1A1B9879007A6E72 /* RightLeftSegue.h */,
-				043BE65E1A1B9879007A6E72 /* RightLeftSegue.m */,
+				043BE65B1A1B9879007A6E72 /* FromLeftToRightSegue.h */,
+				043BE65C1A1B9879007A6E72 /* FromLeftToRightSegue.m */,
+				043BE65D1A1B9879007A6E72 /* FromRightToLeftSegue.h */,
+				043BE65E1A1B9879007A6E72 /* FromRightToLeftSegue.m */,
 			);
 			path = Segues;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 				043BE6A01A1EA90F007A6E72 /* SectionBaseController.swift in Sources */,
 				043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */,
 				043BE62B1A1B956C007A6E72 /* AppDelegate.swift in Sources */,
-				043BE65F1A1B9879007A6E72 /* LeftRightSegue.m in Sources */,
+				043BE65F1A1B9879007A6E72 /* FromLeftToRightSegue.m in Sources */,
 				043BE69A1A1CE82A007A6E72 /* StartController.swift in Sources */,
-				043BE6601A1B9879007A6E72 /* RightLeftSegue.m in Sources */,
+				043BE6601A1B9879007A6E72 /* FromRightToLeftSegue.m in Sources */,
 				043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */,
 				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
 				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,

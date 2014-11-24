@@ -97,10 +97,10 @@ import UIKit
             //let vc:ViewController = ViewController()
              //let vc : AnyObject! = self.storyboard.instantiateViewControllerWithIdentifier("1StartPage")
              //self.showViewController(vc as UIViewController, sender: vc)
-            self.transitionToViewControllerBySegueIdentifier(leftSegueIdentifier, originPage: pageName)
+            self.transitionToViewControllerBySegueIdentifier(segueIdentifier: leftSegueIdentifier, originPage: pageName)
             
         case Direction.Right:
-            self.transitionToViewControllerBySegueIdentifier(rightSequeIdentifier, originPage: pageName)
+            self.transitionToViewControllerBySegueIdentifier(segueIdentifier: rightSequeIdentifier, originPage: pageName)
 
         default:
             println("Error finding a direction, segueWithDirection: returning")

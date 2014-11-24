@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Sage Path. All rights reserved.
 //
 
-#import "LeftRightSegue.h"
+#import "FromLeftToRightSegue.h"
 #import "QuartzCore/QuartzCore.h"
 
-@implementation LeftRightSegue
+@implementation FromLeftToRightSegue
 
 
 - (void)perform {

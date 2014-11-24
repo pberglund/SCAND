@@ -98,8 +98,7 @@ import UIKit
     
 */
     
-    func transitionToViewControllerBySegueIdentifier(segueIdentifier:String, originPage:String = ""){
-        
+    func transitionToViewControllerBySegueIdentifier(segueIdentifier:String = "", originPage:String = ""){
         var origin = originPage;
         
         if(origin == ""){
@@ -109,6 +108,11 @@ import UIKit
             else{
                 origin = pageIdentifier
             }
+        }
+        
+        if(segueIdentifier == ""){
+            println("SegueIdentifier was empty, origin: \(origin)")
+            return
         }
         
         self.performSegueWithIdentifier(segueIdentifier, sender: self)

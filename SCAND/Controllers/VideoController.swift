@@ -58,7 +58,8 @@ import AVFoundation
     }
     
     func transitionToMain(){
-        self.transitionToViewControllerBySegueIdentifier(segueAfterVideo )
+        stopMovieIfPlaying()
+        self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueAfterVideo )
         
         println("Show initial controller")
     }
@@ -73,17 +74,16 @@ import AVFoundation
     func moviePlayerOver(notification: NSNotification){
     //Action take on Notification
         println("In moviePlayerDidFinishPlaying");
-        
         //self.performSegueWithIdentifier("Custom from 1 to main", sender: self)
+        transitionToMain()
 
+    }
+    
+    func stopMovieIfPlaying() -> Void{
         if(moviePlayer.playbackState == MPMoviePlaybackState.Playing){
             moviePlayer.stop();
         }
-        
-         transitionToMain()
-
-
-}
+    }
 
     
     override func didReceiveMemoryWarning() {

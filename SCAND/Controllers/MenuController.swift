@@ -12,17 +12,17 @@ import MediaPlayer
 @IBDesignable class MenuController: BaseViewController {
 
     //Main sections
-    @IBInspectable var categoryAndPerformanceSectionStart: String!
-    @IBInspectable var assortmentPortfolioSectionStart: String!
-    @IBInspectable var pricingAnalysisSectionStart: String!
-    @IBInspectable var storePerformanceSectionStart: String!
-    @IBInspectable var shopperMarketingSectionStart: String!
+    //@IBInspectable var categoryAndPerformanceSectionSegue: String!
+    //@IBInspectable var assortmentPortfolioSectionSegue: String!
+    //@IBInspectable var pricingAnalysisSectionSegue: String!
+    //@IBInspectable var storePerformanceSectionSegue: String!
+    //@IBInspectable var shopperMarketingSectionSegue: String!
     
     //Bottom Links
-    @IBInspectable var whatIsScanD: String!
-    @IBInspectable var whatYouNeedToStart: String!
-    @IBInspectable var typeOfData: String!
-    @IBInspectable var replayIntro: String!
+    //@IBInspectable var whatIsScanD: String!
+    //@IBInspectable var whatYouNeedToStart: String!
+    //@IBInspectable var typeOfData: String!
+    //@IBInspectable var replayIntro: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ import MediaPlayer
     
     
     // Main Sections
-    @IBAction func categoryPerformanceClicked(sender: AnyObject) {
+    /*@IBAction func categoryPerformanceClicked(sender: AnyObject) {
         transitionFromMenu(categoryAndPerformanceSectionStart)
     }
     
@@ -77,7 +77,7 @@ import MediaPlayer
         
         println("Transition from menu to \(storyBoardId)")
                 self.transitionToViewControllerByStoryboardId(storyBoardId)
-    }
+    }*/
     
     
     
