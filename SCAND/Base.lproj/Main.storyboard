@@ -1428,20 +1428,25 @@
                                             <segue destination="pB4-cx-hgB" kind="unwind" identifier="unwindSegue" unwindAction="unwindToViewController:" id="1gk-al-ouI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-4g-9gY" userLabel="Play Arrow Button">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-4g-9gY" userLabel="Play Arrow Button">
                                         <rect key="frame" x="452" y="375" width="120" height="120"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="playArrowButton:" destination="ksl-pq-ITf" eventType="touchUpInside" id="NRN-1N-zeQ"/>
-                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Product_Ranking" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-hK-PsY">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="UvW-4g-9gY"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

@@ -49,8 +49,6 @@ import AVFoundation
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer)
         
-        
-        
         self.view.bringSubviewToFront(moviePlayer.view)
         
         moviePlayer.play()
@@ -78,6 +76,10 @@ import AVFoundation
         
         //self.performSegueWithIdentifier("Custom from 1 to main", sender: self)
 
+        if(moviePlayer.playbackState == MPMoviePlaybackState.Playing){
+            moviePlayer.stop();
+        }
+        
          transitionToMain()
 
 

@@ -11,7 +11,7 @@
 		040F7FAE1A1FDF6000B17B4C /* Key Manu.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FAC1A1FDF6000B17B4C /* Key Manu.m4v */; };
 		040F7FAF1A1FDF6000B17B4C /* Manu Snapshot.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FAD1A1FDF6000B17B4C /* Manu Snapshot.m4v */; };
 		040F7FB21A1FEFDC00B17B4C /* Price Range.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB01A1FEFDC00B17B4C /* Price Range.m4v */; };
-		040F7FB31A1FEFDC00B17B4C /* Price Trend.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB11A1FEFDC00B17B4C /* Price Trend.m4v */; };
+		040F7FB31A1FEFDC00B17B4C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		040F7FB71A1FF01900B17B4C /* Assortment.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB51A1FF01900B17B4C /* Assortment.m4v */; };
 		040F7FB81A1FF01900B17B4C /* Power Index.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FB61A1FF01900B17B4C /* Power Index.m4v */; };
 		040F7FBB1A1FF04600B17B4C /* Store Perform.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 040F7FBA1A1FF04600B17B4C /* Store Perform.m4v */; };
@@ -292,6 +292,7 @@
 				TargetAttributes = {
 					043BE6241A1B956C007A6E72 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3PPLS28652;
 					};
 					043BE6391A1B956C007A6E72 = {
 						CreatedOnToolsVersion = 6.1;
@@ -323,7 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F7FB31A1FEFDC00B17B4C /* Price Trend.m4v in Resources */,
+				040F7FB31A1FEFDC00B17B4C /* (null) in Resources */,
 				040F7FAA1A1FDF4700B17B4C /* Category Snapshot.m4v in Resources */,
 				040F7FAF1A1FDF6000B17B4C /* Manu Snapshot.m4v in Resources */,
 				040F7FB71A1FF01900B17B4C /* Assortment.m4v in Resources */,
@@ -490,9 +491,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SCAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -500,9 +504,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SCAND/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
