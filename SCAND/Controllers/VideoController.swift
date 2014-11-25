@@ -57,6 +57,10 @@ import AVFoundation
 
     }
     
+    @IBAction func swipedLeft(sender: AnyObject) {
+        transitionToMain()
+    }
+    
     func transitionToMain(){
         stopMovieIfPlaying()
         self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueAfterVideo )

@@ -29,11 +29,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="FromRightToLeftSegue" id="uqW-RO-fCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Dasboard">
                     <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="FromRightToLeftSegue" id="CJa-qp-vrs"/>
+                        <action selector="swipedLeft:" destination="BYZ-38-t0r" id="oem-YW-fdw"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -536,13 +539,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwP-Ju-cwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ovo-ce-gBB" userLabel="Swipe Right">
                     <connections>
+                        <action selector="swipedRight:" destination="14a-ZL-8Of" id="wFx-OX-6e7"/>
                         <segue destination="ZDf-mT-dJL" kind="custom" identifier="Category Performance Start - Dashboard" customClass="FromLeftToRightSegue" id="dhf-Lg-jGM"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="Tnh-eb-ScD" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="14a-ZL-8Of" id="roR-Zb-JCI"/>
-                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Category Performance Start - Category Performance 1" customClass="FromRightToLeftSegue" id="lTm-d2-d3x"/>
+                        <action selector="swipedLeft:" destination="14a-ZL-8Of" id="c1M-HU-Qtp"/>
+                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Category Performance Start - Category Performance 1" customClass="FromRightToLeftSegue" id="CDS-Z7-u0U"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -598,18 +602,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="r1I-RZ-uBl" id="6Oj-aU-ALN"/>
+                        <segue destination="deR-nr-Rv0" kind="custom" identifier="AP Start - Cp page 3" customClass="FromLeftToRightSegue" id="1It-uA-oGj"/>
+                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Start - Ap Page 1" customClass="FromRightToLeftSegue" id="nS8-UJ-slB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29g-iL-VMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="VIn-nC-Tml" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="deR-nr-Rv0" kind="custom" identifier="AP Start - Cp page 3" customClass="FromLeftToRightSegue" id="hkg-lO-o77"/>
+                        <action selector="swipedRight:" destination="IB0-YQ-rHE" id="ndE-kN-qDA"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="juu-Tp-qsd" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="IB0-YQ-rHE" id="6vi-cg-12S"/>
-                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Start - Ap Page 1" customClass="FromRightToLeftSegue" id="d19-ff-gez"/>
+                        <action selector="swipedLeft:" destination="IB0-YQ-rHE" id="Bvj-4O-K2S"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -665,18 +670,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ouy-Ng-Eg2" id="EoU-ey-uid"/>
+                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Pa Start - Ap Page 3" customClass="FromLeftToRightSegue" id="SYP-bn-tyj"/>
+                        <segue destination="5o3-U2-smh" kind="custom" identifier="Pa Start - Pa Page 1" customClass="FromRightToLeftSegue" id="2Mb-24-bmv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHV-zO-atb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="6hp-jo-AWe" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Pa Start - Ap Page 3" customClass="FromLeftToRightSegue" id="lKc-wc-dIj"/>
+                        <action selector="swipedRight:" destination="53k-em-v8c" id="joG-JM-J3h"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="M5U-Vj-ExH" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="53k-em-v8c" id="QnB-V0-v5o"/>
-                        <segue destination="5o3-U2-smh" kind="custom" identifier="Pa Start - Pa Page 1" customClass="FromRightToLeftSegue" id="6ab-lT-Yfs"/>
+                        <action selector="swipedLeft:" destination="53k-em-v8c" id="JCL-Nu-QrM"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -732,18 +738,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="T92-o5-NgT" id="XRi-EJ-31w"/>
+                        <segue destination="osf-cO-OhN" kind="custom" identifier="Sp Start - Pa Page 2" customClass="FromLeftToRightSegue" id="dUH-Ra-47Z"/>
+                        <segue destination="937-Ra-2QI" kind="custom" identifier="SP Start - Sp Page 1" customClass="FromRightToLeftSegue" id="cO1-cN-YsD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxx-SE-HE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="v8h-cQ-Y8K" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="osf-cO-OhN" kind="custom" identifier="Sp Start - Pa Page 2" customClass="FromLeftToRightSegue" id="7Cc-5b-e7J"/>
+                        <action selector="swipedRight:" destination="JIs-6d-fUj" id="jcD-cc-jSS"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="k8c-9g-K4i" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="JIs-6d-fUj" id="YyH-PS-Mvy"/>
-                        <segue destination="937-Ra-2QI" kind="custom" identifier="SP Start - Sp Page 1" customClass="FromRightToLeftSegue" id="Qxl-mX-OmK"/>
+                        <action selector="swipedLeft:" destination="JIs-6d-fUj" id="B1K-bx-Azh"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -798,18 +805,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="1LE-ZU-WxA" id="dme-HY-WZR"/>
+                        <segue destination="937-Ra-2QI" kind="custom" identifier="SM Start - SP Page 1" customClass="FromLeftToRightSegue" id="FGH-u7-hsW"/>
+                        <segue destination="XrY-zs-24a" kind="custom" identifier="SM Start - What Is Scan D" customClass="FromRightToLeftSegue" id="BCo-Pi-xFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVM-0r-nhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="3N8-Rn-XXa" userLabel="Swipe Right">
                     <connections>
-                        <segue destination="937-Ra-2QI" kind="custom" identifier="SM Start - SP Page 1" customClass="FromLeftToRightSegue" id="UEn-4T-ryZ"/>
+                        <action selector="swipedRight:" destination="USv-Ee-74X" id="5kL-q8-el3"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="LrB-hP-83x" userLabel="Swipe Left">
                     <connections>
-                        <action selector="swipedLeft:" destination="USv-Ee-74X" id="rZK-ek-hE1"/>
-                        <segue destination="XrY-zs-24a" kind="custom" identifier="SM Start - What Is Scan D" customClass="FromRightToLeftSegue" id="V6l-sx-ND2"/>
+                        <action selector="swipedLeft:" destination="USv-Ee-74X" id="6I5-iA-6gn"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -853,6 +861,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="xQ7-E5-b4k"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
@@ -874,10 +885,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="videoPath" value="Key Manu"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Category Snapshot"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="CP Page 1 - CP Start"/>
@@ -885,6 +893,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="cug-iJ-Y16" id="p94-1d-ez4"/>
+                        <segue destination="14a-ZL-8Of" kind="custom" identifier="CP Page 1 - CP Start" customClass="FromLeftToRightSegue" id="pz3-er-pPf"/>
+                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 1 - Cp Page 2" customClass="FromRightToLeftSegue" id="dYe-cn-sBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0H-gB-ylT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -900,14 +910,12 @@
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="xtb-yQ-fpE" userLabel="Right Swipe">
                     <connections>
-                        <action selector="swipedRight:" destination="Oti-Cv-wYI" id="iuB-ge-ROq"/>
-                        <segue destination="14a-ZL-8Of" kind="custom" identifier="CP Page 1 - CP Start" customClass="FromLeftToRightSegue" id="gJR-g9-SE9"/>
+                        <action selector="swipedRight:" destination="Oti-Cv-wYI" id="eWt-bU-OyN"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="YFv-TQ-w5T" userLabel="Left Swipe">
                     <connections>
-                        <action selector="swipedLeft:" destination="Oti-Cv-wYI" id="Xme-ko-pY1"/>
-                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 1 - Cp Page 2" customClass="FromRightToLeftSegue" id="uk1-Br-HRM"/>
+                        <action selector="swipedLeft:" destination="Oti-Cv-wYI" id="oWp-RF-BvD"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -985,6 +993,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Vnt-03-uXo" id="yH0-KW-Te3"/>
+                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Ap Page 1 - Ap Start" customClass="FromLeftToRightSegue" id="MKQ-sE-Erk"/>
+                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 1 - Ap Page 2" customClass="FromRightToLeftSegue" id="GmU-6f-dec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNM-Sm-rG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1001,13 +1011,11 @@
                 <swipeGestureRecognizer direction="right" id="WQO-U2-Wtv" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="lQx-aY-bJg" id="BrN-aE-Qki"/>
-                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Ap Page 1 - Ap Start" customClass="FromLeftToRightSegue" id="acS-8Y-nZk"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="W73-yz-n1t" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="lQx-aY-bJg" id="QES-Wx-cyB"/>
-                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 1 - Ap Page 2" customClass="FromRightToLeftSegue" id="DV9-8i-fMJ"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1085,6 +1093,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="0MD-sS-pkh" id="pGL-pV-55L"/>
+                        <segue destination="53k-em-v8c" kind="custom" identifier="PA Page 1 - PA Start" customClass="FromLeftToRightSegue" id="PHC-cL-hdO"/>
+                        <segue destination="osf-cO-OhN" kind="custom" identifier="PA Page 1 - PA Page 2" customClass="FromRightToLeftSegue" id="ADy-X7-w9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjP-Vx-5rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1101,13 +1111,11 @@
                 <swipeGestureRecognizer direction="right" id="FyC-H8-0El" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="5o3-U2-smh" id="WKU-bu-Md2"/>
-                        <segue destination="53k-em-v8c" kind="custom" identifier="PA Page 1 - PA Start" customClass="FromLeftToRightSegue" id="hjl-H1-9JS"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="XPr-RL-Ety" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="5o3-U2-smh" id="kBP-0i-5SY"/>
-                        <segue destination="osf-cO-OhN" kind="custom" identifier="PA Page 1 - PA Page 2" customClass="FromRightToLeftSegue" id="hbo-Pr-taG"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1185,6 +1193,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="yS3-wA-eT8" id="Tks-yj-WDq"/>
+                        <segue destination="JIs-6d-fUj" kind="custom" identifier="SP Page 1 - Sp Start" customClass="FromLeftToRightSegue" id="RaR-MY-9qW"/>
+                        <segue destination="USv-Ee-74X" kind="custom" identifier="SP Page 1 - SM Start" customClass="FromRightToLeftSegue" id="OFb-Bv-PpC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-4C-dk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1201,13 +1211,11 @@
                 <swipeGestureRecognizer direction="right" id="sd6-jx-M2D" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="937-Ra-2QI" id="Ix3-h1-Lnu"/>
-                        <segue destination="JIs-6d-fUj" kind="custom" identifier="SP Page 1 - Sp Start" customClass="FromLeftToRightSegue" id="0CR-Wo-Of3"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="mCf-3F-cTU" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="937-Ra-2QI" id="9LF-5X-mlz"/>
-                        <segue destination="USv-Ee-74X" kind="custom" identifier="SP Page 1 - SM Start" customClass="FromRightToLeftSegue" id="Bnv-EW-c05"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1279,12 +1287,14 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Start"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Trend"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price_Trend"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="PA Page 2 - Pa Page 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="PA Page 2 - SP Start"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="5pG-dv-Suf" id="TIb-2e-4am"/>
+                        <segue destination="5o3-U2-smh" kind="custom" identifier="PA Page 2 - Pa Page 1" customClass="FromLeftToRightSegue" id="TdE-sl-L8g"/>
+                        <segue destination="JIs-6d-fUj" kind="custom" identifier="PA Page 2 - SP Start" customClass="FromRightToLeftSegue" id="SCa-Ox-tgO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ar-XE-9vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1301,13 +1311,11 @@
                 <swipeGestureRecognizer direction="right" id="k1H-zF-zSF" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="osf-cO-OhN" id="4fR-LI-CsL"/>
-                        <segue destination="5o3-U2-smh" kind="custom" identifier="PA Page 2 - Pa Page 1" customClass="FromLeftToRightSegue" id="aht-SA-con"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="N6Z-e0-Vtj" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="osf-cO-OhN" id="VPO-mh-5CK"/>
-                        <segue destination="JIs-6d-fUj" kind="custom" identifier="PA Page 2 - SP Start" customClass="FromRightToLeftSegue" id="713-ci-e9p"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1385,6 +1393,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="Fsw-nh-dd6" id="uUt-g1-zCf"/>
+                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Page 2 - Ap Page 1" customClass="FromLeftToRightSegue" id="tzF-tJ-gir"/>
+                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Ap Page 2 - Ap Page 3" customClass="FromRightToLeftSegue" id="sUY-Fz-q1p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq7-Bs-HKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1401,13 +1411,11 @@
                 <swipeGestureRecognizer direction="right" id="JJh-iC-fqm" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="lM1-o4-UYV" id="lNE-tT-Mex"/>
-                        <segue destination="lQx-aY-bJg" kind="custom" identifier="Ap Page 2 - Ap Page 1" customClass="FromLeftToRightSegue" id="fsX-V5-RFF"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="eYT-Ql-CtQ" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="lM1-o4-UYV" id="2sQ-dA-BIG"/>
-                        <segue destination="ksl-pq-ITf" kind="custom" identifier="Ap Page 2 - Ap Page 3" customClass="FromRightToLeftSegue" id="lVc-R2-9GG"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1483,6 +1491,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="X6x-zA-gGl" id="F5M-Zf-eJ7"/>
+                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 3 - Ap Page 2" customClass="FromLeftToRightSegue" id="xdh-4Y-BDt"/>
+                        <segue destination="53k-em-v8c" kind="custom" identifier="Ap Page 3 - Pa Start" customClass="FromRightToLeftSegue" id="QWG-eN-Uds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-la-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1499,13 +1509,11 @@
                 <swipeGestureRecognizer direction="right" id="yyd-qd-oxE" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="ksl-pq-ITf" id="GxR-yS-iCa"/>
-                        <segue destination="lM1-o4-UYV" kind="custom" identifier="Ap Page 3 - Ap Page 2" customClass="FromLeftToRightSegue" id="G7p-c2-mt8"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="je8-RM-yXR" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="ksl-pq-ITf" id="13a-T2-r9k"/>
-                        <segue destination="53k-em-v8c" kind="custom" identifier="Ap Page 3 - Pa Start" customClass="FromRightToLeftSegue" id="GeI-O1-4Z7"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1582,19 +1590,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="KDD-4p-dDN" id="pdS-vO-tud"/>
+                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Cp Page 2 - Cp Page 1" customClass="FromLeftToRightSegue" id="4Z6-FO-awO"/>
+                        <segue destination="deR-nr-Rv0" kind="custom" identifier="Cp page 2 - Cp Page 3" customClass="FromRightToLeftSegue" id="rJ7-vL-edB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwE-k8-joj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="V1Z-q6-VnL" userLabel="Right Swipe">
                     <connections>
-                        <action selector="swipedRight:" destination="4NV-n7-ZOK" id="EVM-HL-gsC"/>
-                        <segue destination="Oti-Cv-wYI" kind="custom" identifier="Cp Page 2 - Cp Page 1" customClass="FromLeftToRightSegue" id="yo6-tI-uv6"/>
+                        <action selector="swipedRight:" destination="4NV-n7-ZOK" id="rFn-GW-WMA"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="3ve-lS-rg2" userLabel="Left Swipe">
                     <connections>
-                        <action selector="swipedLeft:" destination="4NV-n7-ZOK" id="aeO-jt-JBG"/>
-                        <segue destination="deR-nr-Rv0" kind="custom" identifier="Cp page 2 - Cp Page 3" customClass="FromRightToLeftSegue" id="F6B-Y7-n1p"/>
+                        <action selector="swipedLeft:" destination="4NV-n7-ZOK" id="Hub-N0-thi"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="1C3-jf-WNh" userLabel="Up Swipe">
@@ -1682,19 +1690,19 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sliderView" destination="ILF-3E-EAj" id="x1e-Qz-eCk"/>
+                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 3 - Cp Page 2" customClass="FromLeftToRightSegue" id="QO2-K4-9BX"/>
+                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Cp Page 3 - AP Start" customClass="FromRightToLeftSegue" id="gnq-4q-lJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2x-zZ-DVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="O23-Co-eT8" userLabel="Right Swipe">
                     <connections>
                         <action selector="swipedRight:" destination="deR-nr-Rv0" id="i00-yI-haA"/>
-                        <segue destination="4NV-n7-ZOK" kind="custom" identifier="Cp Page 3 - Cp Page 2" customClass="FromLeftToRightSegue" id="B7f-la-cdQ"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="o6Q-Uw-t2x" userLabel="Left Swipe">
                     <connections>
                         <action selector="swipedLeft:" destination="deR-nr-Rv0" id="djP-xc-372"/>
-                        <segue destination="IB0-YQ-rHE" kind="custom" identifier="Cp Page 3 - AP Start" customClass="FromRightToLeftSegue" id="mNE-tP-Xz8"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="up" id="f1B-O3-fuW" userLabel="Up Swipe">
@@ -1734,24 +1742,24 @@
         <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Cc-5b-e7J"/>
-        <segue reference="0CR-Wo-Of3"/>
-        <segue reference="UEn-4T-ryZ"/>
-        <segue reference="DzD-YQ-sh2"/>
-        <segue reference="kef-9h-sFz"/>
-        <segue reference="lFK-6Z-ziH"/>
+        <segue reference="ADy-X7-w9B"/>
+        <segue reference="TdE-sl-L8g"/>
+        <segue reference="PHC-cL-hdO"/>
+        <segue reference="SYP-bn-tyj"/>
+        <segue reference="SCa-Ox-tgO"/>
         <segue reference="TJv-lD-S3Y"/>
         <segue reference="IxJ-xS-8tW"/>
-        <segue reference="lKc-wc-dIj"/>
-        <segue reference="hjl-H1-9JS"/>
-        <segue reference="aht-SA-con"/>
-        <segue reference="G7p-c2-mt8"/>
-        <segue reference="yo6-tI-uv6"/>
-        <segue reference="uk1-Br-HRM"/>
+        <segue reference="lFK-6Z-ziH"/>
+        <segue reference="BCo-Pi-xFP"/>
+        <segue reference="OFb-Bv-PpC"/>
+        <segue reference="FGH-u7-hsW"/>
+        <segue reference="GmU-6f-dec"/>
+        <segue reference="tzF-tJ-gir"/>
+        <segue reference="MKQ-sE-Erk"/>
+        <segue reference="4Z6-FO-awO"/>
+        <segue reference="QO2-K4-9BX"/>
+        <segue reference="rJ7-vL-edB"/>
+        <segue reference="pz3-er-pPf"/>
         <segue reference="dhf-Lg-jGM"/>
-        <segue reference="gJR-g9-SE9"/>
-        <segue reference="fsX-V5-RFF"/>
-        <segue reference="hkg-lO-o77"/>
-        <segue reference="acS-8Y-nZk"/>
     </inferredMetricsTieBreakers>
 </document>

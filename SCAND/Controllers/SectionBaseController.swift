@@ -130,6 +130,14 @@ import MediaPlayer
 
     func doExitMoviePlayer() -> Void{
         
+        if( moviePlayer == nil){
+            return;
+        }
+        
+        if(moviePlayer.playbackState == MPMoviePlaybackState.Playing){
+            moviePlayer.stop();
+        }
+        
         moviePlayer.setFullscreen(false, animated: true)
         moviePlayer.view.removeFromSuperview()
     }
@@ -160,11 +168,11 @@ import MediaPlayer
     @IBAction func swipedUp(sender: AnyObject) {
         
         println("swiped up...")
-        slide(Direction.Down);
+        slide(Direction.Up);
     }
     @IBAction func swipedDown(sender: AnyObject) {
         println("swiped down...")
-        slide(Direction.Up);
+        slide(Direction.Down);
     }
     
     @IBAction func swipedRight(sender: AnyObject) {
@@ -179,7 +187,9 @@ import MediaPlayer
     
     func slide(direction: Direction){
         
-        // If we havent slide, and they want to slide up, return
+        let moviePlaying = moviePlayer != nil && moviePlayer.playbackState == MPMoviePlaybackState.Playing;
+        
+        // If we havent slid, and they want to slide up, return
         if(lastDirection == Direction.None && direction == Direction.Down){
             return;
         }
@@ -191,21 +201,28 @@ import MediaPlayer
         
         let leftOrRight = (direction == Direction.Left || direction == Direction.Right)
         
-        if(lastDirection == Direction.Up && leftOrRight){
+        if(leftOrRight){
+            
+            doExitMoviePlayer()
+            
+            if(lastDirection == Direction.Up ){
             
             println("Sliding up before transistion \(direction.hashValue)")
             
             
             slideIt(Direction.Down, { self.segueWithDirection(direction)})
             
+            }
+            else{
+                self.segueWithDirection(direction)
+            }
+            
             return;
         }
-        
-        if(leftOrRight){
-            self.segueWithDirection(direction)
-            return
+                
+        if(moviePlaying){
+            return;
         }
-        
         
         slideIt(direction, nil)
         lastDirection = direction;
