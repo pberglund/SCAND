@@ -35,9 +35,9 @@
                      completion:^(BOOL finished) {
                          UIWindow *window = source.view.window;
                          [window setRootViewController:destination];
+                         //[ dismissViewControllerAnimated:NO ];
+                         
                      }];
-    
-    
 }
 
 

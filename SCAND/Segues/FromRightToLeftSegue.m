@@ -6,7 +6,6 @@
 
 - (void)perform {
     
-    
     UIViewController* source = (UIViewController *)self.sourceViewController;
     UIViewController* destination = (UIViewController *)self.destinationViewController;
     
@@ -30,6 +29,6 @@
                          UIWindow *window = source.view.window;
                          [window setRootViewController:destination];
                      }];
-}
+    }
 @end
 

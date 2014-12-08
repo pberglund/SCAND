@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="1nz-Ok-IFT" appends="YES" id="CK4-A7-w0f"/>
+                            <outletCollection property="gestureRecognizers" destination="QQy-8C-RPR" appends="YES" id="b7u-gh-MeW"/>
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -29,14 +29,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="FromRightToLeftSegue" id="uqW-RO-fCf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="1nz-Ok-IFT" userLabel="Swipe Left To Dasboard">
+                <swipeGestureRecognizer direction="left" id="QQy-8C-RPR">
                     <connections>
-                        <action selector="swipedLeft:" destination="BYZ-38-t0r" id="oem-YW-fdw"/>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Video - Dashboard" customClass="FromRightToLeftSegue" id="jlC-FG-TxD"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -54,7 +51,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_is_scanD" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-Tq-4lB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_is_scanD.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-Tq-4lB">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYG-dl-aAJ" userLabel="Right Arrow Button">
@@ -111,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_you_need_to_start" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-ex-NFm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_what_you_need_to_start.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-ex-NFm">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPm-5c-0AW" userLabel="Right Arrow Button">
@@ -146,7 +143,6 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="What You Need To Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Type of Data"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="What You Need To Start - What is Scan D"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="What is Scan D - Type Of Data"/>
                     </userDefinedRuntimeAttributes>
@@ -179,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_type_of_data" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-2r-Xom">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_type_of_data.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7r2-2r-Xom">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-SP-Qgh" userLabel="Left Arrow Button">
@@ -237,7 +233,7 @@
                                     <segue destination="flh-Kn-dWf" kind="unwind" unwindAction="unwindToViewController:" id="m8G-lH-j3g"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_dashboard_templates_MENU" translatesAutoresizingMaskIntoConstraints="NO" id="xJo-mw-ocO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_dashboard_templates_MENU.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xJo-mw-ocO">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqs-vh-s11" userLabel="Category Performance Button">
@@ -327,7 +323,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU.jpg"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="SCAND_dashboard_templates_MENU"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="MenuPage"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
@@ -339,7 +335,7 @@
         <!--Start Page-->
         <scene sceneID="Nc4-tG-aqk">
             <objects>
-                <viewController storyboardIdentifier="1StartPage" title="Start Page" id="T1Q-xP-5dL" userLabel="Start Page" customClass="StartController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="1StartPage" autoresizesArchivedViewToFullSize="NO" title="Start Page" automaticallyAdjustsScrollViewInsets="NO" id="T1Q-xP-5dL" userLabel="Start Page" customClass="StartController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0lN-yR-fHe"/>
                         <viewControllerLayoutGuide type="bottom" id="qyi-LO-yUd"/>
@@ -348,9 +344,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_Loading-Start_page_11-18-14" translatesAutoresizingMaskIntoConstraints="NO" id="zfq-wd-jMC">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-F0-Stv" userLabel="Start Button">
                                 <rect key="frame" x="465" y="552" width="97" height="35"/>
                                 <state key="normal">
@@ -370,7 +363,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="48M-XP-kuN" appends="YES" id="cp6-R3-g9e"/>
@@ -384,9 +377,6 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="startToVideoSegueIdentifier" value="Start - Video"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="startToDashBoardSegueIdentifier" value="Start - Dashboard"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="FromRightToLeftSegue" id="aA0-hY-Rsz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Video">
@@ -409,7 +399,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_home_table_of_contents" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-Mt-vqY" userLabel="Dashboard Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCAND_home_table_of_contents.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LWF-Mt-vqY" userLabel="Dashboard Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-wX-aHy" userLabel="Category Performance Button">
@@ -461,7 +451,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="hSX-Ec-1Dd" appends="YES" id="Can-Hi-RbU"/>
+                            <outletCollection property="gestureRecognizers" destination="XJU-xz-Yul" appends="YES" id="0pW-i9-7hj"/>
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -477,9 +467,9 @@
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t5-HS-bNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="hSX-Ec-1Dd" userLabel="Swipe to Video">
+                <swipeGestureRecognizer direction="right" id="XJU-xz-Yul" userLabel="Swipe to Video">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" customClass="FromLeftToRightSegue" id="4em-bj-NZO"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" customClass="FromLeftToRightSegue" id="K0K-bq-Ltx"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -500,7 +490,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-TP-p4D">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Category_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="PMl-1o-LF2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Category_Performance.png" translatesAutoresizingMaskIntoConstraints="NO" id="PMl-1o-LF2">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-Dw-Wdi" userLabel="Arrow Button">
@@ -527,8 +517,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Category Performance Start - Dashboard"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Category Performance Start - Category Performance 1"/>
                     </userDefinedRuntimeAttributes>
@@ -567,7 +556,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-RZ-uBl">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio" translatesAutoresizingMaskIntoConstraints="NO" id="O5C-oM-XLn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5C-oM-XLn">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeN-Rk-Ema" userLabel="Arrow Button">
@@ -595,8 +584,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="AP Start - Cp page 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Start - Ap Page 1"/>
                     </userDefinedRuntimeAttributes>
@@ -635,7 +623,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouy-Ng-Eg2">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Pricing_Analysis" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-ky-FF1">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-ky-FF1">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-LC-rIV" userLabel="Arrow Button">
@@ -663,8 +651,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Pa Start - Ap Page 3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Pa Start - Pa Page 1"/>
                     </userDefinedRuntimeAttributes>
@@ -703,7 +690,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T92-o5-NgT">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Store_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-E1-9HW">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Store_Performance.png" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-E1-9HW">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAE-BR-6KK" userLabel="Arrow Button">
@@ -731,8 +718,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Sp Start - Pa Page 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="SP Start - Sp Page 1"/>
                     </userDefinedRuntimeAttributes>
@@ -771,7 +757,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1LE-ZU-WxA">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Shopper_marketing" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-iu-TSv">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_SCAND_dashboard_templates_Landing_Shopper_marketing.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ul-iu-TSv">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-JY-Zlo" userLabel="Arrow Button">
@@ -798,8 +784,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Shopper Marketing Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="What Is Scan D"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-5"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-5.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="SM Start - SP Page 1"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="SM Start - What Is Scan D"/>
                     </userDefinedRuntimeAttributes>
@@ -826,16 +811,16 @@
         <!--Category Performance Page - 1-->
         <scene sceneID="RFv-pw-n11">
             <objects>
-                <viewController storyboardIdentifier="Category Performance Page - 1" title="Category Performance Page - 1" id="Oti-Cv-wYI" userLabel="Category Performance Page - 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category Performance Page - 1" autoresizesArchivedViewToFullSize="NO" title="Category Performance Page - 1" automaticallyAdjustsScrollViewInsets="NO" id="Oti-Cv-wYI" userLabel="Category Performance Page - 1" customClass="SectionController" customModule="SCAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d5X-nl-2qC"/>
                         <viewControllerLayoutGuide type="bottom" id="GTI-vW-qPC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CWw-IL-X2f">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CWw-IL-X2f">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cug-iJ-Y16">
+                            <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cug-iJ-Y16">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOb-WW-odx" userLabel="Right Arrow Button">
@@ -865,8 +850,9 @@
                                             <action selector="playArrowButton:" destination="Oti-Cv-wYI" eventType="touchUpInside" id="xQ7-E5-b4k"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
+                                    <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Category_snapshot.png" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-c7-fVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -885,7 +871,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Category Snapshot"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="CP Page 1 - CP Start"/>
@@ -963,7 +949,7 @@
                                             <action selector="playArrowButton:" destination="lQx-aY-bJg" eventType="touchUpInside" id="53l-Po-2Iz"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Assortment_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-wO-QSy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Assortment_analysis.png" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-wO-QSy">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -983,9 +969,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Assortment"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 1 - Ap Start"/>
@@ -1063,7 +1047,7 @@
                                             <action selector="playArrowButton:" destination="5o3-U2-smh" eventType="touchUpInside" id="0gJ-oD-40v"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Range_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="med-Sq-fCv">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Range_analysis.png" translatesAutoresizingMaskIntoConstraints="NO" id="med-Sq-fCv">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1083,9 +1067,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price Range"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="PA Page 1 - PA Start"/>
@@ -1163,7 +1145,7 @@
                                             <action selector="playArrowButton:" destination="937-Ra-2QI" eventType="touchUpInside" id="RRA-0Z-WHR"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Store_Performance" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-Lg-C8K">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Store_Performance.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oct-Lg-C8K">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1183,9 +1165,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Store Performance Page - 1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Shopper Marketing Start"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-4.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Store Perform"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="SP Page 1 - Sp Start"/>
@@ -1263,7 +1243,7 @@
                                             <action selector="playArrowButton:" destination="osf-cO-OhN" eventType="touchUpInside" id="ChP-Ff-aJB"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Trend_analysis" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-kD-C9W">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Price_Trend_analysis.png" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-kD-C9W">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1283,9 +1263,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Pricing Analysis Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Store Performance Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-3.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Price_Trend"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="PA Page 2 - Pa Page 1"/>
@@ -1363,7 +1341,7 @@
                                             <action selector="playArrowButton:" destination="lM1-o4-UYV" eventType="touchUpInside" id="ElY-PP-YLG"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Power_Index" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-cO-pqN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Power_Index.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-cO-pqN">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1383,9 +1361,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Page - 3"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Power Index"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 2 - Ap Page 1"/>
@@ -1463,7 +1439,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Product_Ranking" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-hK-PsY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Product_Ranking.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-hK-PsY">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1483,9 +1459,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Assortment Portfolio Page - 3"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="leftView" value="3CategoryPerformance"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Pricing Analysis Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-2.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="rightSegueIdentifier" value="Ap Page 3 - Ap Page 2"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Ap Page 3 - Pa Start"/>
                     </userDefinedRuntimeAttributes>
@@ -1561,7 +1535,7 @@
                                             <action selector="rightArrowButton:" destination="4NV-n7-ZOK" eventType="touchUpInside" id="FMW-my-Dwv"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Manufacturer_snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Manufacturer_snapshot.png" translatesAutoresizingMaskIntoConstraints="NO" id="thu-7i-5aX">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1581,8 +1555,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 2"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Category Performance Page - 3"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Manu Snapshot"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Cp page 2 - Cp Page 3"/>
@@ -1661,7 +1634,7 @@
                                             <action selector="rightArrowButton:" destination="deR-nr-Rv0" eventType="touchUpInside" id="cxy-8j-Oud"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Key_Manufacturer" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-pE-nkz">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_SCAND_dashboard_templates_Key_Manufacturer.png" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-pE-nkz">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1526"/>
                                     </imageView>
                                 </subviews>
@@ -1681,8 +1654,7 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Category Performance Page - 3"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="rightView" value="Assortment Portfolio Start"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundImageFileName" value="1_SCAND_dashboard_backgrounds-noscroll-1.jpg"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Key Manu"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="leftSegueIdentifier" value="Cp Page 3 - AP Start"/>
@@ -1720,46 +1692,45 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio" width="2048" height="1536"/>
-        <image name="1_SCAND_dashboard_templates_Landing_Category_Performance" width="2048" height="1536"/>
-        <image name="1_SCAND_dashboard_templates_Landing_Pricing_Analysis" width="2048" height="1536"/>
-        <image name="1_SCAND_dashboard_templates_Landing_Shopper_marketing" width="2048" height="1536"/>
-        <image name="1_SCAND_dashboard_templates_Landing_Store_Performance" width="2048" height="1536"/>
-        <image name="SCAND_Loading-Start_page_11-18-14" width="2048" height="1536"/>
-        <image name="SCAND_dashboard_templates_MENU" width="2048" height="1536"/>
-        <image name="SCAND_home_table_of_contents" width="2048" height="1536"/>
-        <image name="SCAND_type_of_data" width="2048" height="1536"/>
-        <image name="SCAND_what_is_scanD" width="2048" height="1536"/>
-        <image name="SCAND_what_you_need_to_start" width="2048" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Assortment_analysis" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Category_snapshot" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Key_Manufacturer" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Manufacturer_snapshot" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Power_Index" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Price_Range_analysis" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Price_Trend_analysis" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Product_Ranking" width="2048" height="3072"/>
-        <image name="_SCAND_dashboard_templates_Store_Performance" width="2048" height="3072"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png" width="1024" height="768"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Category_Performance.png" width="1024" height="768"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png" width="1024" height="768"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Shopper_marketing.png" width="1024" height="768"/>
+        <image name="1_SCAND_dashboard_templates_Landing_Store_Performance.png" width="1024" height="768"/>
+        <image name="SCAND_dashboard_templates_MENU.jpg" width="1024" height="768"/>
+        <image name="SCAND_home_table_of_contents.jpg" width="1024" height="768"/>
+        <image name="SCAND_type_of_data.jpg" width="1024" height="768"/>
+        <image name="SCAND_what_is_scanD.jpg" width="1024" height="768"/>
+        <image name="SCAND_what_you_need_to_start.jpg" width="1024" height="768"/>
+        <image name="_SCAND_dashboard_templates_Assortment_analysis.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Category_snapshot.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Key_Manufacturer.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Manufacturer_snapshot.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Power_Index.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Price_Range_analysis.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Price_Trend_analysis.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Product_Ranking.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Store_Performance.png" width="1024" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ADy-X7-w9B"/>
-        <segue reference="TdE-sl-L8g"/>
-        <segue reference="PHC-cL-hdO"/>
-        <segue reference="SYP-bn-tyj"/>
-        <segue reference="SCa-Ox-tgO"/>
-        <segue reference="TJv-lD-S3Y"/>
-        <segue reference="IxJ-xS-8tW"/>
-        <segue reference="lFK-6Z-ziH"/>
-        <segue reference="BCo-Pi-xFP"/>
-        <segue reference="OFb-Bv-PpC"/>
-        <segue reference="FGH-u7-hsW"/>
-        <segue reference="GmU-6f-dec"/>
         <segue reference="tzF-tJ-gir"/>
-        <segue reference="MKQ-sE-Erk"/>
-        <segue reference="4Z6-FO-awO"/>
-        <segue reference="QO2-K4-9BX"/>
-        <segue reference="rJ7-vL-edB"/>
+        <segue reference="xdh-4Y-BDt"/>
+        <segue reference="SYP-bn-tyj"/>
+        <segue reference="Ywc-Ow-bDJ"/>
+        <segue reference="bZS-WT-0wy"/>
+        <segue reference="eZd-ti-QA3"/>
+        <segue reference="WMg-eK-jlC"/>
+        <segue reference="BlT-ws-p0K"/>
+        <segue reference="bIy-Df-e6r"/>
+        <segue reference="7We-bW-cXf"/>
+        <segue reference="FGH-u7-hsW"/>
+        <segue reference="2Mb-24-bmv"/>
+        <segue reference="ADy-X7-w9B"/>
         <segue reference="pz3-er-pPf"/>
-        <segue reference="dhf-Lg-jGM"/>
+        <segue reference="CDS-Z7-u0U"/>
+        <segue reference="dYe-cn-sBf"/>
+        <segue reference="rJ7-vL-edB"/>
+        <segue reference="jlC-FG-TxD"/>
+        <segue reference="K0K-bq-Ltx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 
 @IBDesignable class BaseViewController : UIViewController{
     
-    let transitionManager = TransitionManager()
+    var transitionManager = TransitionManager()
     
     @IBInspectable var backgroundImageFileName:String!
     //@IBInspectable var menuButtonImageFileName:String!
@@ -25,8 +25,25 @@ import UIKit
         case None
     }
     
+    deinit {
+        var origin = pageIdentifier
+        if(pageIdentifier == nil){
+            origin = self.description;
+        }
+        //self.transitionManager = nil;
+        println("DeInit: BaseViewController: \(origin)")
+        //super.deinit;
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //println("Presenting: \(self.presentingViewController)")
+        
+        //println("Presented: \(self.presentedViewController)")
+        
         println("Page identifier: \(pageIdentifier)")
     }
     
@@ -35,42 +52,45 @@ import UIKit
             return
         }
         
-        let image = UIImage(named: backgroundImageFileName) as UIImage?
-        let resized = RBResizeImage(image!, targetSize: self.view.bounds.size)
+        unowned var weakSelf = self;
         
-        self.view.backgroundColor = UIColor(patternImage: resized)
+        var image = weakSelf.getImageFromBundle(weakSelf.backgroundImageFileName)
+        
+        //var resized = RBResizeImage(image!, targetSize: weakSelf.view.bounds.size)
+        weakSelf.view.backgroundColor = UIColor(patternImage: image!)
+        
+        image = nil
+        //resized = nil
+        
     }
     
     func addMenuButton(){
         
-        //if(menuButtonImageFileName == nil){
-        //    return
-        //}
+         weak var weakSelf = self;
         
-        //let image = UIImage(named: menuButtonImageFileName) as UIImage?
-        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(960, 25, 40, 35)
-        //button.setImage(image, forState: .Normal)
-        button.addTarget(self, action: "openMenu:", forControlEvents:.TouchUpInside)
-
-        self.view.addSubview(button)
+        weak var button :UIButton?  = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+        button!.frame = CGRectMake(960, 25, 40, 35)
+        button!.addTarget(weakSelf!, action: "openMenu:", forControlEvents:.TouchUpInside)
+        weakSelf!.view.addSubview(button!)
+        button = nil
 
     }
     
     func openMenu(sender:UIButton!)
     {
-        println("Menu Button tapped")
-        println("Going to menu from \(pageIdentifier)")
+        //println("Menu Button tapped")
+        //println("Going to menu from \(pageIdentifier)")
         if(pageIdentifier == nil || pageIdentifier == "")
         {
-            println("Pageidentifier was null, not going to menu")
+            //println("Pageidentifier was null, not going to menu")
             return
         }
         
-        let vc = getViewControllerFromstoryboardID("MenuPage")
+        var vc = getViewControllerFromstoryboardID("MenuPage")
         //vc.returnStoryBoardId = pageIdentifier;
         //vc.transManager = transitionManager;
-        self.showController(vc);
+        
+         self.showController(vc);
         
     }    
     
@@ -79,24 +99,6 @@ import UIKit
         // handles swiping back to the origin view controller
     }
     
-    /*
-    
-    func closedBtnTouched(sender:UIButton!)
-    {
-        
-        println("Close Button tapped")
-        
-        if(pageIdentifier == nil || pageIdentifier == ""){
-            println("Error returning to previous controller, returnStoryBoardId was null")
-            return;
-        }
-        
-        self.transitionToViewControllerByStoryboardId(pageIdentifier)
-        
-        
-    }
-    
-*/
     
     func transitionToViewControllerBySegueIdentifier(segueIdentifier:String = "", originPage:String = ""){
         var origin = originPage;
@@ -115,32 +117,53 @@ import UIKit
             return
         }
         
+        //weak var weakSelf = self;
+        
         self.performSegueWithIdentifier(segueIdentifier, sender: self)
+
         println("Self: \(origin), Transition: \(segueIdentifier)")
 
     }
     
     func getViewControllerFromstoryboardID(storyBoardId:String) -> UIViewController{
-        let vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as UIViewController
+        //weak var weakSelf = self;
+        
+        var vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as UIViewController
         vc.transitioningDelegate = self.transitionManager
         return vc;
     }
     
     func showController(vc:UIViewController) -> Void{
+        
         self.showViewController(vc, sender: vc)
     }
     
     func transitionToViewControllerByStoryboardId(storyBoardId:String){
         
-        let vc = getViewControllerFromstoryboardID(storyBoardId);
+        var vc = getViewControllerFromstoryboardID(storyBoardId);
         showController(vc);
     }
     
-    func RBResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
-        let size = image.size
+    func getImageFromBundle(imageNameWithExtension:String) -> UIImage?{
+        //let bundle = NSBundle.mainBundle()
+        //println(bundle)
+        //println("Backgroundimage file name: \(imageNameWithExtension)")
+        //let pathhtml:String = bundle.pathForResource(imageNameWithExtension, ofType: nil)!
+        //println("pathhtml: \(pathhtml)")
+        //let minusExtension = imageNameWithExtension.substringToIndex(advance(imageNameWithExtension.startIndex, countElements(imageNameWithExtension) - 4))
+
+        var image = UIImage(named: imageNameWithExtension)
         
-        let widthRatio  = targetSize.width  / image.size.width
-        let heightRatio = targetSize.height / image.size.height
+        return image!;
+    }
+    
+    /*func RBResizeImage(image: UIImage?, targetSize: CGSize) -> UIImage? {
+        weak var newImage :UIImage?
+        
+        let size = image!.size
+        
+        let widthRatio  = targetSize.width  / image!.size.width
+        let heightRatio = targetSize.height / image!.size.height
         
         // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
@@ -155,11 +178,13 @@ import UIKit
         
         // Actually do the resizing to the rect using the ImageContext stuff
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.drawInRect(rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        image!.drawInRect(rect)
+        newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
+               
         return newImage
-    }
+        
+    }*/
 
 }

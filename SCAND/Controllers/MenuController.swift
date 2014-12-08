@@ -28,6 +28,9 @@ import MediaPlayer
         super.viewDidLoad()
     }
     
+    deinit{
+        println("Deinit: menucontroller")
+    }
     
     // Main Sections
     /*@IBAction func categoryPerformanceClicked(sender: AnyObject) {

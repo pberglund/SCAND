@@ -19,7 +19,18 @@ import MediaPlayer
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+println("Dashboard - catperfrom: \(self.categoryPerformanceSegueIdentifier)")
+        println("Dashboard - assortmentPortfolioSegueIdentifier: \(self.assortmentPortfolioSegueIdentifier)")
+        println("Dashboard - pricingAnalysisSegueIdentifier: \(self.pricingAnalysisSegueIdentifier)")
+        println("Dashboard - storePerformanceSegueIdentifier: \(self.storePerformanceSegueIdentifier)")
         
+        println("Dashboard - shopperMarketingSegueIdentifier: \(self.shopperMarketingSegueIdentifier)")
+*/
+    }
+    
+    deinit{
+        println("Deinit - dashboardcontroller")
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,22 +39,27 @@ import MediaPlayer
     }
     
     @IBAction func categoryPerformanceButtonTouchUpInside(sender: AnyObject) {
-        self.transitionToViewControllerByStoryboardId(categoryPerformanceSegueIdentifier)
+        //weak var weakSelf = self;
+        self.transitionToViewControllerByStoryboardId("Category Performance Start")
     }
     
     @IBAction func assortmentPortfolioButtonTouchUpInside(sender: AnyObject) {
+        //weak var weakSelf = self;
         self.transitionToViewControllerByStoryboardId(assortmentPortfolioSegueIdentifier)
     }
     
     @IBAction func pricingAnalysisButtonTouchUpInside(sender: AnyObject) {
+        //weak var weakSelf = self;
         self.transitionToViewControllerByStoryboardId(pricingAnalysisSegueIdentifier)
     }
     @IBAction func shopperMarketingButtonTouchUpInside(sender: AnyObject) {
+        //weak var weakSelf = self;
         self.transitionToViewControllerByStoryboardId(shopperMarketingSegueIdentifier)
     }
     
     @IBAction func storePerformanceButtonTouchUpInside(sender: AnyObject) {
-                self.transitionToViewControllerByStoryboardId(storePerformanceSegueIdentifier)
+        //weak var weakSelf = self;
+        self.transitionToViewControllerByStoryboardId(storePerformanceSegueIdentifier)
     }
     
 }

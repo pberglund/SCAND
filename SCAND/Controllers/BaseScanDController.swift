@@ -26,7 +26,7 @@ import UIKit
         self.setBackGroundImage()
         
         if(pageIdentifier != nil && pageIdentifier == menuIdentifier){
-            println("On menu")
+            //println("On menu")
             return
         }
         

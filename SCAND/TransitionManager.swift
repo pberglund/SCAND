@@ -14,6 +14,10 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     
     // MARK: UIViewControllerAnimatedTransitioning protocol methods
     
+    deinit {
+        println("DeInit: TransitionManager: \(self.description)")
+    }
+    
     // animate a change from one viewcontroller to another
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         

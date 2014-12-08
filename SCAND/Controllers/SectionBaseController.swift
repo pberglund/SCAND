@@ -23,21 +23,42 @@ import MediaPlayer
     var lastDirection:Direction = Direction.None
     
     @IBOutlet weak var sliderView: UIView!
-    @IBOutlet weak var expandCollapseButton: UIButton!
-    
-    
     var downArrowView: UIView!
     var upArrowView: UIView!
+    
+    var moviePlayer:MPMoviePlayerController!
+    
+    deinit {
+       
+        println("DeInit: section base -  \(self.pageIdentifier)")
+        /*self.sliderView.removeFromSuperview();
+        self.sliderView = nil
+        
+        self.downArrowView.removeFromSuperview()
+        self.downArrowView = nil
+        
+        self.upArrowView.removeFromSuperview()
+        self.upArrowView = nil
+
+        self.moviePlayer = nil
+*/
+        ClearSpace()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        ClearSpace()
+    }
+    
+    
+    func ClearSpace(){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     func showHideArrows(showArrow:UIView, hideArrow:UIView){
         UIView.animateWithDuration(0.75, animations: {
             hideArrow.alpha = 1.0
@@ -46,20 +67,24 @@ import MediaPlayer
     }
     
     func arrowAnimationUp(){
-        showHideArrows(downArrowView, hideArrow: upArrowView)
+        weak var weakDown = downArrowView;
+        weak var weakUp = upArrowView;
+        showHideArrows(weakDown!, hideArrow: weakUp!)
     }
     
     func arrowAnimationDown(){
-        showHideArrows(upArrowView, hideArrow: downArrowView)
+        weak var weakDown = downArrowView;
+        weak var weakUp = upArrowView;
+        showHideArrows(weakUp!, hideArrow: weakDown!)
     }
     
     func goRight(){
-        //self.transitionToViewControllerByStoryboardId(rightView)
         transistionBySegue(leftSegueIdentifier)
     }
     
     func transistionBySegue(segueIdentifier:String) -> Void{
-        self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueIdentifier, originPage: self.pageIdentifier)
+        weak var weakSelf = self;
+        weakSelf!.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueIdentifier, originPage: weakSelf!.pageIdentifier)
     }
     
     func goLeft(){
@@ -73,10 +98,8 @@ import MediaPlayer
         goRight()
     }
     
-    var moviePlayer:MPMoviePlayerController!
-    
     @IBAction func playArrowButton(sender: AnyObject) {
-        println("Clicked Play")
+        //println("Clicked Play")
         playVideo()
     }
     
@@ -90,10 +113,12 @@ import MediaPlayer
         let pathhtml = bundle.pathForResource(videoName, ofType: videoExtension)
         var url:NSURL = NSURL(fileURLWithPath: pathhtml!)!
         
-        
         moviePlayer = MPMoviePlayerController(contentURL: url)
         
-        moviePlayer.view.frame = self.view.bounds
+        weak var weakSelf = self;
+        
+        
+        moviePlayer.view.frame = weakSelf!.view.bounds
         
         moviePlayer.fullscreen = true
         
@@ -104,26 +129,22 @@ import MediaPlayer
         //moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
         
         moviePlayer.controlStyle = MPMovieControlStyle.Fullscreen;
-
        
-        self.view.addSubview(moviePlayer.view)
-        
+        weakSelf!.view.addSubview(moviePlayer.view)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerExitingFullScreen:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer)
         
-        
-        
-        self.view.bringSubviewToFront(moviePlayer.view)
+        weakSelf!.view.bringSubviewToFront(moviePlayer.view)
         
         moviePlayer.play()
         
-        println("Playing Movie");
+        //println("Playing Movie");
     }
     
     @objc
     func moviePlayerExitingFullScreen(notification: NSNotification){
-        println("In moviePlayerExitingFullScreen");
+        //println("In moviePlayerExitingFullScreen");
         
         doExitMoviePlayer()
     }
@@ -133,6 +154,7 @@ import MediaPlayer
         if( moviePlayer == nil){
             return;
         }
+        else{
         
         if(moviePlayer.playbackState == MPMoviePlaybackState.Playing){
             moviePlayer.stop();
@@ -140,54 +162,41 @@ import MediaPlayer
         
         moviePlayer.setFullscreen(false, animated: true)
         moviePlayer.view.removeFromSuperview()
+        }
     }
     
     @objc
     func moviePlayerOver(notification: NSNotification){
-        println("In moviePlayerDidFinishPlaying");
-
-        //let userInfo : [NSObject : AnyObject]? = notification.userInfo
-        
-        
-        //var playbackDidFinish : Int = userInfo![MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] as Int
-        
-        
+        //println("In moviePlayerDidFinishPlaying");
         doExitMoviePlayer()
-        
-        /*if(playbackDidFinish == MPMovieFinishReason.UserExited.rawValue || playbackDidFinish == MPMovieFinishReason.PlaybackEnded.rawValue)
-        {
-            moviePlayer.view.removeFromSuperview()
-        }*/
-        
-        
-        
-        
     }
-
     
     @IBAction func swipedUp(sender: AnyObject) {
         
-        println("swiped up...")
+        //println("swiped up...")
         slide(Direction.Up);
     }
+    
     @IBAction func swipedDown(sender: AnyObject) {
-        println("swiped down...")
+        //println("swiped down...")
         slide(Direction.Down);
     }
     
     @IBAction func swipedRight(sender: AnyObject) {
-        println("swiped right...")
+        //println("swiped right...")
         slide(Direction.Left);
     }
     
     @IBAction func swipedLeft(sender: AnyObject) {
-        println("swiped left...")
+        //println("swiped left...")
         slide(Direction.Right);
     }
     
     func slide(direction: Direction){
         
         let moviePlaying = moviePlayer != nil && moviePlayer.playbackState == MPMoviePlaybackState.Playing;
+        
+        weak var weakSelf = self;
         
         // If we havent slid, and they want to slide up, return
         if(lastDirection == Direction.None && direction == Direction.Down){
@@ -207,14 +216,14 @@ import MediaPlayer
             
             if(lastDirection == Direction.Up ){
             
-            println("Sliding up before transistion \(direction.hashValue)")
+            //println("Sliding up before transistion \(direction.hashValue)")
             
             
-            slideIt(Direction.Down, { self.segueWithDirection(direction)})
+            slideIt(Direction.Down, { weakSelf!.segueWithDirection(direction)})
             
             }
             else{
-                self.segueWithDirection(direction)
+                weakSelf!.segueWithDirection(direction)
             }
             
             return;
@@ -229,7 +238,6 @@ import MediaPlayer
         
     }
     
-    
     func segueWithDirection(direction: Direction) -> Void{
         
         var pageName = self.pageIdentifier;
@@ -239,14 +247,8 @@ import MediaPlayer
         
         switch direction {
         case Direction.Left:
-            //self.performSegueWithIdentifier("Slide To Main", sender: self)
-            //let vc:ViewController = ViewController()
-            //let vc : AnyObject! = self.storyboard.instantiateViewControllerWithIdentifier("1StartPage")
-            //self.showViewController(vc as UIViewController, sender: vc)
-            //self.transitionToViewControllerBySegueIdentifier(leftSegueIdentifier, originPage: pageName)
             goLeft();
         case Direction.Right:
-            // self.transitionToViewControllerBySegueIdentifier(rightSequeIdentifier, originPage: pageName)
             goRight();
             
         default:
@@ -257,13 +259,10 @@ import MediaPlayer
     }
     
     func slideIt(direction: Direction, completion: (() -> Void)!){
-        //println("In slideIt")
-        
         let currFrame = sliderView.frame
         
         let newX:CGFloat = currFrame.origin.x
         var newY:CGFloat = currFrame.origin.y
-        
         
         switch direction {
         case Direction.Up:
@@ -278,23 +277,25 @@ import MediaPlayer
             
         }
         
-        let newFrame:CGRect = CGRectMake(newX, newY, currFrame.width, currFrame.height);
+        weak var weakSelf = self;
+        
+        var newFrame:CGRect? = CGRectMake(newX, newY, currFrame.width, currFrame.height) as CGRect?;
         
         UIView.animateWithDuration(animationDuration, animations: {
             
-            self.sliderView.frame = newFrame
-            //println("sliding...")
+            weakSelf!.sliderView.frame = newFrame!
             
             }, completion: {
                 (value: Bool) in
                 
-                //println("Done sliding")
                 if((completion) != nil){
                     completion()
                 }
                 
         })
-        println("Leaving slideIt");
+
+        newFrame = nil
+        //println("Leaving slideIt");
     }
     
 }

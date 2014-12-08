@@ -24,7 +24,6 @@
 		043BE64D1A1B95B1007A6E72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043BE64C1A1B95B1007A6E72 /* QuartzCore.framework */; };
 		043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6521A1B96AE007A6E72 /* BaseViewController.swift */; };
 		043BE6571A1B96AE007A6E72 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6531A1B96AE007A6E72 /* VideoController.swift */; };
-		043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6541A1B96AE007A6E72 /* SliderViewController.swift */; };
 		043BE6591A1B96AE007A6E72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE6551A1B96AE007A6E72 /* ViewController.swift */; };
 		043BE65F1A1B9879007A6E72 /* FromLeftToRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65C1A1B9879007A6E72 /* FromLeftToRightSegue.m */; };
 		043BE6601A1B9879007A6E72 /* FromRightToLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BE65E1A1B9879007A6E72 /* FromRightToLeftSegue.m */; };
@@ -36,6 +35,34 @@
 		043BE69E1A1D46CD007A6E72 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69D1A1D46CD007A6E72 /* MenuController.swift */; };
 		043BE6A01A1EA90F007A6E72 /* SectionBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BE69F1A1EA90F007A6E72 /* SectionBaseController.swift */; };
 		0487F0951A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 0487F0941A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v */; };
+		04C54E281A35F7C300224299 /* 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E231A35F7C300224299 /* 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png */; };
+		04C54E291A35F7C300224299 /* _SCAND_dashboard_templates_Assortment_analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E241A35F7C300224299 /* _SCAND_dashboard_templates_Assortment_analysis.png */; };
+		04C54E2A1A35F7C300224299 /* _SCAND_dashboard_templates_Power_Index.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E251A35F7C300224299 /* _SCAND_dashboard_templates_Power_Index.png */; };
+		04C54E2B1A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E261A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png */; };
+		04C54E2C1A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png.old.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E271A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png.old.png */; };
+		04C54E421A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E2F1A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-1.jpg */; };
+		04C54E431A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E301A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-2.jpg */; };
+		04C54E441A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E311A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-3.jpg */; };
+		04C54E451A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E321A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-4.jpg */; };
+		04C54E461A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E331A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-5.jpg */; };
+		04C54E471A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Category_Performance.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E351A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Category_Performance.png */; };
+		04C54E481A35F7D500224299 /* _SCAND_dashboard_templates_Category_snapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E361A35F7D500224299 /* _SCAND_dashboard_templates_Category_snapshot.png */; };
+		04C54E491A35F7D500224299 /* _SCAND_dashboard_templates_Key_Manufacturer.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E371A35F7D500224299 /* _SCAND_dashboard_templates_Key_Manufacturer.png */; };
+		04C54E4A1A35F7D500224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E381A35F7D500224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot.png */; };
+		04C54E4B1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E3A1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png */; };
+		04C54E4C1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Range_analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E3B1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Range_analysis.png */; };
+		04C54E4D1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Trend_analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E3C1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Trend_analysis.png */; };
+		04C54E4E1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E3E1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png */; };
+		04C54E4F1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Store_Performance.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E401A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Store_Performance.png */; };
+		04C54E501A35F7D500224299 /* _SCAND_dashboard_templates_Store_Performance.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E411A35F7D500224299 /* _SCAND_dashboard_templates_Store_Performance.png */; };
+		04C54E571A35F83500224299 /* SCAND_dashboard_templates_MENU.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E511A35F83500224299 /* SCAND_dashboard_templates_MENU.jpg */; };
+		04C54E581A35F83500224299 /* SCAND_home_table_of_contents.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E521A35F83500224299 /* SCAND_home_table_of_contents.jpg */; };
+		04C54E591A35F83500224299 /* SCAND_Loading-Start_page_11-18-14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E531A35F83500224299 /* SCAND_Loading-Start_page_11-18-14.jpg */; };
+		04C54E5A1A35F83500224299 /* SCAND_type_of_data.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E541A35F83500224299 /* SCAND_type_of_data.jpg */; };
+		04C54E5B1A35F83500224299 /* SCAND_what_is_scanD.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E551A35F83500224299 /* SCAND_what_is_scanD.jpg */; };
+		04C54E5C1A35F83500224299 /* SCAND_what_you_need_to_start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E561A35F83500224299 /* SCAND_what_you_need_to_start.jpg */; };
+		04C54E5F1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E5D1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_03.png */; };
+		04C54E601A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C54E5E1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_06.png */; };
 		04DEEB611A251CAE00644F6F /* Price_Trend.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 04DEEB601A251CAE00644F6F /* Price_Trend.m4v */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +97,6 @@
 		043BE64C1A1B95B1007A6E72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		043BE6521A1B96AE007A6E72 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		043BE6531A1B96AE007A6E72 /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
-		043BE6541A1B96AE007A6E72 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		043BE6551A1B96AE007A6E72 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		043BE65B1A1B9879007A6E72 /* FromLeftToRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromLeftToRightSegue.h; sourceTree = "<group>"; };
 		043BE65C1A1B9879007A6E72 /* FromLeftToRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromLeftToRightSegue.m; sourceTree = "<group>"; };
@@ -84,6 +110,34 @@
 		043BE69D1A1D46CD007A6E72 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		043BE69F1A1EA90F007A6E72 /* SectionBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionBaseController.swift; sourceTree = "<group>"; };
 		0487F0941A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Big_Buck_Bunny_Trailer.m4v; sourceTree = "<group>"; };
+		04C54E231A35F7C300224299 /* 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png; sourceTree = "<group>"; };
+		04C54E241A35F7C300224299 /* _SCAND_dashboard_templates_Assortment_analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Assortment_analysis.png; sourceTree = "<group>"; };
+		04C54E251A35F7C300224299 /* _SCAND_dashboard_templates_Power_Index.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Power_Index.png; sourceTree = "<group>"; };
+		04C54E261A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Product_Ranking.png; sourceTree = "<group>"; };
+		04C54E271A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png.old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Product_Ranking.png.old.png; sourceTree = "<group>"; };
+		04C54E2F1A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1_SCAND_dashboard_backgrounds-noscroll-1.jpg"; sourceTree = "<group>"; };
+		04C54E301A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1_SCAND_dashboard_backgrounds-noscroll-2.jpg"; sourceTree = "<group>"; };
+		04C54E311A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1_SCAND_dashboard_backgrounds-noscroll-3.jpg"; sourceTree = "<group>"; };
+		04C54E321A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1_SCAND_dashboard_backgrounds-noscroll-4.jpg"; sourceTree = "<group>"; };
+		04C54E331A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1_SCAND_dashboard_backgrounds-noscroll-5.jpg"; sourceTree = "<group>"; };
+		04C54E351A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Category_Performance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_SCAND_dashboard_templates_Landing_Category_Performance.png; sourceTree = "<group>"; };
+		04C54E361A35F7D500224299 /* _SCAND_dashboard_templates_Category_snapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Category_snapshot.png; sourceTree = "<group>"; };
+		04C54E371A35F7D500224299 /* _SCAND_dashboard_templates_Key_Manufacturer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Key_Manufacturer.png; sourceTree = "<group>"; };
+		04C54E381A35F7D500224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Manufacturer_snapshot.png; sourceTree = "<group>"; };
+		04C54E3A1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png; sourceTree = "<group>"; };
+		04C54E3B1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Range_analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Price_Range_analysis.png; sourceTree = "<group>"; };
+		04C54E3C1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Trend_analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Price_Trend_analysis.png; sourceTree = "<group>"; };
+		04C54E3E1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png; sourceTree = "<group>"; };
+		04C54E401A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Store_Performance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_SCAND_dashboard_templates_Landing_Store_Performance.png; sourceTree = "<group>"; };
+		04C54E411A35F7D500224299 /* _SCAND_dashboard_templates_Store_Performance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _SCAND_dashboard_templates_Store_Performance.png; sourceTree = "<group>"; };
+		04C54E511A35F83500224299 /* SCAND_dashboard_templates_MENU.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SCAND_dashboard_templates_MENU.jpg; path = Resources/SCAND_dashboard_templates_MENU.jpg; sourceTree = "<group>"; };
+		04C54E521A35F83500224299 /* SCAND_home_table_of_contents.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SCAND_home_table_of_contents.jpg; path = Resources/SCAND_home_table_of_contents.jpg; sourceTree = "<group>"; };
+		04C54E531A35F83500224299 /* SCAND_Loading-Start_page_11-18-14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "SCAND_Loading-Start_page_11-18-14.jpg"; path = "Resources/SCAND_Loading-Start_page_11-18-14.jpg"; sourceTree = "<group>"; };
+		04C54E541A35F83500224299 /* SCAND_type_of_data.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SCAND_type_of_data.jpg; path = Resources/SCAND_type_of_data.jpg; sourceTree = "<group>"; };
+		04C54E551A35F83500224299 /* SCAND_what_is_scanD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SCAND_what_is_scanD.jpg; path = Resources/SCAND_what_is_scanD.jpg; sourceTree = "<group>"; };
+		04C54E561A35F83500224299 /* SCAND_what_you_need_to_start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SCAND_what_you_need_to_start.jpg; path = Resources/SCAND_what_you_need_to_start.jpg; sourceTree = "<group>"; };
+		04C54E5D1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = _SCAND_dashboard_templates_Manufacturer_snapshot_03.png; path = Resources/_SCAND_dashboard_templates_Manufacturer_snapshot_03.png; sourceTree = "<group>"; };
+		04C54E5E1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = _SCAND_dashboard_templates_Manufacturer_snapshot_06.png; path = Resources/_SCAND_dashboard_templates_Manufacturer_snapshot_06.png; sourceTree = "<group>"; };
 		04DEEB601A251CAE00644F6F /* Price_Trend.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = Price_Trend.m4v; path = "Video Resources/Pricing Analysis/Price_Trend.m4v"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +220,7 @@
 		043BE6271A1B956C007A6E72 /* SCAND */ = {
 			isa = PBXGroup;
 			children = (
+				04C54E2D1A35F7C700224299 /* Images */,
 				0487F08D1A1FD37900AD66D4 /* Videos */,
 				043BE65A1A1B9879007A6E72 /* Segues */,
 				043BE6511A1B96AE007A6E72 /* Controllers */,
@@ -210,7 +265,6 @@
 				043BE69D1A1D46CD007A6E72 /* MenuController.swift */,
 				043BE6521A1B96AE007A6E72 /* BaseViewController.swift */,
 				043BE6531A1B96AE007A6E72 /* VideoController.swift */,
-				043BE6541A1B96AE007A6E72 /* SliderViewController.swift */,
 				043BE6551A1B96AE007A6E72 /* ViewController.swift */,
 				043BE6611A1B9DC3007A6E72 /* DashBoardController.swift */,
 				043BE6691A1BE646007A6E72 /* BaseScanDController.swift */,
@@ -242,6 +296,103 @@
 				0487F0941A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v */,
 			);
 			name = Videos;
+			sourceTree = "<group>";
+		};
+		04C54E221A35F7C300224299 /* Assortment Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E231A35F7C300224299 /* 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png */,
+				04C54E241A35F7C300224299 /* _SCAND_dashboard_templates_Assortment_analysis.png */,
+				04C54E251A35F7C300224299 /* _SCAND_dashboard_templates_Power_Index.png */,
+				04C54E261A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png */,
+				04C54E271A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png.old.png */,
+			);
+			name = "Assortment Portfolio";
+			path = "Resources/Assortment Portfolio";
+			sourceTree = "<group>";
+		};
+		04C54E2D1A35F7C700224299 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E611A35F89C00224299 /* Resources */,
+				04C54E2E1A35F7D500224299 /* Backgrounds */,
+				04C54E341A35F7D500224299 /* Category Performance */,
+				04C54E391A35F7D500224299 /* Pricing Analysis */,
+				04C54E3D1A35F7D500224299 /* Shopper Marketing */,
+				04C54E3F1A35F7D500224299 /* Store Performance */,
+				04C54E221A35F7C300224299 /* Assortment Portfolio */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		04C54E2E1A35F7D500224299 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E2F1A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-1.jpg */,
+				04C54E301A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-2.jpg */,
+				04C54E311A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-3.jpg */,
+				04C54E321A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-4.jpg */,
+				04C54E331A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-5.jpg */,
+			);
+			name = Backgrounds;
+			path = Resources/Backgrounds;
+			sourceTree = "<group>";
+		};
+		04C54E341A35F7D500224299 /* Category Performance */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E351A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Category_Performance.png */,
+				04C54E361A35F7D500224299 /* _SCAND_dashboard_templates_Category_snapshot.png */,
+				04C54E371A35F7D500224299 /* _SCAND_dashboard_templates_Key_Manufacturer.png */,
+				04C54E381A35F7D500224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot.png */,
+			);
+			name = "Category Performance";
+			path = "Resources/Category Performance";
+			sourceTree = "<group>";
+		};
+		04C54E391A35F7D500224299 /* Pricing Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E3A1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png */,
+				04C54E3B1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Range_analysis.png */,
+				04C54E3C1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Trend_analysis.png */,
+			);
+			name = "Pricing Analysis";
+			path = "Resources/Pricing Analysis";
+			sourceTree = "<group>";
+		};
+		04C54E3D1A35F7D500224299 /* Shopper Marketing */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E3E1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png */,
+			);
+			name = "Shopper Marketing";
+			path = "Resources/Shopper Marketing";
+			sourceTree = "<group>";
+		};
+		04C54E3F1A35F7D500224299 /* Store Performance */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E401A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Store_Performance.png */,
+				04C54E411A35F7D500224299 /* _SCAND_dashboard_templates_Store_Performance.png */,
+			);
+			name = "Store Performance";
+			path = "Resources/Store Performance";
+			sourceTree = "<group>";
+		};
+		04C54E611A35F89C00224299 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04C54E5D1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_03.png */,
+				04C54E5E1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_06.png */,
+				04C54E511A35F83500224299 /* SCAND_dashboard_templates_MENU.jpg */,
+				04C54E521A35F83500224299 /* SCAND_home_table_of_contents.jpg */,
+				04C54E531A35F83500224299 /* SCAND_Loading-Start_page_11-18-14.jpg */,
+				04C54E541A35F83500224299 /* SCAND_type_of_data.jpg */,
+				04C54E551A35F83500224299 /* SCAND_what_is_scanD.jpg */,
+				04C54E561A35F83500224299 /* SCAND_what_you_need_to_start.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,19 +476,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C54E421A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-1.jpg in Resources */,
+				04C54E461A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-5.jpg in Resources */,
+				04C54E481A35F7D500224299 /* _SCAND_dashboard_templates_Category_snapshot.png in Resources */,
+				04C54E601A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_06.png in Resources */,
 				040F7FB31A1FEFDC00B17B4C /* (null) in Resources */,
 				040F7FAA1A1FDF4700B17B4C /* Category Snapshot.m4v in Resources */,
 				040F7FAF1A1FDF6000B17B4C /* Manu Snapshot.m4v in Resources */,
+				04C54E291A35F7C300224299 /* _SCAND_dashboard_templates_Assortment_analysis.png in Resources */,
+				04C54E571A35F83500224299 /* SCAND_dashboard_templates_MENU.jpg in Resources */,
+				04C54E4E1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Shopper_marketing.png in Resources */,
+				04C54E501A35F7D500224299 /* _SCAND_dashboard_templates_Store_Performance.png in Resources */,
+				04C54E431A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-2.jpg in Resources */,
+				04C54E581A35F83500224299 /* SCAND_home_table_of_contents.jpg in Resources */,
+				04C54E5C1A35F83500224299 /* SCAND_what_you_need_to_start.jpg in Resources */,
+				04C54E471A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Category_Performance.png in Resources */,
+				04C54E5A1A35F83500224299 /* SCAND_type_of_data.jpg in Resources */,
+				04C54E441A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-3.jpg in Resources */,
 				040F7FB71A1FF01900B17B4C /* Assortment.m4v in Resources */,
 				040F7FAE1A1FDF6000B17B4C /* Key Manu.m4v in Resources */,
+				04C54E4D1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Trend_analysis.png in Resources */,
 				043BE6301A1B956C007A6E72 /* Main.storyboard in Resources */,
+				04C54E5B1A35F83500224299 /* SCAND_what_is_scanD.jpg in Resources */,
+				04C54E491A35F7D500224299 /* _SCAND_dashboard_templates_Key_Manufacturer.png in Resources */,
 				040F7FBB1A1FF04600B17B4C /* Store Perform.m4v in Resources */,
+				04C54E281A35F7C300224299 /* 1_SCAND_dashboard_templates_Landing_Assortent_Portfolio.png in Resources */,
 				040F7FB21A1FEFDC00B17B4C /* Price Range.m4v in Resources */,
+				04C54E4F1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Store_Performance.png in Resources */,
 				043BE6351A1B956C007A6E72 /* LaunchScreen.xib in Resources */,
+				04C54E2C1A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png.old.png in Resources */,
+				04C54E4B1A35F7D500224299 /* 1_SCAND_dashboard_templates_Landing_Pricing_Analysis.png in Resources */,
+				04C54E591A35F83500224299 /* SCAND_Loading-Start_page_11-18-14.jpg in Resources */,
 				0487F0951A1FD48500AD66D4 /* Big_Buck_Bunny_Trailer.m4v in Resources */,
 				04DEEB611A251CAE00644F6F /* Price_Trend.m4v in Resources */,
+				04C54E451A35F7D500224299 /* 1_SCAND_dashboard_backgrounds-noscroll-4.jpg in Resources */,
+				04C54E4C1A35F7D500224299 /* _SCAND_dashboard_templates_Price_Range_analysis.png in Resources */,
+				04C54E2A1A35F7C300224299 /* _SCAND_dashboard_templates_Power_Index.png in Resources */,
 				043BE6321A1B956C007A6E72 /* Images.xcassets in Resources */,
+				04C54E5F1A35F89300224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot_03.png in Resources */,
+				04C54E4A1A35F7D500224299 /* _SCAND_dashboard_templates_Manufacturer_snapshot.png in Resources */,
 				040F7FB81A1FF01900B17B4C /* Power Index.m4v in Resources */,
+				04C54E2B1A35F7C300224299 /* _SCAND_dashboard_templates_Product_Ranking.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +545,6 @@
 				043BE6601A1B9879007A6E72 /* FromRightToLeftSegue.m in Sources */,
 				043BE6641A1BACB2007A6E72 /* TransitionManager.swift in Sources */,
 				043BE6561A1B96AE007A6E72 /* BaseViewController.swift in Sources */,
-				043BE6581A1B96AE007A6E72 /* SliderViewController.swift in Sources */,
 				043BE69E1A1D46CD007A6E72 /* MenuController.swift in Sources */,
 				043BE69C1A1CE8D6007A6E72 /* SectionController.swift in Sources */,
 			);
@@ -496,6 +674,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SCAND/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -509,6 +688,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SCAND/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

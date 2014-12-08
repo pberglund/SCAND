@@ -8,7 +8,6 @@
 
 import UIKit
 import MediaPlayer
-import AVFoundation
 
 @IBDesignable class VideoController : BaseScanDController {
     
@@ -17,43 +16,53 @@ import AVFoundation
     @IBInspectable var videoName: String!
     @IBInspectable var videoExtension: String!
     
+    var deinitCalled = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpAndPlayMovie(videoName,fileExtension: videoExtension )
     }
     
+    deinit{
+        deinitCalled = true;
+        println("Deinit: VideoController: \(self.pageIdentifier)")
+        stopMovieIfPlaying()
+        
+        self.moviePlayer = nil
+    }
+    
     func setUpAndPlayMovie(fileName:String, fileExtension:String){
+        
         let bundle = NSBundle.mainBundle()
         let pathhtml = bundle.pathForResource(fileName, ofType: fileExtension)
         var url:NSURL = NSURL(fileURLWithPath: pathhtml!)!
         
         
-        moviePlayer = MPMoviePlayerController(contentURL: url)
+        moviePlayer = MPMoviePlayerController(contentURL: url)!
         
-        moviePlayer.view.frame = self.view.bounds
+        moviePlayer!.view.frame = self.view.bounds
         
-        moviePlayer.fullscreen = true
+        moviePlayer!.fullscreen = true
         
-        moviePlayer.shouldAutoplay = true
+        moviePlayer!.shouldAutoplay = true
         
         //moviePlayer.movieSourceType = MPMovieSourceType.Streaming
         
         //moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
         
-        moviePlayer.controlStyle = MPMovieControlStyle.Fullscreen;
+        moviePlayer!.controlStyle = MPMovieControlStyle.Fullscreen;
         
-        self.view.addSubview(moviePlayer.view)
+        self.view.addSubview(moviePlayer!.view)
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerPlaybackDidFinishNotification, object: moviePlayer!)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "moviePlayerOver:", name: MPMoviePlayerWillExitFullscreenNotification, object: moviePlayer!)
         
-        self.view.bringSubviewToFront(moviePlayer.view)
+        self.view.bringSubviewToFront(moviePlayer.view!)
         
-        moviePlayer.play()
+        moviePlayer!.play()
         
-        println("Playing Movie");
+        //println("Playing Movie");
 
     }
     
@@ -62,36 +71,42 @@ import AVFoundation
     }
     
     func transitionToMain(){
-        stopMovieIfPlaying()
-        self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueAfterVideo )
-        
-        println("Show initial controller")
+        if(self.moviePlayer != nil && !deinitCalled){
+            stopMovieIfPlaying()
+            
+            self.transitionToViewControllerBySegueIdentifier(segueIdentifier: segueAfterVideo )
+            
+            //println("Show initial controller")
+        }
     }
     
     @objc
     func moviePlayerExitingFullScreen(notification: NSNotification){
-        println("In moviePlayerExitingFullScreen");
+       // println("In moviePlayerExitingFullScreen");
         transitionToMain()
     }
     
     @objc
     func moviePlayerOver(notification: NSNotification){
     //Action take on Notification
-        println("In moviePlayerDidFinishPlaying");
+        //println("In moviePlayerDidFinishPlaying");
         //self.performSegueWithIdentifier("Custom from 1 to main", sender: self)
         transitionToMain()
 
     }
     
     func stopMovieIfPlaying() -> Void{
-        if(moviePlayer.playbackState == MPMoviePlaybackState.Playing){
-            moviePlayer.stop();
+        
+        if(self.moviePlayer != nil){
+            if(self.moviePlayer.playbackState == MPMoviePlaybackState.Playing){
+                self.moviePlayer.stop();
+            }
         }
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        self.moviePlayer = nil
     }
 }
