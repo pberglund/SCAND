@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1Q-xP-5dL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1Q-xP-5dL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Intro Video-->
@@ -25,8 +25,8 @@
                     <size key="freeformSize" width="1024" height="768"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="segueAfterVideo" value="Video - Dashboard"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Big_Buck_Bunny_Trailer"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="m4v"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="Scan-D-intro"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="videoExtension" value="mp4"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="pageIdentifier" value="Intro Video"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
@@ -377,6 +377,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="startToVideoSegueIdentifier" value="Start - Video"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="startToDashBoardSegueIdentifier" value="Start - Dashboard"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="ZDf-mT-dJL" kind="custom" identifier="Start - Dashboard" customClass="FromRightToLeftSegue" id="pm3-Jd-aQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-eX-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="48M-XP-kuN" userLabel="Swipe to Video">
@@ -1717,20 +1720,20 @@
         <segue reference="xdh-4Y-BDt"/>
         <segue reference="SYP-bn-tyj"/>
         <segue reference="Ywc-Ow-bDJ"/>
-        <segue reference="bZS-WT-0wy"/>
-        <segue reference="eZd-ti-QA3"/>
-        <segue reference="WMg-eK-jlC"/>
-        <segue reference="BlT-ws-p0K"/>
         <segue reference="bIy-Df-e6r"/>
         <segue reference="7We-bW-cXf"/>
-        <segue reference="FGH-u7-hsW"/>
+        <segue reference="bZS-WT-0wy"/>
+        <segue reference="eZd-ti-QA3"/>
         <segue reference="2Mb-24-bmv"/>
         <segue reference="ADy-X7-w9B"/>
-        <segue reference="pz3-er-pPf"/>
-        <segue reference="CDS-Z7-u0U"/>
+        <segue reference="FGH-u7-hsW"/>
+        <segue reference="DzD-YQ-sh2"/>
+        <segue reference="BCo-Pi-xFP"/>
         <segue reference="dYe-cn-sBf"/>
+        <segue reference="CDS-Z7-u0U"/>
+        <segue reference="pz3-er-pPf"/>
         <segue reference="rJ7-vL-edB"/>
+        <segue reference="Bkw-JS-1Id"/>
         <segue reference="jlC-FG-TxD"/>
-        <segue reference="K0K-bq-Ltx"/>
     </inferredMetricsTieBreakers>
 </document>

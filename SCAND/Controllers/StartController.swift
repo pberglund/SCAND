@@ -30,8 +30,7 @@ import MediaPlayer
     }
     
     @IBAction func skipIntroButtonTouched(sender: AnyObject) {
-        weak var weakSelf = self;
-        weakSelf!.transitionToViewControllerBySegueIdentifier( segueIdentifier: startToDashBoardSegueIdentifier)
+        self.transitionToViewControllerBySegueIdentifier( segueIdentifier: startToDashBoardSegueIdentifier)
     }
     
     
