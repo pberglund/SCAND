@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1Q-xP-5dL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1Q-xP-5dL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -1748,15 +1748,15 @@
         <image name="SCAND_type_of_data.jpg" width="1024" height="768"/>
         <image name="SCAND_what_is_scanD.jpg" width="1024" height="768"/>
         <image name="SCAND_what_you_need_to_start.jpg" width="1024" height="768"/>
-        <image name="_SCAND_dashboard_templates_Assortment_analysis.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Category_snapshot.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Key_Manufacturer.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Manufacturer_snapshot.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Power_Index.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Price_Range_analysis.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Price_Trend_analysis.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Product_Ranking.png" width="1024" height="1536"/>
-        <image name="_SCAND_dashboard_templates_Store_Performance.png" width="1024" height="1536"/>
+        <image name="_SCAND_dashboard_templates_Assortment_analysis.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Category_snapshot.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Key_Manufacturer.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Manufacturer_snapshot.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Power_Index.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Price_Range_analysis.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Price_Trend_analysis.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Product_Ranking.png" width="2048" height="3072"/>
+        <image name="_SCAND_dashboard_templates_Store_Performance.png" width="2048" height="3072"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tzF-tJ-gir"/>

@@ -219,7 +219,7 @@ import MediaPlayer
             //println("Sliding up before transistion \(direction.hashValue)")
             
             
-            slideIt(Direction.Down, { weakSelf!.segueWithDirection(direction)})
+            slideIt(Direction.Down, completion: { weakSelf!.segueWithDirection(direction)})
             
             }
             else{
@@ -233,7 +233,7 @@ import MediaPlayer
             return;
         }
         
-        slideIt(direction, nil)
+        slideIt(direction, completion: nil)
         lastDirection = direction;
         
     }

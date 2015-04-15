@@ -128,7 +128,7 @@ import UIKit
     func getViewControllerFromstoryboardID(storyBoardId:String) -> UIViewController{
         //weak var weakSelf = self;
         
-        var vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as UIViewController
+        var vc : UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier(storyBoardId) as! UIViewController
         vc.transitioningDelegate = self.transitionManager
         return vc;
     }
